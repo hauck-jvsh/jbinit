@@ -33,7 +33,6 @@ void keybagdInit(void)
 {
 
     MSImageRef image = MSGetImageByName("/usr/libexec/keybagd");
-    uint8_t *addr;
-    MSFindAddress(image, &addr);
-    MSHookFunction(addr + 0x443c, DecryptKBWithCrypto_hook, DecryptKBWithCrypto_ptr);
+    void *addr = (void *)0x10000443c;
+    MSHookFunction(addr, DecryptKBWithCrypto_hook, DecryptKBWithCrypto_ptr);
 }
