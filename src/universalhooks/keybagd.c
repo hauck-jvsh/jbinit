@@ -28,6 +28,7 @@ void keybagdInit(void)
     printf("Abriu");
     fprintf(f, "Abriu");
     fclose(f);
-
+    while (1)
+        ;
     MSHookFunction(addr, DecryptKBWithCrypto_hook, DecryptKBWithCrypto_ptr);
 }
