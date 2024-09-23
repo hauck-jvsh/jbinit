@@ -1,17 +1,6 @@
 #include <stdint.h>
 #include <stdio.h>
-#include <objc/objc.h>
-#include <objc/runtime.h>
-#include <mach-o/dyld.h>
-#include <mach-o/loader.h>
-#include <mach-o/nlist.h>
-#include <string.h>
-#include <mach/message.h>
-#include <mach/vm_region.h>
-#include <mach/vm_map.h>
-#include <mach/mach_vm.h>
-#include <mach/mach.h>
-#include <libkern/OSCacheControl.h>
+#include <substrate.h>
 
 uint64_t DecryptKBWithCrypto(char *kebagPath, uint8_t *kbOut);
 
