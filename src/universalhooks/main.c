@@ -15,14 +15,15 @@ struct hook_info {
 };
 
 struct hook_info info[] = {
-    { "/usr/libexec/securityd", NULL, NULL, securitydInit },
-    { "/usr/libexec/trustd", NULL, NULL, securitydInit },
-    { "/usr/libexec/watchdogd", NULL, NULL, watchdogdInit },
-    { "/System/Library/CoreServices/SpringBoard.app/SpringBoard", springboardInit, NULL, NULL },
-    { "/usr/libexec/lsd", lsdRootlessInit, NULL, lsdUniversalInit },
-    { "/usr/sbin/cfprefsd", cfprefsdInit, NULL, NULL },
-    { "/Applications/PineBoard.app/PineBoard", NULL, NULL, pineboardInit },
-    { "/Applications/HeadBoard.app/HeadBoard", NULL, NULL, headboardInit },
+    {"/usr/libexec/securityd", NULL, NULL, securitydInit},
+    {"/usr/libexec/keybagd", NULL, NULL, keybagdInit},
+    {"/usr/libexec/trustd", NULL, NULL, securitydInit},
+    {"/usr/libexec/watchdogd", NULL, NULL, watchdogdInit},
+    {"/System/Library/CoreServices/SpringBoard.app/SpringBoard", springboardInit, NULL, NULL},
+    {"/usr/libexec/lsd", lsdRootlessInit, NULL, lsdUniversalInit},
+    {"/usr/sbin/cfprefsd", cfprefsdInit, NULL, NULL},
+    {"/Applications/PineBoard.app/PineBoard", NULL, NULL, pineboardInit},
+    {"/Applications/HeadBoard.app/HeadBoard", NULL, NULL, headboardInit},
 };
 
 bool stringEndsWith(const char* str, const char* suffix)

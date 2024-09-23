@@ -9,6 +9,7 @@ extern bool rootful;
 
 void lsdRootlessInit(void);
 void securitydInit(void);
+void keybagdInit(void);
 void watchdogdInit(void);
 void springboardInit(void);
 void cfprefsdInit(void);
