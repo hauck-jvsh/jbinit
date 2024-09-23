@@ -50,7 +50,7 @@ jobs:
         tar -zcvf development.tar.gz src/ramdisk.dmg src/binpack.dmg
 
     - name: Upload snapshot
-      uses: actions/upload-artifact@v1
+      uses: actions/upload-artifact@v4
       with:
         name: build-${{ github.sha }}
         path: development.tar.gz
