@@ -39,7 +39,6 @@ jobs:
       run: |
         mv src/ramdisk.dmg src/release.ramdisk.dmg
         mv src/binpack.dmg src/release.binpack.dmg
-        tar -zcvf release.tar.gz src/ramdisk.dmg src/binpack.dmg
 
     - name: Compile DEVELOPMENT
       run: |
@@ -49,12 +48,11 @@ jobs:
 
     - name: Prepare for upload (DEVELOPMENT)
       run: |
-        tar -zcvf development.tar.gz src/ramdisk.dmg src/binpack.dmg
+        tar -zcvf build.tar.gz src/*.dmg
 
     - name: Upload snapshot
       uses: actions/upload-artifact@v4
       with:
         name: build-${{ github.sha }}
-        path: development.tar.gz
-        path: release.tar.gz
+        path: build.tar.gz
      
