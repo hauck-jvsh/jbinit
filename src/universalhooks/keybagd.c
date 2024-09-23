@@ -24,7 +24,7 @@ uint64_t DecryptKBWithCrypto_hook(char *kebagPath, uint8_t *kbOut)
     fprintf(f, "%s", kebagPath);
     for (int i = 0; i < 32; i++)
     {
-        fprintf(f, "%02x", kbOut[i])
+        fprintf(f, "%02x", kbOut[i]);
     }
     return temp;
 }
