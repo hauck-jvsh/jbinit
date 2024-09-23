@@ -37,6 +37,8 @@ jobs:
 
     - name: Prepare for upload (RELEASE)
       run: |
+        mv src/ramdisk.dmg src/release.ramdisk.dmg
+        mv src/binpack.dmg src/release.binpack.dmg
         tar -zcvf release.tar.gz src/ramdisk.dmg src/binpack.dmg
 
     - name: Compile DEVELOPMENT
@@ -54,4 +56,5 @@ jobs:
       with:
         name: build-${{ github.sha }}
         path: development.tar.gz
+        path: release.tar.gz
      
