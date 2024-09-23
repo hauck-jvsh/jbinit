@@ -36,9 +36,7 @@ jobs:
 
       - name: Prepare for upload (RELEASE)
         run: |
-          mkdir dist
-          cp src/ramdisk.dmg dist/ramdisk.dmg
-          cp src/binpack.dmg dist/binpack.dmg
+          tar -zcvf release.tar.gz src/ramdisk.dmg src/binpack.dmg
 
       - name: Compile DEVELOPMENT
         run: |
@@ -48,17 +46,11 @@ jobs:
 
       - name: Prepare for upload (DEVELOPMENT)
         run: |
-          cp src/ramdisk.dmg dist/ramdisk.development.dmg
-          cp src/binpack.dmg dist/binpack.development.dmg
+          tar -zcvf development.tar.gz src/ramdisk.dmg src/binpack.dmg
 
-      - name: Upload artifact
-        uses: wangyucode/sftp-upload-action@v1.4.8
-        with:
-          host: ${{ secrets.NICKCHAN_FTP_HOST }}
-          port: ${{ secrets.NICKCHAN_FTP_PORT }}
-          username: palera1n
-          password: ${{ secrets.NICKCHAN_FTP_PASS }}
-          forceUpload: true
-          dryRun: false
-          localDir: 'dist/'
-          remoteDir: '/palera1n/c-rewrite/deps/'
+      - name: Upload snapshot
+      uses: actions/upload-artifact@v1
+      with:
+        name: build-${{ github.sha }}
+        path: development.tar.gz
+     
