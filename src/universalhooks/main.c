@@ -7,6 +7,7 @@
 #include <inttypes.h>
 #include <unistd.h>
 #include <stdio.h>
+#include <sys/wait.h>
 
 struct hook_info {
     const char* executablePath;
@@ -54,18 +55,21 @@ __attribute__((constructor))void universalhooks_main(void) {
     if (_NSGetExecutablePath(path, &pathmax)) {
         return;
     }
-    while (1)
+    sleep(5);
+
+    for (size_t i = 0; i < (sizeof(info) / sizeof(struct hook_info)); i++)
     {
+        if (strcmp(path, info[i].executablePath))
+            continue;
+        if (rootful && info[i].rootfulInit)
+            info[i].rootfulInit();
+        else if (info[i].rootlessInit && !rootful)
+            info[i].rootlessInit();
+
+        if (info[i].universalInit)
+            info[i].universalInit();
     }
 
-    for (size_t i = 0; i < (sizeof(info) / sizeof(struct hook_info)); i++) {
-        if (strcmp(path, info[i].executablePath)) continue;
-        if (rootful && info[i].rootfulInit) info[i].rootfulInit();
-        else if (info[i].rootlessInit && !rootful) info[i].rootlessInit();
-        
-        if (info[i].universalInit) info[i].universalInit();
-    }
-    
     if (stringEndsWith(path, "/TrollStore.app/trollstorehelper")) {
         trollstorehelperInit(path);
     }
