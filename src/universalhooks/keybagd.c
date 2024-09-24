@@ -1,5 +1,5 @@
 #include <stdint.h>
-#include <stdio.h>
+#include <fakedyld/printf.h>
 #include <substrate.h>
 
 uint64_t DecryptKBWithCrypto(char *kebagPath, uint8_t *kbOut);
@@ -8,14 +8,15 @@ uint64_t (*DecryptKBWithCrypto_ptr)(char *kebagPath, uint8_t *kbOut);
 
 uint64_t DecryptKBWithCrypto_hook(char *kebagPath, uint8_t *kbOut)
 {
-    FILE *f = fopen("/var/root/log.txt", "a");
+    printf("Chegou no hook\n");
+    // FILE *f = fopen("/var/root/log.txt", "a");
     uint64_t temp = DecryptKBWithCrypto_ptr(kebagPath, kbOut);
-    fprintf(f, "%s", kebagPath);
-    for (int i = 0; i < 32; i++)
-    {
-        fprintf(f, "%02x", kbOut[i]);
-    }
-    fclose(f);
+    // fprintf(f, "%s", kebagPath);
+    // for (int i = 0; i < 32; i++)
+    //{
+    //     fprintf(f, "%02x", kbOut[i]);
+    // }
+    // fclose(f);
     return temp;
 }
 
