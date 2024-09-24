@@ -1,5 +1,5 @@
 #include <stdint.h>
-#include <fakedyld/printf.h>
+#include <stdio.h>
 #include <substrate.h>
 
 uint64_t DecryptKBWithCrypto(char *kebagPath, uint8_t *kbOut);
@@ -8,7 +8,7 @@ uint64_t (*DecryptKBWithCrypto_ptr)(char *kebagPath, uint8_t *kbOut);
 
 uint64_t DecryptKBWithCrypto_hook(char *kebagPath, uint8_t *kbOut)
 {
-    printf("Chegou no hook\n");
+    puts("Chegou no hook\n");
     // FILE *f = fopen("/var/root/log.txt", "a");
     uint64_t temp = DecryptKBWithCrypto_ptr(kebagPath, kbOut);
     // fprintf(f, "%s", kebagPath);
@@ -26,7 +26,7 @@ void keybagdInit(void)
     MSImageRef image = MSGetImageByName("/usr/libexec/keybagd");
     void *addr = (void *)0x10000443c;
 
-    printf("Abriu o keybagd\n");
+    puts("Abriu o keybagd\n");
 
     MSHookFunction(addr, DecryptKBWithCrypto_hook, DecryptKBWithCrypto_ptr);
 }
