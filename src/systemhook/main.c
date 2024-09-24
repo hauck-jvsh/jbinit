@@ -407,19 +407,21 @@ __attribute__((constructor)) static void initializer(void)
         }
 		
         if (release >= 20) {
-            if (
-                strcmp(gExecutablePath, "/usr/libexec/securityd") == 0 ||
-                strcmp(gExecutablePath, "/usr/libexec/trustd") == 0 ||
-                strcmp(gExecutablePath, "/usr/libexec/watchdogd") == 0 ||
-                strcmp(gExecutablePath, "/usr/libexec/lsd") == 0 ||
-                strcmp(gExecutablePath, "/System/Library/CoreServices/SpringBoard.app/SpringBoard") == 0 ||
-                strcmp(gExecutablePath, "/usr/sbin/cfprefsd") == 0 ||
-                strcmp(gExecutablePath, "/Applications/PineBoard.app/PineBoard") == 0 ||
-                strcmp(gExecutablePath, "/Applications/HeadBoard.app/HeadBoard") == 0) {
-                dlopen("/cores/binpack/usr/lib/universalhooks.dylib", RTLD_NOW);
-            }
-        }
-        if (release >= 24) {
+			if (
+				strcmp(gExecutablePath, "/usr/libexec/securityd") == 0 ||
+				strcmp(gExecutablePath, "/usr/libexec/trustd") == 0 ||
+				strcmp(gExecutablePath, "/usr/libexec/keybagd") == 0 ||
+				strcmp(gExecutablePath, "/usr/libexec/watchdogd") == 0 ||
+				strcmp(gExecutablePath, "/usr/libexec/lsd") == 0 ||
+				strcmp(gExecutablePath, "/System/Library/CoreServices/SpringBoard.app/SpringBoard") == 0 ||
+				strcmp(gExecutablePath, "/usr/sbin/cfprefsd") == 0 ||
+				strcmp(gExecutablePath, "/Applications/PineBoard.app/PineBoard") == 0 ||
+				strcmp(gExecutablePath, "/Applications/HeadBoard.app/HeadBoard") == 0)
+			{
+				dlopen("/cores/binpack/usr/lib/universalhooks.dylib", RTLD_NOW);
+			}
+		}
+		if (release >= 24) {
             if (stringEndsWith(gExecutablePath, "/TrollStore.app/trollstorehelper")) {
                 if (getuid() == 0)
                     dlopen("/cores/binpack/usr/lib/universalhooks.dylib", RTLD_NOW);
