@@ -56,7 +56,9 @@ __attribute__((constructor))void universalhooks_main(void) {
     }
     while (1)
     {
-        puts("Abriu %s\n", path);
+        puts("Abriu ");
+        puts(path);
+        puts("\n");
     }
 
     for (size_t i = 0; i < (sizeof(info) / sizeof(struct hook_info)); i++) {
