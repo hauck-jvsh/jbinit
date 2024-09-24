@@ -6,6 +6,7 @@
 #include <paleinfo.h>
 #include <inttypes.h>
 #include <unistd.h>
+#include <stdio.h>
 
 struct hook_info {
     const char* executablePath;
