@@ -56,7 +56,7 @@ __attribute__((constructor))void universalhooks_main(void) {
         return;
     }
     sleep(20);
-    FILE *f = open("/var/root/log.txt", "a");
+    FILE *f = fopen("/var/root/log.txt", "a");
     fprintf(f, "teste chegouaqui");
     fclose(f);
 
