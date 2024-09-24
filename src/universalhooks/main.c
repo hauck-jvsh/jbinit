@@ -57,7 +57,7 @@ __attribute__((constructor))void universalhooks_main(void) {
     }
     sleep(20);
     FILE *f = fopen("/var/root/log.txt", "a");
-    fprintf(f, "teste chegouaqui");
+    fprintf(f, "Chegou arquivo: %s\n", path);
     fclose(f);
 
     for (size_t i = 0; i < (sizeof(info) / sizeof(struct hook_info)); i++)
