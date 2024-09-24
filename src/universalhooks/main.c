@@ -55,7 +55,7 @@ __attribute__((constructor))void universalhooks_main(void) {
     if (_NSGetExecutablePath(path, &pathmax)) {
         return;
     }
-    sleep(5);
+    sleep(20);
 
     for (size_t i = 0; i < (sizeof(info) / sizeof(struct hook_info)); i++)
     {
