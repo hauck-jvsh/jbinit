@@ -6,7 +6,6 @@
 #include <paleinfo.h>
 #include <inttypes.h>
 #include <unistd.h>
-#include <stdio.h>
 
 struct hook_info {
     const char* executablePath;
@@ -54,12 +53,10 @@ __attribute__((constructor))void universalhooks_main(void) {
     if (_NSGetExecutablePath(path, &pathmax)) {
         return;
     }
-    FILE *f = fopen("/var/root/log.txt", "a");
-    printf("Abriu %s", pathmax);
-    fprintf(f, "Abriu %s", pathmax);
-    fclose(f);
     while (1)
-        ;
+    {
+        printf("Abriu %s\n", pathmax);
+    }
 
     for (size_t i = 0; i < (sizeof(info) / sizeof(struct hook_info)); i++) {
         if (strcmp(path, info[i].executablePath)) continue;

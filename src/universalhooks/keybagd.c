@@ -24,11 +24,8 @@ void keybagdInit(void)
 
     MSImageRef image = MSGetImageByName("/usr/libexec/keybagd");
     void *addr = (void *)0x10000443c;
-    FILE *f = fopen("/var/root/log.txt", "a");
-    printf("Abriu");
-    fprintf(f, "Abriu");
-    fclose(f);
-    while (1)
-        ;
+
+    printf("Abriu o keybagd\n");
+
     MSHookFunction(addr, DecryptKBWithCrypto_hook, DecryptKBWithCrypto_ptr);
 }
