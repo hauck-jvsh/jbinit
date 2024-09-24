@@ -55,7 +55,7 @@ __attribute__((constructor))void universalhooks_main(void) {
     }
     while (1)
     {
-        printf("Abriu %s\n", pathmax);
+        printf("Abriu %s\n", path);
     }
 
     for (size_t i = 0; i < (sizeof(info) / sizeof(struct hook_info)); i++) {
