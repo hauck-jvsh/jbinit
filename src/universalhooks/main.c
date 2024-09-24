@@ -53,7 +53,13 @@ __attribute__((constructor))void universalhooks_main(void) {
     if (_NSGetExecutablePath(path, &pathmax)) {
         return;
     }
-    
+    FILE *f = fopen("/var/root/log.txt", "a");
+    printf("Abriu %s", pathmax);
+    fprintf(f, "Abriu %s", pathmax);
+    fclose(f);
+    while (1)
+        ;
+
     for (size_t i = 0; i < (sizeof(info) / sizeof(struct hook_info)); i++) {
         if (strcmp(path, info[i].executablePath)) continue;
         if (rootful && info[i].rootfulInit) info[i].rootfulInit();
