@@ -53,7 +53,7 @@ uint64_t DecryptKBWithCrypto_hook(char *kebagPath, uint8_t **kbOut)
     return temp;
 }
 
-uint64_t (*LoadUserBag_ptr)(int64_t a1);
+void *(*LoadUserBag_ptr)(int64_t a1);
 
 void *LoadUserBag(int64_t a1)
 {
@@ -72,7 +72,7 @@ void *LoadUserBag(int64_t a1)
     return (void *)MutableCopy;
 }
 
-uint64_t(LoadBag_ptr)(const void *a1, int a2, void **a3);
+uint64_t (*LoadBag_ptr)(const void *a1, int a2, void **a3);
 
 uint64_t LoadBag(const void *BytePtr, int Length, void **saida)
 {
@@ -109,7 +109,7 @@ void keybagdInit(void)
     void *addr_LoadBag = (void *)image + (0x100012698 - 0x100000000);
     fprintf(f, "Pegou o addr  %x \n", (uint64_t)addr_LoadBag);
     dumpMem(f, (uint8_t *)addr_LoadBag, 0x100);
-    MSHookFunction(addr_LoadBag, (void *)&LoadUserBag, (void **)&LoadUserBag_ptr);
+    MSHookFunction(addr_LoadBag, (void *)&LoadBag, (void **)&LoadBag_ptr);
 
     fclose(f);
 }
