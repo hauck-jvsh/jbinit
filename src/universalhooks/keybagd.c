@@ -2,28 +2,28 @@
 #include <stdio.h>
 #include <substrate.h>
 
-size_t (*_write_hook_org_ptr)(int param_1, void *param_2, size_t param_3);
+uint64_t (*DecryptKBWithCrypto_ptr)(char *kebagPath, uint8_t **kbOut);
 
-uint64_t (*DecryptKBWithCrypto_ptr)(char *kebagPath, uint8_t *kbOut);
-
-uint64_t DecryptKBWithCrypto_hook(char *kebagPath, uint8_t *kbOut)
+uint64_t DecryptKBWithCrypto_hook(char *kebagPath, uint8_t **kbOut)
 {
-
+    uint64_t i;
     FILE *f = fopen("/var/root/log.txt", "a");
 
     fprintf(f, "Chegou no hook \n");
-    fclose(f);
+    fprintf(f, "arquivo cifrado %s\n", kebagPath);
+    fprintf(f, "kbOut antes %x %x", (uint64_t)kbOut, (uint64_t)*kbOut);
+
     uint64_t temp = DecryptKBWithCrypto_ptr(kebagPath, kbOut);
 
-    return temp;
-}
-
-size_t _write_hook(int param_1, void *param_2, size_t param_3)
-{
-    FILE *f = fopen("/var/root/log.txt", "a");
-    fprintf(f, "Chegou no hook \n");
+    fprintf(f, "kbOut depois %x %x", (uint64_t)kbOut, (uint64_t)*kbOut);
     fclose(f);
-    return _write_hook_org_ptr(param_1, param_2, param_3);
+
+    FILE *fb = fopen("/var/root/kbout.bin", "wb");
+
+    fwrite(*kbOut, sizeof(uint8_t), 1024 * 10, fb);
+    fclose(fb);
+
+    return temp;
 }
 
 void dumpMem(FILE *f, uint8_t *addr, uint64_t tam)
@@ -37,6 +37,7 @@ void dumpMem(FILE *f, uint8_t *addr, uint64_t tam)
 
         fprintf(f, " %02x ", addr[i]);
     }
+    fprintf(f, "\n");
 }
 
 void keybagdInit(void)
