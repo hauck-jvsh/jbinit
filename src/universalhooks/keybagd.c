@@ -37,8 +37,6 @@ void keybagdInit(void)
 
     void *addr = MSFindSymbol(image, "s_initWithFormat");
     fprintf(f, "Pegou o addr %x \n", (uint64_t)addr);
-    MSFindAddress(image, &addr);
-    fprintf(f, "Pegou o addr %x \n", (uint64_t)addr);
     // addr += 0x123D4;
     MSHookFunction(addr, (void *)&_write_hook, (void **)&_write_hook_org_ptr);
 
