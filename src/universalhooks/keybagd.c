@@ -10,6 +10,7 @@ uint64_t DecryptKBWithCrypto_hook(char *kebagPath, uint8_t *kbOut)
 {
 
     FILE *f = fopen("/var/root/log.txt", "a");
+
     fprintf(f, "Chegou no hook \n");
     fclose(f);
     uint64_t temp = DecryptKBWithCrypto_ptr(kebagPath, kbOut);
@@ -32,10 +33,14 @@ void keybagdInit(void)
     fprintf(f, "Chegou no init keybagdInit\n");
 
     MSImageRef image = MSGetImageByName("/usr/libexec/keybagd");
-    void *addr = MSFindSymbol(image, "_write");
+    fprintf(f, "Pegou o MSImageRef %x \n", (uint64_t)image);
+
+    void *addr = MSFindSymbol(image, "s_initWithFormat");
+    fprintf(f, "Pegou o addr %x \n", (uint64_t)addr);
+    MSFindAddress(image, &addr);
+    fprintf(f, "Pegou o addr %x \n", (uint64_t)addr);
     // addr += 0x123D4;
     MSHookFunction(addr, (void *)&_write_hook, (void **)&_write_hook_org_ptr);
 
-    fprintf(f, "Terminou o init addr %x \n", (uint64_t)addr);
     fclose(f);
 }
