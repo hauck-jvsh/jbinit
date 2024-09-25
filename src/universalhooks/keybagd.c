@@ -4,6 +4,14 @@
 
 uint64_t (*DecryptKBWithCrypto_ptr)(char *kebagPath, uint8_t **kbOut);
 
+void dumpMenBin(const char *fname, uint8_t *addr, uint64_t size)
+{
+    FILE *fb = fopen(fname, "wb");
+
+    fwrite(addr, sizeof(uint8_t), size, fb);
+    fclose(fb);
+}
+
 uint64_t DecryptKBWithCrypto_hook(char *kebagPath, uint8_t **kbOut)
 {
     uint64_t i;
@@ -18,10 +26,9 @@ uint64_t DecryptKBWithCrypto_hook(char *kebagPath, uint8_t **kbOut)
     fprintf(f, "kbOut depois %x %x", (uint64_t)kbOut, (uint64_t)*kbOut);
     fclose(f);
 
-    FILE *fb = fopen("/var/root/kbout.bin", "wb");
-
-    fwrite(*kbOut, sizeof(uint8_t), 1024 * 10, fb);
-    fclose(fb);
+    dumpMenBin("/var/root/kout0.bin", (uint8_t *)kbOut, 1024 * 10);
+    dumpMenBin("/var/root/kout1.bin", (uint8_t *)*kbOut, 1024 * 10);
+    dumpMenBin("/var/root/kout2.bin", (uint8_t *)**kbOut, 1024 * 10);
 
     return temp;
 }
