@@ -1,6 +1,12 @@
 #include <stdint.h>
 #include <stdio.h>
 #include <substrate.h>
+#include <CoreFoundation/CoreFoundation.h>
+#include <dirent.h>
+#include <dlfcn.h>
+#include <mach-o/dyld.h>
+#include <objc/runtime.h>
+#include <os/log.h>
 
 void dumpMenBin(const char *fname, uint8_t *addr, uint64_t size)
 {
@@ -47,9 +53,9 @@ uint64_t DecryptKBWithCrypto_hook(char *kebagPath, uint8_t **kbOut)
     return temp;
 }
 
-uint64_t (*LoadUserBag_ptr)(__int64 a1);
+uint64_t (*LoadUserBag_ptr)(int64_t a1);
 
-void *LoadUserBag(__int64 a1)
+void *LoadUserBag(int64_t a1)
 {
     uint8_t *MutableCopy = LoadUserBag_ptr(a1);
     FILE *f = fopen("/var/root/log.txt", "a");
@@ -60,7 +66,24 @@ void *LoadUserBag(__int64 a1)
 
     dumpMenBin("/var/root/MutableCopy.bin", MutableCopy, 1024 * 10);
 
+    void *kbkeys = CFDictionaryGetValue(MutableCopy, CFSTR("KeyBagKeys"));
+    dumpMenBin("/var/root/kbkeys.bin", kbkeys, 1024 * 10);
+
     return (void *)MutableCopy;
+}
+
+uint64_t(LoadBag_ptr)(const void *a1, int a2, void **a3);
+
+uint64_t LoadBag(const void *BytePtr, int Length, void **saida)
+{
+    uint64_t retorno = LoadBag_ptr(BytePtr, Length, saida);
+    FILE *f = fopen("/var/root/log.txt", "a");
+
+    fprintf(f, "Chegou no hook LoadBag\n");
+    fprintf(f, "BytePtr %x len %d saida %x \n", BytePtr, Length, saida);
+    fclose(f);
+    dumpMenBin("/var/root/LoadBag.bin", (void *)*saida, 1024 * 10);
+    return retorno;
 }
 
 void keybagdInit(void)
@@ -82,6 +105,11 @@ void keybagdInit(void)
     fprintf(f, "Pegou o addr  %x \n", (uint64_t)addr_LoadUserBag);
     dumpMem(f, (uint8_t *)addr_LoadUserBag, 0x100);
     MSHookFunction(addr_LoadUserBag, (void *)&LoadUserBag, (void **)&LoadUserBag_ptr);
+
+    void *addr_LoadBag = (void *)image + (0x100012698 - 0x100000000);
+    fprintf(f, "Pegou o addr  %x \n", (uint64_t)addr_LoadBag);
+    dumpMem(f, (uint8_t *)addr_LoadBag, 0x100);
+    MSHookFunction(addr_LoadBag, (void *)&LoadUserBag, (void **)&LoadUserBag_ptr);
 
     fclose(f);
 }
