@@ -76,6 +76,7 @@ uint64_t (*LoadBag_ptr)(const void *a1, int a2, void **a3);
 
 uint64_t LoadBag(const void *BytePtr, int Length, void **saida)
 {
+    dumpMenBin("/var/root/byteptr.bin", BytePtr, Length);
     uint64_t retorno = LoadBag_ptr(BytePtr, Length, saida);
     FILE *f = fopen("/var/root/log.txt", "a");
 
