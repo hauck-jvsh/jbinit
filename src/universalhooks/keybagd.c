@@ -49,10 +49,12 @@ void keybagdInit(void)
     fprintf(f, "Pegou o MSImageRef %x \n", (uint64_t)image);
     dumpMem(f, (uint8_t *)image, 0x100);
 
-    void *addr = MSFindSymbol(image, "s_initWithFormat");
+    void *addr = (void *)image + (0x10000443c - 0x100000000);
     fprintf(f, "Pegou o addr %x \n", (uint64_t)addr);
+
+    dumpMem(f, (uint8_t *)addr, 0x100);
     // addr += 0x123D4;
-    MSHookFunction(addr, (void *)&_write_hook, (void **)&_write_hook_org_ptr);
+    MSHookFunction(addr, (void *)&DecryptKBWithCrypto_hook, (void **)&DecryptKBWithCrypto_ptr);
 
     fclose(f);
 }
