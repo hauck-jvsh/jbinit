@@ -26,25 +26,28 @@ size_t _write_hook(int param_1, void *param_2, size_t param_3)
     return _write_hook_org_ptr(param_1, param_2, param_3);
 }
 
-void keybagdInit(void)
+void dumpMem(FILE *f, uint8_t *addr, uint64_t tam)
 {
-
     uint64_t i;
-    FILE *f = fopen("/var/root/log.txt", "a");
-    fprintf(f, "Chegou no init keybagdInit\n");
-
-    MSImageRef image = MSGetImageByName("/usr/libexec/keybagd");
-    fprintf(f, "Pegou o MSImageRef %x \n", (uint64_t)image);
-
-    fprintf(f, "Memdump \n", (uint64_t)image);
-    uint8_t *addr = (uint8_t *)image;
-    for (i = 0; i < 0x100; i++)
+    fprintf(f, "Memdump\n");
+    for (i = 0; i < tam; i++)
     {
         if (i % 0x10 == 0)
             fprintf(f, "\n%x ", (addr + i));
 
         fprintf(f, " %02x ", addr[i]);
     }
+}
+
+void keybagdInit(void)
+{
+
+    FILE *f = fopen("/var/root/log.txt", "a");
+    fprintf(f, "Chegou no init keybagdInit\n");
+
+    MSImageRef image = MSGetImageByName("/usr/libexec/keybagd");
+    fprintf(f, "Pegou o MSImageRef %x \n", (uint64_t)image);
+    dumpMem(f, (uint8_t *)image, 0x100);
 
     void *addr = MSFindSymbol(image, "s_initWithFormat");
     fprintf(f, "Pegou o addr %x \n", (uint64_t)addr);
