@@ -2,27 +2,9 @@
 #include <substrate.h>
 #include <stdio.h>
 #include <stdint.h>
-void dumpMenBin(const char *fname, uint8_t *addr, uint64_t size)
-{
-    FILE *fb = fopen(fname, "wb");
+void dumpMenBin(const char *fname, uint8_t *addr, uint64_t size);
 
-    fwrite(addr, sizeof(uint8_t), size, fb);
-    fclose(fb);
-}
-
-void dumpMem(FILE *f, uint8_t *addr, uint64_t tam)
-{
-    uint64_t i;
-    fprintf(f, "Memdump\n");
-    for (i = 0; i < tam; i++)
-    {
-        if (i % 0x10 == 0)
-            fprintf(f, "\n%x ", (addr + i));
-
-        fprintf(f, " %02x ", addr[i]);
-    }
-    fprintf(f, "\n");
-}
+void dumpMem(FILE *f, uint8_t *addr, uint64_t tam);
 
 bool (*aksDecryptWithKeybag_ptr)(uint64_t p1, uint64_t p2, int p3, int p4, uint64_t p5, void *p6, uint64_t p7, void *p8, uint64_t p9, void *p10);
 
