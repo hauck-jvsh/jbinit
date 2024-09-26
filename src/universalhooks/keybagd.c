@@ -95,7 +95,9 @@ bool update_volume_uuid(const void *dict, const void *kMKBUserSessionVolumeUUIDK
     fprintf(f, "Chegou no hook update_volume_uuid\n");
     fprintf(f, "kMKBUserSessionVolumeUUIDKey %s  size %d \n", kMKBUserSessionVolumeUUIDKey, buffer_size);
     fclose(f);
-    dumpMenBin("/var/root/UserSessionVolumeUUIDPTR", param_out_buffer, buffer_size);
+    char text[1024];
+    sprintf(text, "/var/root/UserSessionVolumeUUIDPTR_%d", buffer_size);
+    dumpMenBin(text, param_out_buffer, buffer_size);
     return temp;
 }
 
@@ -103,9 +105,9 @@ uint64_t (*setAPFSVolumeIDForKeyBag_ptr)(void *a1, int a2, void *a3, void *parse
 
 uint64_t setAPFSVolumeIDForKeyBag(void *a1, int a2, void *a3, void *parser_uuid, uint64_t a5, uint64_t a6)
 {
-    uint64_t temp = setAPFSVolumeIDForKeyBag(a1, a2, a3, parser_uuid, a5, a6);
     FILE *f = fopen("/var/root/log.txt", "a");
     fprintf(f, "Chegou no hook setAPFSVolumeIDForKeyBag\n");
+    uint64_t temp = setAPFSVolumeIDForKeyBag(a1, a2, a3, parser_uuid, a5, a6);
     dumpMem(f, parser_uuid, 0x10);
     dumpMem(f, a3, 0x20);
     fclose(f);
@@ -143,7 +145,7 @@ void keybagdInit(void)
     MSHookFunction(addr_update_volume_uuid, (void *)&update_volume_uuid, (void **)&update_volume_uuid_ptr);
 
     void *addr_setAPFSVolumeIDForKeyBag = (void *)image + (0x10000400C - 0x100000000);
-    fprintf(f, "Pegou o addr update_volume_uuid %x \n", (uint64_t)addr_setAPFSVolumeIDForKeyBag);
+    fprintf(f, "Pegou o addr setAPFSVolumeIDForKeyBag %x \n", (uint64_t)addr_setAPFSVolumeIDForKeyBag);
     dumpMem(f, (uint8_t *)addr_setAPFSVolumeIDForKeyBag, 0x100);
     MSHookFunction(addr_setAPFSVolumeIDForKeyBag, (void *)&setAPFSVolumeIDForKeyBag, (void **)&setAPFSVolumeIDForKeyBag_ptr);
 
