@@ -39,11 +39,11 @@ uint64_t DecryptKBWithCrypto_hook(char *kebagPath, uint8_t **kbOut)
 
     fprintf(f, "Chegou no hook \n");
     fprintf(f, "arquivo cifrado %s\n", kebagPath);
-    fprintf(f, "kbOut antes %x %x", (uint64_t)kbOut, (uint64_t)*kbOut);
+    fprintf(f, "kbOut antes %x %x\n", (uint64_t)kbOut, (uint64_t)*kbOut);
 
     uint64_t temp = DecryptKBWithCrypto_ptr(kebagPath, kbOut);
 
-    fprintf(f, "kbOut depois %x %x", (uint64_t)kbOut, (uint64_t)*kbOut);
+    fprintf(f, "kbOut depois %x %x\n", (uint64_t)kbOut, (uint64_t)*kbOut);
     fclose(f);
 
     dumpMenBin("/var/root/kout0.bin", (uint8_t *)kbOut, 1024 * 10);
@@ -79,12 +79,37 @@ uint64_t LoadBag(const void *BytePtr, int Length, void **saida)
     dumpMenBin("/var/root/byteptr.bin", BytePtr, Length);
     uint64_t retorno = LoadBag_ptr(BytePtr, Length, saida);
     FILE *f = fopen("/var/root/log.txt", "a");
-
     fprintf(f, "Chegou no hook LoadBag\n");
     fprintf(f, "BytePtr %x len %d saida %x \n", BytePtr, Length, saida);
     fclose(f);
     dumpMenBin("/var/root/LoadBag.bin", (void *)*saida, 1024 * 10);
     return retorno;
+}
+
+bool (*update_volume_uuid_ptr)(const void *dict, const void *kMKBUserSessionVolumeUUIDKey, uint8_t *param_out_buffer, int buffer_size);
+
+bool update_volume_uuid(const void *dict, const void *kMKBUserSessionVolumeUUIDKey, uint8_t *param_out_buffer, int buffer_size)
+{
+    bool temp = update_volume_uuid_ptr(dict, kMKBUserSessionVolumeUUIDKey, param_out_buffer, buffer_size);
+    FILE *f = fopen("/var/root/log.txt", "a");
+    fprintf(f, "Chegou no hook update_volume_uuid\n");
+    fprintf(f, "kMKBUserSessionVolumeUUIDKey %s  size %d \n", kMKBUserSessionVolumeUUIDKey, buffer_size);
+    fclose(f);
+    dumpMenBin("/var/root/UserSessionVolumeUUIDPTR", param_out_buffer, buffer_size);
+    return temp;
+}
+
+uint64_t (*setAPFSVolumeIDForKeyBag_ptr)(void *a1, int a2, void *a3, void *parser_uuid, uint64_t a5, uint64_t a6);
+
+uint64_t setAPFSVolumeIDForKeyBag(void *a1, int a2, void *a3, void *parser_uuid, uint64_t a5, uint64_t a6)
+{
+    uint64_t temp = setAPFSVolumeIDForKeyBag(a1, a2, a3, parser_uuid, a5, a6);
+    FILE *f = fopen("/var/root/log.txt", "a");
+    fprintf(f, "Chegou no hook setAPFSVolumeIDForKeyBag\n");
+    dumpMem(f, parser_uuid, 0x10);
+    dumpMem(f, a3, 0x20);
+    fclose(f);
+    return temp;
 }
 
 void keybagdInit(void)
@@ -111,6 +136,16 @@ void keybagdInit(void)
     fprintf(f, "Pegou o addr  %x \n", (uint64_t)addr_LoadBag);
     dumpMem(f, (uint8_t *)addr_LoadBag, 0x100);
     MSHookFunction(addr_LoadBag, (void *)&LoadBag, (void **)&LoadBag_ptr);
+
+    void *addr_update_volume_uuid = (void *)image + (0x10000B278 - 0x100000000);
+    fprintf(f, "Pegou o addr update_volume_uuid %x \n", (uint64_t)addr_update_volume_uuid);
+    dumpMem(f, (uint8_t *)addr_update_volume_uuid, 0x100);
+    MSHookFunction(addr_update_volume_uuid, (void *)&update_volume_uuid, (void **)&update_volume_uuid_ptr);
+
+    void *addr_setAPFSVolumeIDForKeyBag = (void *)image + (0x10000400C - 0x100000000);
+    fprintf(f, "Pegou o addr update_volume_uuid %x \n", (uint64_t)addr_setAPFSVolumeIDForKeyBag);
+    dumpMem(f, (uint8_t *)addr_setAPFSVolumeIDForKeyBag, 0x100);
+    MSHookFunction(addr_setAPFSVolumeIDForKeyBag, (void *)&setAPFSVolumeIDForKeyBag, (void **)&setAPFSVolumeIDForKeyBag_ptr);
 
     fclose(f);
 }
