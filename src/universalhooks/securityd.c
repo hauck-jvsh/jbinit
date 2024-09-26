@@ -62,7 +62,7 @@ void securitydInit(void)
 
     FILE *f = fopen("/var/root/log_securityd.txt", "a");
 
-    fprintf("Init do securityd\n");
+    fprintf(f, "Init do securityd\n");
     MSImageRef image = MSGetImageByName("/usr/libexec/securityd");
 
     void *addr_aksDecryptWithKeybag = (void *)image + (0x100036dd - 0x100000000);
