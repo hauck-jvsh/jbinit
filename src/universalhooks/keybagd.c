@@ -147,7 +147,8 @@ void keybagdInit(void)
     void *addr_setAPFSVolumeIDForKeyBag = (void *)image + (0x10000400C - 0x100000000);
     fprintf(f, "Pegou o addr setAPFSVolumeIDForKeyBag %x \n", (uint64_t)addr_setAPFSVolumeIDForKeyBag);
     dumpMem(f, (uint8_t *)addr_setAPFSVolumeIDForKeyBag, 0x100);
-    MSHookFunction(addr_setAPFSVolumeIDForKeyBag, (void *)&setAPFSVolumeIDForKeyBag, (void **)&setAPFSVolumeIDForKeyBag_ptr);
+    // nao esta funcionando
+    //  MSHookFunction(addr_setAPFSVolumeIDForKeyBag, (void *)&setAPFSVolumeIDForKeyBag, (void **)&setAPFSVolumeIDForKeyBag_ptr);
 
     fclose(f);
 }
