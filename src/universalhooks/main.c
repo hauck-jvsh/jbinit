@@ -56,13 +56,13 @@ __attribute__((constructor))void universalhooks_main(void) {
         return;
     }
 
-    FILE *f = fopen("/var/root/log.txt", "a");
+    FILE *f = fopen("/cores/launch_log.txt", "a");
     for (int i = 0; i < 10; i++)
     {
         if (f != NULL)
             break;
         sleep(1);
-        f = fopen("/var/root/log.txt", "a");
+        f = fopen("/cores/launch_log.txt", "a");
     }
     fprintf(f, "Chegou arquivo: %s\n", path);
     fclose(f);
