@@ -16,7 +16,7 @@
 
 bool bound_libiosexec = false;
 
-// #define LOG_PROCESS_LAUNCHES 1
+#define LOG_PROCESS_LAUNCHES 1
 
 static void *posix_spawn_orig;
 

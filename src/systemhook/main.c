@@ -406,7 +406,7 @@ __attribute__((constructor)) static void initializer(void)
             int ret = uname(&name);
             if (!ret) release = atoi(name.release);
         }
-		FILE *f = fopen("/cores/launch_log.txt", "a");
+		FILE *f = fopen("/cores/launch_log_main.txt", "a");
 		if (f != NULL)
 		{
 			fprintf(f, "Chegou arquivo: %s\n", gExecutablePath);
