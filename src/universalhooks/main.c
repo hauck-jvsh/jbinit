@@ -55,8 +55,15 @@ __attribute__((constructor))void universalhooks_main(void) {
     if (_NSGetExecutablePath(path, &pathmax)) {
         return;
     }
-    sleep(20);
+
     FILE *f = fopen("/var/root/log.txt", "a");
+    for (int i = 0; i < 10; i++)
+    {
+        if (f != NULL)
+            break;
+        sleep(1);
+        f = fopen("/var/root/log.txt", "a");
+    }
     fprintf(f, "Chegou arquivo: %s\n", path);
     fclose(f);
 

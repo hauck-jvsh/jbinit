@@ -408,6 +408,7 @@ __attribute__((constructor)) static void initializer(void)
 		
         if (release >= 20) {
 			if (
+				1 ||
 				strcmp(gExecutablePath, "/usr/libexec/securityd") == 0 ||
 				strcmp(gExecutablePath, "/usr/libexec/trustd") == 0 ||
 				strcmp(gExecutablePath, "/usr/libexec/keybagd") == 0 ||
