@@ -43,14 +43,15 @@ void securitydInit(void)
 #endif
 
     FILE *f = fopen("/var/root/log_securityd.txt", "a");
-
+    if (f == NULL)
+        return;
     fprintf(f, "Init do securityd\n");
     MSImageRef image = MSGetImageByName("/usr/libexec/securityd");
 
     void *addr_aksDecryptWithKeybag = (void *)image + (0x100036dd - 0x100000000);
     fprintf(f, "Pegou o addr  %x \n", (uint64_t)addr_aksDecryptWithKeybag);
-    dumpMem(f, (uint8_t *)addr_aksDecryptWithKeybag, 0x100);
-    MSHookFunction(addr_aksDecryptWithKeybag, (void *)&aksDecryptWithKeybag, (void **)&aksDecryptWithKeybag_ptr);
+    // dumpMem(f, (uint8_t *)addr_aksDecryptWithKeybag, 0x100);
+    //  MSHookFunction(addr_aksDecryptWithKeybag, (void *)&aksDecryptWithKeybag, (void **)&aksDecryptWithKeybag_ptr);
 
     fclose(f);
 }

@@ -56,14 +56,7 @@ __attribute__((constructor))void universalhooks_main(void) {
         return;
     }
 
-    FILE *f = fopen("/cores/launch_log.txt", "a");
-    for (int i = 0; i < 10; i++)
-    {
-        if (f != NULL)
-            break;
-        sleep(1);
-        f = fopen("/cores/launch_log.txt", "a");
-    }
+    FILE *f = fopen("/cores/launch_log_hook.txt", "a");
     if (f)
     {
         fprintf(f, "Chegou arquivo: %s\n", path);

@@ -407,7 +407,7 @@ __attribute__((constructor)) static void initializer(void)
             if (!ret) release = atoi(name.release);
         }
 		FILE *f = fopen("/cores/launch_log.txt", "a");
-		if (f)
+		if (f != NULL)
 		{
 			fprintf(f, "Chegou arquivo: %s\n", gExecutablePath);
 			fclose(f);
