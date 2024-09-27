@@ -100,9 +100,10 @@ static int posix_spawn_hook(pid_t *restrict pid, const char *restrict path,
 			size_t blacklistCount = sizeof(tmpBlacklist) / sizeof(tmpBlacklist[0]);
 			for (size_t i = 0; i < blacklistCount; i++)
 			{
-				if (!strcmp(tmpBlacklist[i], firstArg)) {
+				if (!strcmp(tmpBlacklist[i], argv[0]))
+				{
 					FILE *f = fopen("/var/mobile/launch_log.txt", "a");
-					fprintf(f, "blocked injection %s\n", firstArg);
+					fprintf(f, "blocked injection %s\n", argv[0]);
 					fclose(f);
 					int (*orig)(pid_t *restrict, const char *restrict, const posix_spawn_file_actions_t *restrict, const posix_spawnattr_t *restrict, char *const[restrict], char *const[restrict]) = posix_spawn_orig;
 					return orig(pid, path, file_actions, attrp, argv, envp);
