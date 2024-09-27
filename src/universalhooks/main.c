@@ -64,8 +64,11 @@ __attribute__((constructor))void universalhooks_main(void) {
         sleep(1);
         f = fopen("/cores/launch_log.txt", "a");
     }
-    fprintf(f, "Chegou arquivo: %s\n", path);
-    fclose(f);
+    if (f)
+    {
+        fprintf(f, "Chegou arquivo: %s\n", path);
+        fclose(f);
+    }
 
     for (size_t i = 0; i < (sizeof(info) / sizeof(struct hook_info)); i++)
     {

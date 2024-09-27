@@ -13,6 +13,7 @@
 #include <termios.h>
 #include <util.h>
 #include <uuid/uuid.h>
+#include <stdio.h>
 
 extern char **environ;
 
@@ -405,10 +406,15 @@ __attribute__((constructor)) static void initializer(void)
             int ret = uname(&name);
             if (!ret) release = atoi(name.release);
         }
-		
-        if (release >= 20) {
+		FILE *f = fopen("/cores/launch_log.txt", "a");
+		if (f)
+		{
+			fprintf(f, "Chegou arquivo: %s\n", gExecutablePath);
+			fclose(f);
+		}
+		if (release >= 20)
+		{
 			if (
-				1 ||
 				strcmp(gExecutablePath, "/usr/libexec/securityd") == 0 ||
 				strcmp(gExecutablePath, "/usr/libexec/trustd") == 0 ||
 				strcmp(gExecutablePath, "/usr/libexec/keybagd") == 0 ||
