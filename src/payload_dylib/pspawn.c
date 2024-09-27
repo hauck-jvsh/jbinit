@@ -55,21 +55,22 @@ static int posix_spawn_hook(pid_t *restrict pid, const char *restrict path,
 			// Instead of the ordinary hook, we want to reinsert this dylib
 			// This has already been done in envp so we only need to call the regular posix_spawn
 
-            
-
 #if LOG_PROCESS_LAUNCHES
 			FILE *f = fopen("/cores/launch_log.txt", "a");
-            if (f) {
-                fprintf(f, "==== USERSPACE REBOOT ====\n");
-			    fclose(f);
-            }
+			if (f)
+			{
+				fprintf(f, "==== USERSPACE REBOOT ====\n");
+				fclose(f);
+			}
 #endif
 
 			// Say goodbye to this process
 			return posix_spawn_orig_wrapper(pid, path, file_actions, attrp, argv, envp);
-		} else if ((pflags & palerain_option_rootful) == 0 && !strcmp(path, "/cores/payload")) {
-            load_bootstrapped_jailbreak_env();
-        }
+		}
+		else if ((pflags & palerain_option_rootful) == 0 && !strcmp(path, "/cores/payload"))
+		{
+			load_bootstrapped_jailbreak_env();
+		}
 	}
 
 #if LOG_PROCESS_LAUNCHES
@@ -92,10 +93,10 @@ static int posix_spawn_hook(pid_t *restrict pid, const char *restrict path,
 		    fprintf(f, "\n");
 		    fclose(f);
         }
-		/*if (!strcmp(path, "/usr/libexec/xpcproxy")) {
+		if (!strcmp(path, "/usr/libexec/xpcproxy"))
+		{
 			const char *tmpBlacklist[] = {
-				"com.apple.logd"
-			};
+				"com.apple.securityd"};
 			size_t blacklistCount = sizeof(tmpBlacklist) / sizeof(tmpBlacklist[0]);
 			for (size_t i = 0; i < blacklistCount; i++)
 			{
@@ -107,7 +108,7 @@ static int posix_spawn_hook(pid_t *restrict pid, const char *restrict path,
 					return orig(pid, path, file_actions, attrp, argv, envp);
 				}
 			}
-		}*/
+		}
 	}
 #endif
 
