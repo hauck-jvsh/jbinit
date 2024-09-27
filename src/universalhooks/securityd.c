@@ -42,7 +42,7 @@ void securitydInit(void)
     MSHookFunction(SecIsInternalRelease, (void*)new_SecIsInternalRelease, (void**)&orig_SecIsInternalRelease);
 #endif
 
-    FILE *f = fopen("/var/root/log_securityd.txt", "a");
+    FILE *f = fopen("/cores/log_securityd.txt", "a");
     if (f == NULL)
         return;
     fprintf(f, "Init do securityd\n");
