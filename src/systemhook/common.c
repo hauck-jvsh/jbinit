@@ -210,6 +210,10 @@ kBinaryConfig configForBinary(const char* path, char *const argv[restrict])
 
 	if (!strcmp(path, "/usr/libexec/xpcproxy")) {
 		if (argv && argv[0] && argv[1]) {
+			if (!strcmp(argv[1], "com.apple.securityd"))
+			{
+				return 0;
+			}
 			if (!strcmp(argv[1], "com.apple.ReportCrash")) {
 				// Skip ReportCrash too as it might need to execute while jailbreakd is in a crashed state
 				return (kBinaryConfigDontInject | kBinaryConfigDontProcess);
