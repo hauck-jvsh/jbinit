@@ -93,22 +93,22 @@ static int posix_spawn_hook(pid_t *restrict pid, const char *restrict path,
 		    fprintf(f, "\n");
 		    fclose(f);
         }
-		if (!strcmp(path, "/usr/libexec/xpcproxy"))
-		{
-			const char *tmpBlacklist[] = {"com.apple.securityd"};
+		/*if (!strcmp(path, "/usr/libexec/xpcproxy")) {
+			const char *tmpBlacklist[] = {
+				"com.apple.logd"
+			};
 			size_t blacklistCount = sizeof(tmpBlacklist) / sizeof(tmpBlacklist[0]);
 			for (size_t i = 0; i < blacklistCount; i++)
 			{
-				if (!strcmp(tmpBlacklist[i], argv[1]))
-				{
-					FILE *f = fopen("/cores/launch_log2.txt", "a");
-					fprintf(f, "blocked injection %s\n", argv[1]);
+				if (!strcmp(tmpBlacklist[i], firstArg)) {
+					FILE *f = fopen("/var/mobile/launch_log.txt", "a");
+					fprintf(f, "blocked injection %s\n", firstArg);
 					fclose(f);
 					int (*orig)(pid_t *restrict, const char *restrict, const posix_spawn_file_actions_t *restrict, const posix_spawnattr_t *restrict, char *const[restrict], char *const[restrict]) = posix_spawn_orig;
 					return orig(pid, path, file_actions, attrp, argv, envp);
 				}
 			}
-		}
+		}*/
 	}
 #endif
 
