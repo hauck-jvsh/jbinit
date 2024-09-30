@@ -340,7 +340,7 @@ bool shouldEnableTweaks(void)
 
 	const char *tweaksDisabledPathSuffixes[] = {
 		// System binaries
-		"/usr/libexec/xpcproxy",
+		//"/usr/libexec/xpcproxy",
 
 		// Dopamine app itself (jailbreak detection bypass tweaks can break it)
 		"Dopamine.app/Dopamine",
