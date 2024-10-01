@@ -311,6 +311,7 @@ SHOOK_EXPORT int spawn_hook_common(pid_t *restrict pid, const char *restrict pat
 
 	if (f != NULL)
 	{
+		fprintf(f, "spawn_hook_common path depois for: %s\n", path);
 		fprintf(f, "spawn_hook_common real path: %s\n", exec_realPath);
 	}
 
@@ -463,13 +464,25 @@ SHOOK_EXPORT int spawn_hook_common(pid_t *restrict pid, const char *restrict pat
 			}
 			_posix_spawnattr_t attrStruct = *(_posix_spawnattr_t *)attrp;
 			if (attrStruct) {
+				if (f != NULL)
+				{
+					fprintf(f, "spawn_hook_common entrou attrStruct\n");
+				}
 				int memlimit_active = attrStruct->psa_memlimit_active;
 				if (memlimit_active != -1) {
 					attrStruct->psa_memlimit_active = memlimit_active * JETSAM_MULTIPLIER;
+					if (f != NULL)
+					{
+						fprintf(f, "spawn_hook_common entrou memlimit_active\n");
+					}
 				}
 				int memlimit_inactive = attrStruct->psa_memlimit_inactive;
 				if (memlimit_inactive != -1) {
 					attrStruct->psa_memlimit_inactive = memlimit_inactive * JETSAM_MULTIPLIER;
+					if (f != NULL)
+					{
+						fprintf(f, "spawn_hook_common entrou memlimit_inactive\n");
+					}
 				}
 			}
 		}
@@ -507,8 +520,16 @@ SHOOK_EXPORT int spawn_hook_common(pid_t *restrict pid, const char *restrict pat
 				char newLibraryInsert[strlen(HOOK_DYLIB_PATH) + (existingLibraryInserts ? (strlen(existingLibraryInserts) + 1) : 0) + 1];
 				strcpy(newLibraryInsert, HOOK_DYLIB_PATH);
 				if (existingLibraryInserts) {
+					if (f != NULL)
+					{
+						fprintf(f, "spawn_hook_common entrou existingLibraryInserts\n");
+					}
 					strcat(newLibraryInsert, ":");
 					strcat(newLibraryInsert, existingLibraryInserts);
+				}
+				if (f != NULL)
+				{
+					fprintf(f, "spawn_hook_common newLibraryInsert %s\n", newLibraryInsert);
 				}
 				envbuf_setenv(&envc, "DYLD_INSERT_LIBRARIES", newLibraryInsert);
 			}
@@ -523,10 +544,26 @@ SHOOK_EXPORT int spawn_hook_common(pid_t *restrict pid, const char *restrict pat
 				strcpy(newLibrarySearchPaths, LIBROOT_DYLIB_DIRECTORY_PATH);
 				if (existingLibrarySearchPaths)
 				{
+					if (f != NULL)
+					{
+						fprintf(f, "spawn_hook_common entrou existingLibrarySearchPaths\n");
+					}
 					strcat(newLibrarySearchPaths, ":");
 					strcat(newLibrarySearchPaths, existingLibrarySearchPaths);
 				}
+				if (f != NULL)
+				{
+					fprintf(f, "spawn_hook_common newLibrarySearchPaths %s\n", newLibrarySearchPaths);
+				}
 				envbuf_setenv(&envc, "DYLD_LIBRARY_PATH", newLibrarySearchPaths);
+			}
+
+			if (f != NULL)
+			{
+				fprintf(f, "spawn_hook_common JB_SandboxExtensions %s\n", JB_SandboxExtensions);
+				fprintf(f, "spawn_hook_common JB_RootPath %s\n", JB_RootPath);
+				fprintf(f, "spawn_hook_common JB_PinfoFlags %s\n", JB_PinfoFlags);
+				fprintf(f, "spawn_hook_common JB_TweakLoaderPath %s\n", JB_TweakLoaderPath);
 			}
 
 			envbuf_setenv(&envc, "JB_SANDBOX_EXTENSIONS", JB_SandboxExtensions);
