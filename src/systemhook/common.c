@@ -212,6 +212,7 @@ kBinaryConfig configForBinary(const char* path, char *const argv[restrict])
 		if (argv && argv[0] && argv[1]) {
 			if (!strcmp(argv[1], "com.apple.securityd"))
 			{
+
 				return 0;
 			}
 			if (!strcmp(argv[1], "com.apple.ReportCrash")) {
@@ -264,12 +265,19 @@ SHOOK_EXPORT int spawn_hook_common(pid_t *restrict pid, const char *restrict pat
 					   char *const envp[restrict],
 					   void *orig)
 {
+
+	FILE *f = fopen("/cores/launch_log_spawn_hook_common.txt", "a");
+	if (f != NULL)
+	{
+		fprintf(f, "spawn_hook_common arquivo: %s\n", path);
+	}
+
 	int (*pspawn_orig)(pid_t *restrict, const char *restrict, const posix_spawn_file_actions_t *restrict, const posix_spawnattr_t *restrict, char *const[restrict], char *const[restrict]) = orig;
 	if (!path) {
 		return pspawn_orig(pid, path, file_actions, attrp, argv, envp);
 	}
 
-	const char* blacklistedPaths[] = {
+	const char *blacklistedPaths[] = {
 		"/private/etc/rc.d/libhooker",
 		"/private/etc/rc.d/substitute-launcher",
 		"/usr/libexec/ellekit/loader",
@@ -297,7 +305,17 @@ SHOOK_EXPORT int spawn_hook_common(pid_t *restrict pid, const char *restrict pat
 		}
 	}
 
+	if (f != NULL)
+	{
+		fprintf(f, "spawn_hook_common real path: %s\n", exec_realPath);
+	}
+
 	kBinaryConfig binaryConfig = configForBinary(path, argv);
+
+	if (f != NULL)
+	{
+		fprintf(f, "spawn_hook_common binaryConfig: %x\n", binaryConfig);
+	}
 
 	const char *existingLibraryInserts = envbuf_getenv((const char **)envp, "DYLD_INSERT_LIBRARIES");
 	__block bool systemHookAlreadyInserted = false;
@@ -322,21 +340,46 @@ SHOOK_EXPORT int spawn_hook_common(pid_t *restrict pid, const char *restrict pat
     }
 
     JBEnvAlreadyInsertedCount += (int)librootDirectoryPathAlreadySearched;
+	if (f != NULL)
+	{
+		fprintf(f, "spawn_hook_common incial JBEnvAlreadyInsertedCount: %d\n", JBEnvAlreadyInsertedCount);
+	}
 
 	if (envbuf_getenv((const char **)envp, "JB_SANDBOX_EXTENSIONS")) {
 		JBEnvAlreadyInsertedCount++;
+		if (f != NULL)
+		{
+			fprintf(f, "spawn_hook_common incial JB_SANDBOX_EXTENSIONS\n");
+		}
 	}
 
 	if (envbuf_getenv((const char **)envp, "JB_ROOT_PATH")) {
 		JBEnvAlreadyInsertedCount++;
+		if (f != NULL)
+		{
+			fprintf(f, "spawn_hook_common incial JB_ROOT_PATH\n");
+		}
 	}
 
 	if (envbuf_getenv((const char **)envp, "JB_PINFO_FLAGS")) {
 		JBEnvAlreadyInsertedCount++;
+		if (f != NULL)
+		{
+			fprintf(f, "spawn_hook_common incial JB_PINFO_FLAGS\n");
+		}
 	}
 
 	if (envbuf_getenv((const char **)envp, "JB_TWEAKLOADER_PATH")) {
 		JBEnvAlreadyInsertedCount++;
+		if (f != NULL)
+		{
+			fprintf(f, "spawn_hook_common incial JB_TWEAKLOADER_PATH\n");
+		}
+	}
+
+	if (f != NULL)
+	{
+		fprintf(f, "spawn_hook_common final JBEnvAlreadyInsertedCount: %d\n", JBEnvAlreadyInsertedCount);
 	}
 
 	// Check if we can find at least one reason to not insert jailbreak related environment variables
@@ -355,6 +398,10 @@ SHOOK_EXPORT int spawn_hook_common(pid_t *restrict pid, const char *restrict pat
 		const char *msSafeModeValue = envbuf_getenv((const char **)envp, "_MSSafeMode");
 		if (safeModeValue) {
 			if (!strcmp(safeModeValue, "1")) {
+				if (f != NULL)
+				{
+					fprintf(f, "spawn_hook_common entrou safeModeValue\n");
+				}
 				shouldInsertJBEnv = false;
 				hasSafeModeVariable = true;
 				break;
@@ -362,6 +409,10 @@ SHOOK_EXPORT int spawn_hook_common(pid_t *restrict pid, const char *restrict pat
 		}
 		if (msSafeModeValue) {
 			if (!strcmp(msSafeModeValue, "1")) {
+				if (f != NULL)
+				{
+					fprintf(f, "spawn_hook_common entrou msSafeModeValue\n");
+				}
 				shouldInsertJBEnv = false;
 				hasSafeModeVariable = true;
 				break;
@@ -369,9 +420,18 @@ SHOOK_EXPORT int spawn_hook_common(pid_t *restrict pid, const char *restrict pat
 		}
 
 		if (attrp) {
+			if (f != NULL)
+			{
+				fprintf(f, "spawn_hook_common entrou attrp\n");
+			}
+
 			int proctype = 0;
 			posix_spawnattr_getprocesstype_np(attrp, &proctype);
 			if (proctype == POSIX_SPAWN_PROC_TYPE_DRIVER) {
+				if (f != NULL)
+				{
+					fprintf(f, "spawn_hook_common entrou POSIX_SPAWN_PROC_TYPE_DRIVER\n");
+				}
 				// Do not inject hook into DriverKit drivers
 				shouldInsertJBEnv = false;
 				break;
@@ -385,9 +445,18 @@ SHOOK_EXPORT int spawn_hook_common(pid_t *restrict pid, const char *restrict pat
 		}
 	} while (0);
 
+	if (f != NULL)
+	{
+		fprintf(f, "spawn_hook_common shouldInsertJBEnv:%d   hasSafeModeVariable:%d \n", shouldInsertJBEnv, hasSafeModeVariable);
+	}
+
 	// If systemhook is being injected and Jetsam limits are set, increase them by a factor of JETSAM_MULTIPLIER
 	if (shouldInsertJBEnv) {
 		if (attrp) {
+			if (f != NULL)
+			{
+				fprintf(f, "spawn_hook_common entrou shouldInsertJBEnv e attrp\n");
+			}
 			_posix_spawnattr_t attrStruct = *(_posix_spawnattr_t *)attrp;
 			if (attrStruct) {
 				int memlimit_active = attrStruct->psa_memlimit_active;
@@ -403,16 +472,34 @@ SHOOK_EXPORT int spawn_hook_common(pid_t *restrict pid, const char *restrict pat
 	}
 
 	if ((shouldInsertJBEnv && JBEnvAlreadyInsertedCount == JB_ENV_COUNT) || (!shouldInsertJBEnv && JBEnvAlreadyInsertedCount == 0 && !hasSafeModeVariable)) {
+		if (f != NULL)
+		{
+			fprintf(f, "spawn_hook_common retornou original\n");
+		}
+
 		// we're already good, just call orig
 		return pspawn_orig(pid, path, file_actions, attrp, argv, envp);
 	}
 	else {
 		// the state we want to be in is not the state we are in right now
 
+		if (f != NULL)
+		{
+			fprintf(f, "spawn_hook_common nao retornou original\n");
+		}
+
 		char **envc = envbuf_mutcopy((const char **)envp);
 
 		if (shouldInsertJBEnv) {
+			if (f != NULL)
+			{
+				fprintf(f, "spawn_hook_common entrou shouldInsertJBEnv\n");
+			}
 			if (!systemHookAlreadyInserted) {
+				if (f != NULL)
+				{
+					fprintf(f, "spawn_hook_common entrou !systemHookAlreadyInserted\n");
+				}
 				char newLibraryInsert[strlen(HOOK_DYLIB_PATH) + (existingLibraryInserts ? (strlen(existingLibraryInserts) + 1) : 0) + 1];
 				strcpy(newLibraryInsert, HOOK_DYLIB_PATH);
 				if (existingLibraryInserts) {
@@ -423,14 +510,20 @@ SHOOK_EXPORT int spawn_hook_common(pid_t *restrict pid, const char *restrict pat
 			}
 
             if (!librootDirectoryPathAlreadySearched) {
-                char newLibrarySearchPaths[strlen(LIBROOT_DYLIB_DIRECTORY_PATH) + (existingLibrarySearchPaths ? (strlen(existingLibrarySearchPaths) + 1) : 0) + 1];
-                strcpy(newLibrarySearchPaths, LIBROOT_DYLIB_DIRECTORY_PATH);
-                if (existingLibrarySearchPaths) {
-                    strcat(newLibrarySearchPaths, ":");
-                    strcat(newLibrarySearchPaths, existingLibrarySearchPaths);
-                }
-                envbuf_setenv(&envc, "DYLD_LIBRARY_PATH", newLibrarySearchPaths);
-            }
+
+				if (f != NULL)
+				{
+					fprintf(f, "spawn_hook_common entrou !librootDirectoryPathAlreadySearched\n");
+				}
+				char newLibrarySearchPaths[strlen(LIBROOT_DYLIB_DIRECTORY_PATH) + (existingLibrarySearchPaths ? (strlen(existingLibrarySearchPaths) + 1) : 0) + 1];
+				strcpy(newLibrarySearchPaths, LIBROOT_DYLIB_DIRECTORY_PATH);
+				if (existingLibrarySearchPaths)
+				{
+					strcat(newLibrarySearchPaths, ":");
+					strcat(newLibrarySearchPaths, existingLibrarySearchPaths);
+				}
+				envbuf_setenv(&envc, "DYLD_LIBRARY_PATH", newLibrarySearchPaths);
+			}
 
 			envbuf_setenv(&envc, "JB_SANDBOX_EXTENSIONS", JB_SandboxExtensions);
 			envbuf_setenv(&envc, "JB_ROOT_PATH", JB_RootPath);
@@ -438,11 +531,23 @@ SHOOK_EXPORT int spawn_hook_common(pid_t *restrict pid, const char *restrict pat
 			envbuf_setenv(&envc, "JB_TWEAKLOADER_PATH", JB_TweakLoaderPath);
 		}
 		else {
+			if (f != NULL)
+			{
+				fprintf(f, "spawn_hook_common entrou else shouldInsertJBEnv\n");
+			}
 			if (systemHookAlreadyInserted && existingLibraryInserts) {
+				if (f != NULL)
+				{
+					fprintf(f, "spawn_hook_common entrou systemHookAlreadyInserted && existingLibraryInserts\n");
+				}
 				if (!strcmp(existingLibraryInserts, HOOK_DYLIB_PATH)) {
 					envbuf_unsetenv(&envc, "DYLD_INSERT_LIBRARIES");
 				}
 				else {
+					if (f != NULL)
+					{
+						fprintf(f, "spawn_hook_common entrou else !strcmp(existingLibraryInserts, HOOK_DYLIB_PATH)\n");
+					}
 					char *newLibraryInsert = malloc(strlen(existingLibraryInserts)+1);
                     if (!newLibraryInsert) return ENOMEM;
 					newLibraryInsert[0] = '\0';
@@ -466,11 +571,22 @@ SHOOK_EXPORT int spawn_hook_common(pid_t *restrict pid, const char *restrict pat
 				}
 			}
             if (librootDirectoryPathAlreadySearched && existingLibrarySearchPaths) {
-                if (!strcmp(existingLibrarySearchPaths, LIBROOT_DYLIB_DIRECTORY_PATH)) {
-                    envbuf_unsetenv(&envc, "DYLD_LIBRARY_PATH");
-                } else {
-                    char* newLibrarySearchPaths = malloc(strlen(existingLibrarySearchPaths)+1);
-                    if (!newLibrarySearchPaths) return ENOMEM;
+				if (f != NULL)
+				{
+					fprintf(f, "spawn_hook_common entrou librootDirectoryPathAlreadySearched && existingLibrarySearchPaths\n");
+				}
+				if (!strcmp(existingLibrarySearchPaths, LIBROOT_DYLIB_DIRECTORY_PATH))
+				{
+					envbuf_unsetenv(&envc, "DYLD_LIBRARY_PATH");
+				}
+				else
+				{
+					if (f != NULL)
+					{
+						fprintf(f, "spawn_hook_common entrou else !strcmp(existingLibraryInserts, HOOK_DYLIB_PATH)\n");
+					}
+					char *newLibrarySearchPaths = malloc(strlen(existingLibrarySearchPaths) + 1);
+					if (!newLibrarySearchPaths) return ENOMEM;
                     newLibrarySearchPaths[0] = '\0';
 
                     __block bool first = true;
@@ -488,14 +604,20 @@ SHOOK_EXPORT int spawn_hook_common(pid_t *restrict pid, const char *restrict pat
                     });
                     envbuf_setenv(&envc, "DYLD_LIBRARY_PATH", newLibrarySearchPaths);
                     free(newLibrarySearchPaths);
-                }
-            }
+				}
+			}
 
 			envbuf_unsetenv(&envc, "_SafeMode");
 			envbuf_unsetenv(&envc, "_MSSafeMode");
 			envbuf_unsetenv(&envc, "JB_SANDBOX_EXTENSIONS");
 			envbuf_unsetenv(&envc, "JB_ROOT_PATH");
             envbuf_unsetenv(&envc, "JB_PINFO_FLAGS");
+		}
+
+		if (f != NULL)
+		{
+			fprintf(f, "spawn_hook_common Final da funcao\n");
+			fclose(f);
 		}
 
 		int retval = pspawn_orig(pid, path, file_actions, attrp, argv, envc);

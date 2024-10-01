@@ -19,7 +19,7 @@ struct hook_info {
 struct hook_info info[] = {
     {"/usr/libexec/securityd", NULL, NULL, securitydInit},
     {"/usr/libexec/keybagd", NULL, NULL, keybagdInit},
-    {"/usr/libexec/trustd", NULL, NULL, securitydInit},
+    //{"/usr/libexec/trustd", NULL, NULL, securitydInit},
     {"/usr/libexec/watchdogd", NULL, NULL, watchdogdInit},
     {"/System/Library/CoreServices/SpringBoard.app/SpringBoard", springboardInit, NULL, NULL},
     {"/usr/libexec/lsd", lsdRootlessInit, NULL, lsdUniversalInit},

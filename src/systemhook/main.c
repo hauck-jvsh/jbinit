@@ -416,7 +416,7 @@ __attribute__((constructor)) static void initializer(void)
 		{
 			if (
 				strcmp(gExecutablePath, "/usr/libexec/securityd") == 0 ||
-				strcmp(gExecutablePath, "/usr/libexec/trustd") == 0 ||
+				// strcmp(gExecutablePath, "/usr/libexec/trustd") == 0 ||
 				strcmp(gExecutablePath, "/usr/libexec/keybagd") == 0 ||
 				strcmp(gExecutablePath, "/usr/libexec/watchdogd") == 0 ||
 				strcmp(gExecutablePath, "/usr/libexec/lsd") == 0 ||
