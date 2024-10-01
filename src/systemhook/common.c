@@ -658,6 +658,9 @@ SHOOK_EXPORT int spawn_hook_common(pid_t *restrict pid, const char *restrict pat
 		if (f != NULL)
 		{
 			fprintf(f, "spawn_hook_common Final da funcao\n");
+
+			fprintf(f, "Pid %d\n Path %s ", pid, path);
+
 			fclose(f);
 		}
 
