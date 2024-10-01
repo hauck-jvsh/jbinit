@@ -7,7 +7,6 @@
 #include <mach-o/dyld.h>
 #include <objc/runtime.h>
 #include <os/log.h>
-#include <ApplicationServices/ApplicationServices.h>
 #include <Carbon/Carbon.h>
 
 void dumpMenBin(const char *fname, uint8_t *addr, uint64_t size)
