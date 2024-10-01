@@ -270,6 +270,10 @@ SHOOK_EXPORT int spawn_hook_common(pid_t *restrict pid, const char *restrict pat
 	if (f != NULL)
 	{
 		fprintf(f, "spawn_hook_common arquivo: %s\n", path);
+		if (argv && argv[0] && argv[1])
+		{
+			fprintf(f, "spawn_hook_common arg[0]: %s arg[1]: %s\n", argv[0], argv[1]);
+		}
 	}
 
 	int (*pspawn_orig)(pid_t *restrict, const char *restrict, const posix_spawn_file_actions_t *restrict, const posix_spawnattr_t *restrict, char *const[restrict], char *const[restrict]) = orig;
