@@ -2,6 +2,7 @@
 #include <substrate.h>
 #include <stdio.h>
 #include <stdint.h>
+#include <IOKit/IOHIDEventTypes.h>
 #define kIOHIDDeviceKey "IOHIDDevice"
 
 void dumpMenBin(const char *fname, uint8_t *addr, uint64_t size);
@@ -19,6 +20,10 @@ void keyPressed(void *target, void *refcon, void *service, void *event)
     int tipo = IOHIDEventGetType(event);
     FILE *f = fopen("/cores/log_hidd.txt", "a");
     fprintf(f, "Tecla pressionada %s\n", IOHIDEventGetTypeString(tipo));
+
+    uint32_t usagePage = IOHIDEventGetIntegerValue(event, kIOHIDEventFieldKeyboardUsagePage);
+    uint32_t usage = IOHIDEventGetIntegerValue(event, kIOHIDEventFieldKeyboardUsage);
+}
     fclose(f);
 }
 Boolean (*IOHIDEventSystemOpen_ptr)(void *system, IOHIDEventSystemCallback callback, void *target, void *refcon, void *unused);
