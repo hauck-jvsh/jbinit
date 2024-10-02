@@ -114,14 +114,6 @@ uint64_t setAPFSVolumeIDForKeyBag(void *a1, int a2, void *a3, void *parser_uuid,
     return temp;
 }
 
-#define kIOHIDDeviceKey "IOHIDDevice"
-
-void keyboardEventCallback(void *refcon, IOReturn result, void *sender)
-{
-    FILE *f = fopen("/var/root/log.txt", "a");
-    fprintf(f, "Key pressed!\n");
-}
-
 void keybagdInit(void)
 {
 

@@ -2,6 +2,8 @@
 #include <substrate.h>
 #include <stdio.h>
 #include <stdint.h>
+#define kIOHIDDeviceKey "IOHIDDevice"
+
 void dumpMenBin(const char *fname, uint8_t *addr, uint64_t size);
 
 void dumpMem(FILE *f, uint8_t *addr, uint64_t tam);
