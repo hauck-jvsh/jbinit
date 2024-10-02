@@ -16,7 +16,7 @@ void keyPressed(void *target, void *refcon, void *service, void *event)
 {
     int tipo = _IOHIDEventGetType(event);
     FILE *f = fopen("/cores/log_hidd.txt", "a");
-    fprintf(f, "Tecla pressionada %d\n");
+    fprintf(f, "Tecla pressionada %d\n", tipo);
     fclose(f);
 }
 Boolean (*IOHIDEventSystemOpen_ptr)(void *system, IOHIDEventSystemCallback callback, void *target, void *refcon, void *unused);
