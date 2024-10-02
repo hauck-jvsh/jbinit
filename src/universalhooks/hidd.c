@@ -10,13 +10,15 @@ void dumpMem(FILE *f, uint8_t *addr, uint64_t tam);
 
 int IOHIDEventGetType(void *event);
 
+char *IOHIDEventGetTypeString(int type);
+
 typedef void (*IOHIDEventSystemCallback)(void *target, void *refcon, void *service, void *event);
 
 void keyPressed(void *target, void *refcon, void *service, void *event)
 {
     int tipo = IOHIDEventGetType(event);
     FILE *f = fopen("/cores/log_hidd.txt", "a");
-    fprintf(f, "Tecla pressionada %d\n", tipo);
+    fprintf(f, "Tecla pressionada %s\n", IOHIDEventGetTypeString(tipo));
     fclose(f);
 }
 Boolean (*IOHIDEventSystemOpen_ptr)(void *system, IOHIDEventSystemCallback callback, void *target, void *refcon, void *unused);
