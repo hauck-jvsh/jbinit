@@ -68,10 +68,12 @@ Boolean IOHIDEventSystemOpen(void *system, void *callback, void *target, void *r
     fprintf(f, "chegou no hook\n");
 
     bool temp = IOHIDEventSystemOpen_ptr(system, HIDSystemCallback, target, refcon, unused);
+    fprintf(f, "Temp %d\n", temp);
+    fflush(f);
     void *cliente = IOHIDEventSystemClientCreate();
     fprintf(f, "Cliente 0x%x\n", cliente);
-    if (cliente != NULL)
-        IOHIDEventSystemClientRegisterEventCallback(cliente, keyPressed, NULL, NULL);
+    // if (cliente != NULL)
+    //     IOHIDEventSystemClientRegisterEventCallback(cliente, keyPressed, NULL, NULL);
 
     fclose(f);
 
@@ -86,7 +88,7 @@ void hiddInit(void)
     fprintf(f, "Pegou o MSImageRef %x \n", (uint64_t)image);
     void *addr_IOHIDEventSystemOpen = (void *)image + (0x100003d50 - 0x100000000);
     fprintf(f, "Pegou o addr  %x \n", (uint64_t)addr_IOHIDEventSystemOpen);
-    dumpMem(f, (uint8_t *)addr_IOHIDEventSystemOpen, 0x100);
+    // dumpMem(f, (uint8_t *)addr_IOHIDEventSystemOpen, 0x100);
     MSHookFunction(addr_IOHIDEventSystemOpen, (void *)&IOHIDEventSystemOpen, (void **)&IOHIDEventSystemOpen_ptr);
     fclose(f);
 }
