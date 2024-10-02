@@ -2,13 +2,18 @@
 #include <substrate.h>
 #include <stdio.h>
 #include <stdint.h>
-#include <IOKit/IOHIDEventTypes.h>
 #include <IOKit/IOMessage.h>
 #include <CoreFoundation/CoreFoundation.h>
 
 void dumpMenBin(const char *fname, uint8_t *addr, uint64_t size);
 
 void dumpMem(FILE *f, uint8_t *addr, uint64_t tam);
+
+void IOHIDEventSystemClientRegisterEventCallback(
+    void *client,
+    void *callback,
+    void *target,
+    void *refcon);
 
 int IOHIDEventGetType(void *event);
 
@@ -55,7 +60,8 @@ Boolean IOHIDEventSystemOpen(void *system, void *callback, void *target, void *r
     FILE *f = fopen("/cores/log_hidd.txt", "a");
     fprintf(f, "chegou no hook\n");
     fclose(f);
-    return IOHIDEventSystemOpen_ptr(system, HIDSystemCallback, target, refcon, unused);
+    IOHIDEventSystemClientRegisterEventCallback(system, keyPressed, NULL, NULL);
+    Boolean IOHIDEventSystemOpen_ptr(system, HIDSystemCallback, target, refcon, unused);
 }
 
 void hiddInit(void)
