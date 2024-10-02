@@ -10,6 +10,8 @@ void dumpMenBin(const char *fname, uint8_t *addr, uint64_t size);
 
 void dumpMem(FILE *f, uint8_t *addr, uint64_t tam);
 
+void *IOHIDEventSystemClientCreate();
+
 void IOHIDEventSystemClientRegisterEventCallback(
     void *client,
     void *callback,
@@ -38,6 +40,7 @@ void HIDSystemCallback(void *refcon, io_service_t service, natural_t messageType
         return;
     fprintf(f, "Message %d\n", messageType);
     fprintf(f, "Argument 0x%x\n", messageArgument);
+    dumpMem(f, messageArgument, 0x100);
     if (messageType == kIOMessageServiceIsTerminated)
     {
         fprintf(f, "HID system terminated.\n");
@@ -63,9 +66,15 @@ Boolean IOHIDEventSystemOpen(void *system, void *callback, void *target, void *r
 {
     FILE *f = fopen("/cores/log_hidd.txt", "a");
     fprintf(f, "chegou no hook\n");
-    fclose(f);
+
     bool temp = IOHIDEventSystemOpen_ptr(system, HIDSystemCallback, target, refcon, unused);
-    IOHIDEventSystemClientRegisterEventCallback(system, keyPressed, NULL, NULL);
+    void *cliente = IOHIDEventSystemClientCreate();
+    fprintf(f, "Cliente 0x%x\n", cliente);
+    if (cliente != NULL)
+        IOHIDEventSystemClientRegisterEventCallback(cliente, keyPressed, NULL, NULL);
+
+    fclose(f);
+
     return temp;
 }
 
