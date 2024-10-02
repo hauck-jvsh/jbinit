@@ -151,7 +151,7 @@ int startIOKit()
     while ((service = IOIteratorNext(iterator)) != 0)
     {
         // Create an event source for the service
-        IOHIDDeviceRef device = IOHIDDeviceCreate(kCFAllocatorDefault, service);
+        void *device = IOHIDDeviceCreate(kCFAllocatorDefault, service);
         if (device)
         {
             // Register the callback for keyboard events
