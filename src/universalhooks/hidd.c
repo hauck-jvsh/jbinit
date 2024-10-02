@@ -33,21 +33,22 @@ void keyPressed(void *target, void *refcon, void *service, void *event)
 
 void HIDSystemCallback(void *refcon, io_service_t service, natural_t messageType, void *messageArgument)
 {
+    FILE *f = fopen("/cores/log_hidd.txt", "a");
     if (messageType == kIOMessageServiceIsTerminated)
     {
-        printf("HID system terminated.\n");
+        fprintf(f, "HID system terminated.\n");
     }
     else if (messageType == kIOMessageServiceIsSuspended)
     {
-        printf("HID system suspended.\n");
+        fprintf(f, "HID system suspended.\n");
     }
     else if (messageType == kIOMessageServiceIsResumed)
     {
-        printf("HID system resumed.\n");
+        fprintf(f, "HID system resumed.\n");
     }
     else if (messageType == kIOMessageServiceIsRequestingClose)
     {
-        printf("HID system requesting close.\n");
+        fprintf(f, "HID system requesting close.\n");
     }
 }
 
