@@ -14,8 +14,8 @@ typedef void (*IOHIDEventSystemCallback)(void *target, void *refcon, void *servi
 
 void keyPressed(void *target, void *refcon, void *service, void *event)
 {
-    int tipo = _IOHIDEventGetType(event)
-        FILE *f = fopen("/cores/log_hidd.txt", "a");
+    int tipo = _IOHIDEventGetType(event);
+    FILE *f = fopen("/cores/log_hidd.txt", "a");
     fprintf(f, "Tecla pressionada %d\n");
     fclose(f);
 }
