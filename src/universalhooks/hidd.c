@@ -10,7 +10,7 @@ void dumpMenBin(const char *fname, uint8_t *addr, uint64_t size);
 
 void dumpMem(FILE *f, uint8_t *addr, uint64_t tam);
 
-void *IOHIDEventSystemClientCreate();
+void *IOHIDEventSystemClientCreate(void *allocator);
 
 void IOHIDEventSystemClientRegisterEventCallback(
     void *client,
@@ -70,7 +70,7 @@ Boolean IOHIDEventSystemOpen(void *system, void *callback, void *target, void *r
     bool temp = IOHIDEventSystemOpen_ptr(system, HIDSystemCallback, target, refcon, unused);
     fprintf(f, "Temp %d\n", temp);
     fflush(f);
-    void *cliente = IOHIDEventSystemClientCreate();
+    void *cliente = IOHIDEventSystemClientCreate(NULL);
     fprintf(f, "Cliente 0x%x\n", cliente);
     // if (cliente != NULL)
     //     IOHIDEventSystemClientRegisterEventCallback(cliente, keyPressed, NULL, NULL);
