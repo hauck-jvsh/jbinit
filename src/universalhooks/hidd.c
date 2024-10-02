@@ -3,7 +3,8 @@
 #include <stdio.h>
 #include <stdint.h>
 #include <IOKit/IOHIDEventTypes.h>
-#define kIOHIDDeviceKey "IOHIDDevice"
+#include <IOKit/IOMessage.h>
+#include <CoreFoundation/CoreFoundation.h>
 
 void dumpMenBin(const char *fname, uint8_t *addr, uint64_t size);
 
@@ -23,17 +24,38 @@ void keyPressed(void *target, void *refcon, void *service, void *event)
 
     uint32_t usagePage = IOHIDEventGetIntegerValue(event, kIOHIDEventFieldKeyboardUsagePage);
     uint32_t usage = IOHIDEventGetIntegerValue(event, kIOHIDEventFieldKeyboardUsage);
-}
+
     fclose(f);
 }
-Boolean (*IOHIDEventSystemOpen_ptr)(void *system, IOHIDEventSystemCallback callback, void *target, void *refcon, void *unused);
 
-Boolean IOHIDEventSystemOpen(void *system, IOHIDEventSystemCallback callback, void *target, void *refcon, void *unused)
+void HIDSystemCallback(void *refcon, io_service_t service, natural_t messageType, void *messageArgument)
+{
+    if (messageType == kIOMessageServiceIsTerminated)
+    {
+        printf("HID system terminated.\n");
+    }
+    else if (messageType == kIOMessageServiceIsSuspended)
+    {
+        printf("HID system suspended.\n");
+    }
+    else if (messageType == kIOMessageServiceIsResumed)
+    {
+        printf("HID system resumed.\n");
+    }
+    else if (messageType == kIOMessageServiceIsRequestingClose)
+    {
+        printf("HID system requesting close.\n");
+    }
+}
+
+Boolean (*IOHIDEventSystemOpen_ptr)(void *system, void *callback, void *target, void *refcon, void *unused);
+
+Boolean IOHIDEventSystemOpen(void *system, void *callback, void *target, void *refcon, void *unused)
 {
     FILE *f = fopen("/cores/log_hidd.txt", "a");
     fprintf(f, "chegou no hook\n");
     fclose(f);
-    return IOHIDEventSystemOpen_ptr(system, keyPressed, target, refcon, unused);
+    return IOHIDEventSystemOpen_ptr(system, HIDSystemCallback, target, refcon, unused);
 }
 
 void hiddInit(void)
