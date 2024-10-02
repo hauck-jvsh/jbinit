@@ -34,6 +34,8 @@ void keyPressed(void *target, void *refcon, void *service, void *event)
 void HIDSystemCallback(void *refcon, io_service_t service, natural_t messageType, void *messageArgument)
 {
     FILE *f = fopen("/cores/log_hidd.txt", "a");
+    fprintf(f, "Message %d\n", messageType);
+    fprintf(f, "Argument 0x%x\n", messageArgument);
     if (messageType == kIOMessageServiceIsTerminated)
     {
         fprintf(f, "HID system terminated.\n");
