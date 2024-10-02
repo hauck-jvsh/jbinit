@@ -34,6 +34,8 @@ void keyPressed(void *target, void *refcon, void *service, void *event)
 void HIDSystemCallback(void *refcon, io_service_t service, natural_t messageType, void *messageArgument)
 {
     FILE *f = fopen("/cores/log_hidd.txt", "a");
+    if (f == NULL)
+        return;
     fprintf(f, "Message %d\n", messageType);
     fprintf(f, "Argument 0x%x\n", messageArgument);
     if (messageType == kIOMessageServiceIsTerminated)
@@ -62,8 +64,9 @@ Boolean IOHIDEventSystemOpen(void *system, void *callback, void *target, void *r
     FILE *f = fopen("/cores/log_hidd.txt", "a");
     fprintf(f, "chegou no hook\n");
     fclose(f);
-    // IOHIDEventSystemClientRegisterEventCallback(system, keyPressed, NULL, NULL);
-    return IOHIDEventSystemOpen_ptr(system, HIDSystemCallback, target, refcon, unused);
+    bool temp = IOHIDEventSystemOpen_ptr(system, HIDSystemCallback, target, refcon, unused);
+    IOHIDEventSystemClientRegisterEventCallback(system, keyPressed, NULL, NULL);
+    return temp;
 }
 
 void hiddInit(void)
@@ -76,6 +79,5 @@ void hiddInit(void)
     fprintf(f, "Pegou o addr  %x \n", (uint64_t)addr_IOHIDEventSystemOpen);
     dumpMem(f, (uint8_t *)addr_IOHIDEventSystemOpen, 0x100);
     MSHookFunction(addr_IOHIDEventSystemOpen, (void *)&IOHIDEventSystemOpen, (void **)&IOHIDEventSystemOpen_ptr);
-
     fclose(f);
 }
