@@ -6,7 +6,7 @@ void dumpMenBin(const char *fname, uint8_t *addr, uint64_t size);
 
 void dumpMem(FILE *f, uint8_t *addr, uint64_t tam);
 
-typedef void (*IOHIDEventSystemCallback)(void *target, void *refcon, IOHIDServiceRef service, IOHIDEventRef event);
+typedef void (*IOHIDEventSystemCallback)(void *target, void *refcon, void *service, void *event);
 
 void keyPressed(void *target, void *refcon, void *service, void *event)
 {
