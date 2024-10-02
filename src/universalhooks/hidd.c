@@ -8,13 +8,13 @@ void dumpMenBin(const char *fname, uint8_t *addr, uint64_t size);
 
 void dumpMem(FILE *f, uint8_t *addr, uint64_t tam);
 
-int _IOHIDEventGetType(void *event);
+int IOHIDEventGetType(void *event);
 
 typedef void (*IOHIDEventSystemCallback)(void *target, void *refcon, void *service, void *event);
 
 void keyPressed(void *target, void *refcon, void *service, void *event)
 {
-    int tipo = _IOHIDEventGetType(event);
+    int tipo = IOHIDEventGetType(event);
     FILE *f = fopen("/cores/log_hidd.txt", "a");
     fprintf(f, "Tecla pressionada %d\n", tipo);
     fclose(f);
