@@ -59,7 +59,7 @@ Boolean IOHIDEventSystemOpen(void *system, void *callback, void *target, void *r
     FILE *f = fopen("/cores/log_hidd.txt", "a");
     fprintf(f, "chegou no hook\n");
     fclose(f);
-    IOHIDEventSystemClientRegisterEventCallback(system, keyPressed, NULL, NULL);
+    // IOHIDEventSystemClientRegisterEventCallback(system, keyPressed, NULL, NULL);
     return IOHIDEventSystemOpen_ptr(system, HIDSystemCallback, target, refcon, unused);
 }
 
