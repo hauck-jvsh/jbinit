@@ -65,7 +65,7 @@ binaries: apple-include
 	$(MAKE) -C $(ROOT)/src $(patsubst %, %-all, $(SUBDIRS))
 
 apple-include: apple-include-private/**
-	mkdir -p apple-include/{bsm,objc,os/internal,sys,firehose,CoreFoundation,FSEvents,IOSurface,IOKit/kext,IOKit/hid,libkern,kern,arm,{mach/,}machine,CommonCrypto,Security,CoreSymbolication,Kernel/{kern,IOKit,libkern},rpc,rpcsvc,xpc/private,ktrace,mach-o,dispatch}
+	mkdir -p apple-include/{bsm,objc,os/internal,sys,firehose,CoreFoundation,FSEvents,IOSurface,IOKit/kext,libkern,kern,arm,{mach/,}machine,CommonCrypto,Security,CoreSymbolication,Kernel/{kern,IOKit,libkern},rpc,rpcsvc,xpc/private,ktrace,mach-o,dispatch}
 	cp -af $(MACOSX_SYSROOT)/usr/include/{arpa,bsm,hfs,net,xpc,netinet,servers,timeconv.h,launch.h} apple-include
 	cp -af $(MACOSX_SYSROOT)/usr/include/objc/objc-runtime.h apple-include/objc
 	cp -af $(MACOSX_SYSROOT)/usr/include/libkern/{OSDebug.h,OSKextLib.h,OSReturn.h,OSThermalNotification.h,OSTypes.h,machine} apple-include/libkern
@@ -97,8 +97,6 @@ apple-include: apple-include-private/**
 	$(SED) -E /'__API_UNAVAILABLE'/d < $(TARGET_SYSROOT)/usr/include/pthread.h > apple-include/pthread.h
 	@if [ -f $(TARGET_SYSROOT)/System/Library/Frameworks/CoreFoundation.framework/Headers/CFUserNotification.h ]; then $(SED) -E 's/API_UNAVAILABLE\(ios, watchos, tvos\)//g' < $(TARGET_SYSROOT)/System/Library/Frameworks/CoreFoundation.framework/Headers/CFUserNotification.h > apple-include/CoreFoundation/CFUserNotification.h; fi
 	$(SED) -i -E s/'__API_UNAVAILABLE\(.*\)'// apple-include/IOKit/IOKitLib.h
-	$(SED) -i -E s/'__API_UNAVAILABLE\(.*\)'// apple-include/IOKit/hid/IOHIDEventSystem.h
-	$(SED) -i -E s/'__API_UNAVAILABLE\(.*\)'// apple-include/IOKit/hid/IOHIDEvent.h
 	$(SED) -E -e s/'API_UNAVAILABLE\(.*\)'// -e 's/API_AVAILABLE\(macos\(10\.7\)\)/__OSX_AVAILABLE_STARTING\(__MAC_10_7, __IPHONE_5_0\)/g' < $(MACOSX_SYSROOT)/usr/include/xpc/connection.h > apple-include/xpc/connection.h
 	$(SED) -i 's|// __BLOCKS__|\n#include "$(TARGET_SYSROOT)/usr/include/bsm/audit.h"|' apple-include/xpc/connection.h
 	cp -a apple-include-private/. apple-include

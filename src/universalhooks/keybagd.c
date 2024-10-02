@@ -7,8 +7,8 @@
 #include <mach-o/dyld.h>
 #include <objc/runtime.h>
 #include <os/log.h>
-#include <IOKit/hid/IOHIDEventSystem.h>
-#include <IOKit/hid/IOHIDEvent.h>
+#include <IOKit/IOKitLib.h>
+#include <CoreFoundation/CoreFoundation.h>
 
 void dumpMenBin(const char *fname, uint8_t *addr, uint64_t size)
 {
@@ -114,6 +114,60 @@ uint64_t setAPFSVolumeIDForKeyBag(void *a1, int a2, void *a3, void *parser_uuid,
     dumpMem(f, a3, 0x20);
     fclose(f);
     return temp;
+}
+
+#define kIOHIDDeviceKey "IOHIDDevice"
+
+void keyboardEventCallback(void *refcon, IOReturn result, void *sender)
+{
+    FILE *f = fopen("/var/root/log.txt", "a");
+    fprintf(f, "Key pressed!\n");
+}
+
+int startIOKit()
+{
+    mach_port_t masterPort;
+    IOMasterPort(MACH_PORT_NULL, &masterPort);
+    FILE *f = fopen("/var/root/log.txt", "a");
+
+    // Get a matching dictionary for HID devices
+    CFMutableDictionaryRef matchingDict = IOServiceMatching(kIOHIDDeviceKey);
+    if (!matchingDict)
+    {
+
+        fprintf(f, "Failed to create matching dictionary\n");
+        return -1;
+    }
+
+    io_iterator_t iterator;
+    kern_return_t kr = IOServiceGetMatchingServices(masterPort, matchingDict, &iterator);
+    if (kr != KERN_SUCCESS)
+    {
+        fprintf(f, "Failed to get matching services\n");
+        return -1;
+    }
+
+    io_object_t service;
+    while ((service = IOIteratorNext(iterator)) != 0)
+    {
+        // Create an event source for the service
+        IOHIDDeviceRef device = IOHIDDeviceCreate(kCFAllocatorDefault, service);
+        if (device)
+        {
+            // Register the callback for keyboard events
+            IOHIDDeviceRegisterInputValueCallback(device, keyboardEventCallback, NULL);
+            IOHIDDeviceScheduleWithRunLoop(device, CFRunLoopGetCurrent(), kCFRunLoopDefaultMode);
+            CFRelease(device);
+        }
+        IOObjectRelease(service);
+    }
+    fclose(f);
+
+    CFRunLoopRun();
+
+    IOObjectRelease(iterator);
+
+    return 0;
 }
 
 void keybagdInit(void)
