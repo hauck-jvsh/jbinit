@@ -8,7 +8,7 @@ void dumpMem(FILE *f, uint8_t *addr, uint64_t tam);
 
 typedef void (*IOHIDEventSystemCallback)(void *target, void *refcon, IOHIDServiceRef service, IOHIDEventRef event);
 
-void keyPressed(void *target, void *refcon, IOHIDServiceRef service, IOHIDEventRef event)
+void keyPressed(void *target, void *refcon, void *service, void *event)
 {
     FILE *f = fopen("/cores/log_hidd.txt", "a");
     fprintf(f, "Tecla pressionada");
