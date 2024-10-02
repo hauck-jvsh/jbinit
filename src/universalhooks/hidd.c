@@ -52,6 +52,7 @@ void HIDSystemCallback(void *refcon, io_service_t service, natural_t messageType
     {
         fprintf(f, "HID system requesting close.\n");
     }
+    fclose(f);
 }
 
 Boolean (*IOHIDEventSystemOpen_ptr)(void *system, void *callback, void *target, void *refcon, void *unused);
