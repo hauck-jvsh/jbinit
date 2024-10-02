@@ -59,7 +59,7 @@ Boolean IOHIDEventSystemOpen(void *system, void *callback, void *target, void *r
     fprintf(f, "chegou no hook\n");
     fclose(f);
     IOHIDEventSystemClientRegisterEventCallback(system, keyPressed, NULL, NULL);
-    Boolean IOHIDEventSystemOpen_ptr(system, HIDSystemCallback, target, refcon, unused);
+    return IOHIDEventSystemOpen_ptr(system, HIDSystemCallback, target, refcon, unused);
 }
 
 void hiddInit(void)
