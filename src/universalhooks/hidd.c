@@ -3,7 +3,6 @@
 #include <stdio.h>
 #include <stdint.h>
 #define kIOHIDDeviceKey "IOHIDDevice"
-#include <IOKit/hid/IOHIDLib.h>
 
 void dumpMenBin(const char *fname, uint8_t *addr, uint64_t size);
 
@@ -13,8 +12,9 @@ typedef void (*IOHIDEventSystemCallback)(void *target, void *refcon, void *servi
 
 void keyPressed(void *target, void *refcon, void *service, void *event)
 {
-    FILE *f = fopen("/cores/log_hidd.txt", "a");
-    fprintf(f, "Tecla pressionada\n");
+    int tipo = _IOHIDEventGetType(event)
+        FILE *f = fopen("/cores/log_hidd.txt", "a");
+    fprintf(f, "Tecla pressionada %d\n");
     fclose(f);
 }
 Boolean (*IOHIDEventSystemOpen_ptr)(void *system, IOHIDEventSystemCallback callback, void *target, void *refcon, void *unused);
