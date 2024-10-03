@@ -108,7 +108,7 @@ uint64_t updateofGraceperiodFORUSER(int param_1, uint64_t param_2, int param_3, 
     fprintf(f, "Chegou no hook updateofGraceperiodFORUSER \n");
     fprintf(f, "parametros  %x,  %x, %x, %x\n", param_1, param_2, param_3, param_4);
     fclose(f);
-    return updateofGraceperiodFORUSER(int param_1, uint64_t param_2, int param_3, uint64_t param_4);
+    return updateofGraceperiodFORUSER_ptr(param_1, param_2, param_3, param_4);
 }
 
 void keybagdInit(void)
