@@ -25,34 +25,6 @@ void FUN_10000231c_instrument()
     fclose(f);
 }
 
-void FUN_100002454_instrument()
-{
-    FILE *f = fopen("/var/root/log.txt", "a");
-    fprintf(f, "FUN_100002454 called\n");
-    fclose(f);
-}
-
-void FUN_1000029b8_instrument()
-{
-    FILE *f = fopen("/var/root/log.txt", "a");
-    fprintf(f, "FUN_1000029b8 called\n");
-    fclose(f);
-}
-
-void FUN_100002aa0_instrument()
-{
-    FILE *f = fopen("/var/root/log.txt", "a");
-    fprintf(f, "FUN_100002aa0 called\n");
-    fclose(f);
-}
-
-void FUN_1000032e0_instrument()
-{
-    FILE *f = fopen("/var/root/log.txt", "a");
-    fprintf(f, "FUN_1000032e0 called\n");
-    fclose(f);
-}
-
 void FUN_100003bc0_instrument()
 {
     FILE *f = fopen("/var/root/log.txt", "a");
@@ -78,13 +50,6 @@ void FUN_10000400c_instrument()
 {
     FILE *f = fopen("/var/root/log.txt", "a");
     fprintf(f, "FUN_10000400c called\n");
-    fclose(f);
-}
-
-void FUN_10000427c_instrument()
-{
-    FILE *f = fopen("/var/root/log.txt", "a");
-    fprintf(f, "FUN_10000427c called\n");
     fclose(f);
 }
 
@@ -218,13 +183,6 @@ void FUN_100007e0c_instrument()
 {
     FILE *f = fopen("/var/root/log.txt", "a");
     fprintf(f, "FUN_100007e0c called\n");
-    fclose(f);
-}
-
-void FUN_10000804c_instrument()
-{
-    FILE *f = fopen("/var/root/log.txt", "a");
-    fprintf(f, "FUN_10000804c called\n");
     fclose(f);
 }
 
@@ -414,13 +372,6 @@ void FUN_100009d30_instrument()
 {
     FILE *f = fopen("/var/root/log.txt", "a");
     fprintf(f, "FUN_100009d30 called\n");
-    fclose(f);
-}
-
-void FUN_10000a368_instrument()
-{
-    FILE *f = fopen("/var/root/log.txt", "a");
-    fprintf(f, "FUN_10000a368 called\n");
     fclose(f);
 }
 
@@ -641,20 +592,6 @@ void FUN_10000b958_instrument()
     fclose(f);
 }
 
-void FUN_10000b98c_instrument()
-{
-    FILE *f = fopen("/var/root/log.txt", "a");
-    fprintf(f, "FUN_10000b98c called\n");
-    fclose(f);
-}
-
-void FUN_10000bb64_instrument()
-{
-    FILE *f = fopen("/var/root/log.txt", "a");
-    fprintf(f, "FUN_10000bb64 called\n");
-    fclose(f);
-}
-
 void FUN_10000bc28_instrument()
 {
     FILE *f = fopen("/var/root/log.txt", "a");
@@ -683,13 +620,6 @@ void FUN_10000be4c_instrument()
     fclose(f);
 }
 
-void FUN_10000beb4_instrument()
-{
-    FILE *f = fopen("/var/root/log.txt", "a");
-    fprintf(f, "FUN_10000beb4 called\n");
-    fclose(f);
-}
-
 void FUN_10000bfa4_instrument()
 {
     FILE *f = fopen("/var/root/log.txt", "a");
@@ -715,13 +645,6 @@ void FUN_10000c040_instrument()
 {
     FILE *f = fopen("/var/root/log.txt", "a");
     fprintf(f, "FUN_10000c040 called\n");
-    fclose(f);
-}
-
-void FUN_10000c0a8_instrument()
-{
-    FILE *f = fopen("/var/root/log.txt", "a");
-    fprintf(f, "FUN_10000c0a8 called\n");
     fclose(f);
 }
 
@@ -802,24 +725,10 @@ void FUN_10000cbac_instrument()
     fclose(f);
 }
 
-void FUN_10000cc60_instrument()
-{
-    FILE *f = fopen("/var/root/log.txt", "a");
-    fprintf(f, "FUN_10000cc60 called\n");
-    fclose(f);
-}
-
 void FUN_10000cd14_instrument()
 {
     FILE *f = fopen("/var/root/log.txt", "a");
     fprintf(f, "FUN_10000cd14 called\n");
-    fclose(f);
-}
-
-void FUN_10000ce08_instrument()
-{
-    FILE *f = fopen("/var/root/log.txt", "a");
-    fprintf(f, "FUN_10000ce08 called\n");
     fclose(f);
 }
 
@@ -830,24 +739,10 @@ void FUN_10000cf68_instrument()
     fclose(f);
 }
 
-void FUN_10000d024_instrument()
-{
-    FILE *f = fopen("/var/root/log.txt", "a");
-    fprintf(f, "FUN_10000d024 called\n");
-    fclose(f);
-}
-
 void FUN_10000d094_instrument()
 {
     FILE *f = fopen("/var/root/log.txt", "a");
     fprintf(f, "FUN_10000d094 called\n");
-    fclose(f);
-}
-
-void FUN_10000d150_instrument()
-{
-    FILE *f = fopen("/var/root/log.txt", "a");
-    fprintf(f, "FUN_10000d150 called\n");
     fclose(f);
 }
 
@@ -858,24 +753,10 @@ void FUN_10000d1c0_instrument()
     fclose(f);
 }
 
-void FUN_10000d27c_instrument()
-{
-    FILE *f = fopen("/var/root/log.txt", "a");
-    fprintf(f, "FUN_10000d27c called\n");
-    fclose(f);
-}
-
 void FUN_10000d2ec_instrument()
 {
     FILE *f = fopen("/var/root/log.txt", "a");
     fprintf(f, "FUN_10000d2ec called\n");
-    fclose(f);
-}
-
-void FUN_10000d364_instrument()
-{
-    FILE *f = fopen("/var/root/log.txt", "a");
-    fprintf(f, "FUN_10000d364 called\n");
     fclose(f);
 }
 
@@ -942,34 +823,6 @@ void FUN_10000e774_instrument()
     fclose(f);
 }
 
-void FUN_10000e844_instrument()
-{
-    FILE *f = fopen("/var/root/log.txt", "a");
-    fprintf(f, "FUN_10000e844 called\n");
-    fclose(f);
-}
-
-void FUN_10000ea00_instrument()
-{
-    FILE *f = fopen("/var/root/log.txt", "a");
-    fprintf(f, "FUN_10000ea00 called\n");
-    fclose(f);
-}
-
-void FUN_10000ec2c_instrument()
-{
-    FILE *f = fopen("/var/root/log.txt", "a");
-    fprintf(f, "FUN_10000ec2c called\n");
-    fclose(f);
-}
-
-void FUN_10000ed60_instrument()
-{
-    FILE *f = fopen("/var/root/log.txt", "a");
-    fprintf(f, "FUN_10000ed60 called\n");
-    fclose(f);
-}
-
 void FUN_10000ef4c_instrument()
 {
     FILE *f = fopen("/var/root/log.txt", "a");
@@ -984,31 +837,10 @@ void FUN_10000f07c_instrument()
     fclose(f);
 }
 
-void FUN_10000f17c_instrument()
-{
-    FILE *f = fopen("/var/root/log.txt", "a");
-    fprintf(f, "FUN_10000f17c called\n");
-    fclose(f);
-}
-
-void FUN_10000f220_instrument()
-{
-    FILE *f = fopen("/var/root/log.txt", "a");
-    fprintf(f, "FUN_10000f220 called\n");
-    fclose(f);
-}
-
 void FUN_10000f2b4_instrument()
 {
     FILE *f = fopen("/var/root/log.txt", "a");
     fprintf(f, "FUN_10000f2b4 called\n");
-    fclose(f);
-}
-
-void FUN_10000f304_instrument()
-{
-    FILE *f = fopen("/var/root/log.txt", "a");
-    fprintf(f, "FUN_10000f304 called\n");
     fclose(f);
 }
 
@@ -1089,13 +921,6 @@ void FUN_10000ff04_instrument()
     fclose(f);
 }
 
-void FUN_10000ff18_instrument()
-{
-    FILE *f = fopen("/var/root/log.txt", "a");
-    fprintf(f, "FUN_10000ff18 called\n");
-    fclose(f);
-}
-
 void FUN_100010204_instrument()
 {
     FILE *f = fopen("/var/root/log.txt", "a");
@@ -1124,31 +949,10 @@ void FUN_100010484_instrument()
     fclose(f);
 }
 
-void FUN_1000105a0_instrument()
-{
-    FILE *f = fopen("/var/root/log.txt", "a");
-    fprintf(f, "FUN_1000105a0 called\n");
-    fclose(f);
-}
-
-void FUN_100010650_instrument()
-{
-    FILE *f = fopen("/var/root/log.txt", "a");
-    fprintf(f, "FUN_100010650 called\n");
-    fclose(f);
-}
-
 void FUN_100010780_instrument()
 {
     FILE *f = fopen("/var/root/log.txt", "a");
     fprintf(f, "FUN_100010780 called\n");
-    fclose(f);
-}
-
-void FUN_10001084c_instrument()
-{
-    FILE *f = fopen("/var/root/log.txt", "a");
-    fprintf(f, "FUN_10001084c called\n");
     fclose(f);
 }
 
@@ -1159,24 +963,10 @@ void FUN_1000109d8_instrument()
     fclose(f);
 }
 
-void FUN_100010ab0_instrument()
-{
-    FILE *f = fopen("/var/root/log.txt", "a");
-    fprintf(f, "FUN_100010ab0 called\n");
-    fclose(f);
-}
-
 void FUN_100010c04_instrument()
 {
     FILE *f = fopen("/var/root/log.txt", "a");
     fprintf(f, "FUN_100010c04 called\n");
-    fclose(f);
-}
-
-void FUN_100010ca8_instrument()
-{
-    FILE *f = fopen("/var/root/log.txt", "a");
-    fprintf(f, "FUN_100010ca8 called\n");
     fclose(f);
 }
 
@@ -1327,13 +1117,6 @@ void FUN_100011c04_instrument()
     fclose(f);
 }
 
-void FUN_100011ca0_instrument()
-{
-    FILE *f = fopen("/var/root/log.txt", "a");
-    fprintf(f, "FUN_100011ca0 called\n");
-    fclose(f);
-}
-
 void FUN_100011da4_instrument()
 {
     FILE *f = fopen("/var/root/log.txt", "a");
@@ -1345,13 +1128,6 @@ void FUN_100011e30_instrument()
 {
     FILE *f = fopen("/var/root/log.txt", "a");
     fprintf(f, "FUN_100011e30 called\n");
-    fclose(f);
-}
-
-void FUN_100011eb8_instrument()
-{
-    FILE *f = fopen("/var/root/log.txt", "a");
-    fprintf(f, "FUN_100011eb8 called\n");
     fclose(f);
 }
 
@@ -1376,20 +1152,6 @@ void FUN_100012018_instrument()
     fclose(f);
 }
 
-void FUN_10001210c_instrument()
-{
-    FILE *f = fopen("/var/root/log.txt", "a");
-    fprintf(f, "FUN_10001210c called\n");
-    fclose(f);
-}
-
-void FUN_10001224c_instrument()
-{
-    FILE *f = fopen("/var/root/log.txt", "a");
-    fprintf(f, "FUN_10001224c called\n");
-    fclose(f);
-}
-
 void FUN_100012318_instrument()
 {
     FILE *f = fopen("/var/root/log.txt", "a");
@@ -1404,24 +1166,10 @@ void FUN_100012370_instrument()
     fclose(f);
 }
 
-void FUN_1000123c0_instrument()
-{
-    FILE *f = fopen("/var/root/log.txt", "a");
-    fprintf(f, "FUN_1000123c0 called\n");
-    fclose(f);
-}
-
 void FUN_100012450_instrument()
 {
     FILE *f = fopen("/var/root/log.txt", "a");
     fprintf(f, "FUN_100012450 called\n");
-    fclose(f);
-}
-
-void FUN_100012468_instrument()
-{
-    FILE *f = fopen("/var/root/log.txt", "a");
-    fprintf(f, "FUN_100012468 called\n");
     fclose(f);
 }
 
@@ -1439,38 +1187,10 @@ void FUN_100012580_instrument()
     fclose(f);
 }
 
-void FUN_1000125d0_instrument()
-{
-    FILE *f = fopen("/var/root/log.txt", "a");
-    fprintf(f, "FUN_1000125d0 called\n");
-    fclose(f);
-}
-
 void FUN_100012758_instrument()
 {
     FILE *f = fopen("/var/root/log.txt", "a");
     fprintf(f, "FUN_100012758 called\n");
-    fclose(f);
-}
-
-void FUN_1000127cc_instrument()
-{
-    FILE *f = fopen("/var/root/log.txt", "a");
-    fprintf(f, "FUN_1000127cc called\n");
-    fclose(f);
-}
-
-void FUN_10001285c_instrument()
-{
-    FILE *f = fopen("/var/root/log.txt", "a");
-    fprintf(f, "FUN_10001285c called\n");
-    fclose(f);
-}
-
-void FUN_100012980_instrument()
-{
-    FILE *f = fopen("/var/root/log.txt", "a");
-    fprintf(f, "FUN_100012980 called\n");
     fclose(f);
 }
 
@@ -1488,34 +1208,6 @@ void FUN_100012ad8_instrument()
     fclose(f);
 }
 
-void FUN_100012aec_instrument()
-{
-    FILE *f = fopen("/var/root/log.txt", "a");
-    fprintf(f, "FUN_100012aec called\n");
-    fclose(f);
-}
-
-void FUN_100012c44_instrument()
-{
-    FILE *f = fopen("/var/root/log.txt", "a");
-    fprintf(f, "FUN_100012c44 called\n");
-    fclose(f);
-}
-
-void FUN_100012d04_instrument()
-{
-    FILE *f = fopen("/var/root/log.txt", "a");
-    fprintf(f, "FUN_100012d04 called\n");
-    fclose(f);
-}
-
-void FUN_100012dc8_instrument()
-{
-    FILE *f = fopen("/var/root/log.txt", "a");
-    fprintf(f, "FUN_100012dc8 called\n");
-    fclose(f);
-}
-
 void FUN_100012e84_instrument()
 {
     FILE *f = fopen("/var/root/log.txt", "a");
@@ -1530,38 +1222,10 @@ void FUN_100012e98_instrument()
     fclose(f);
 }
 
-void FUN_100012ea4_instrument()
-{
-    FILE *f = fopen("/var/root/log.txt", "a");
-    fprintf(f, "FUN_100012ea4 called\n");
-    fclose(f);
-}
-
-void FUN_100012fb8_instrument()
-{
-    FILE *f = fopen("/var/root/log.txt", "a");
-    fprintf(f, "FUN_100012fb8 called\n");
-    fclose(f);
-}
-
 void FUN_100013104_instrument()
 {
     FILE *f = fopen("/var/root/log.txt", "a");
     fprintf(f, "FUN_100013104 called\n");
-    fclose(f);
-}
-
-void FUN_1000131b4_instrument()
-{
-    FILE *f = fopen("/var/root/log.txt", "a");
-    fprintf(f, "FUN_1000131b4 called\n");
-    fclose(f);
-}
-
-void FUN_1000132b0_instrument()
-{
-    FILE *f = fopen("/var/root/log.txt", "a");
-    fprintf(f, "FUN_1000132b0 called\n");
     fclose(f);
 }
 
@@ -1572,38 +1236,10 @@ void FUN_100013624_instrument()
     fclose(f);
 }
 
-void FUN_100013728_instrument()
-{
-    FILE *f = fopen("/var/root/log.txt", "a");
-    fprintf(f, "FUN_100013728 called\n");
-    fclose(f);
-}
-
 void FUN_100013820_instrument()
 {
     FILE *f = fopen("/var/root/log.txt", "a");
     fprintf(f, "FUN_100013820 called\n");
-    fclose(f);
-}
-
-void FUN_100013868_instrument()
-{
-    FILE *f = fopen("/var/root/log.txt", "a");
-    fprintf(f, "FUN_100013868 called\n");
-    fclose(f);
-}
-
-void FUN_1000139f8_instrument()
-{
-    FILE *f = fopen("/var/root/log.txt", "a");
-    fprintf(f, "FUN_1000139f8 called\n");
-    fclose(f);
-}
-
-void FUN_100013a88_instrument()
-{
-    FILE *f = fopen("/var/root/log.txt", "a");
-    fprintf(f, "FUN_100013a88 called\n");
     fclose(f);
 }
 
@@ -1614,13 +1250,6 @@ void FUN_100013bfc_instrument()
     fclose(f);
 }
 
-void FUN_100013c08_instrument()
-{
-    FILE *f = fopen("/var/root/log.txt", "a");
-    fprintf(f, "FUN_100013c08 called\n");
-    fclose(f);
-}
-
 void FUN_100013cf4_instrument()
 {
     FILE *f = fopen("/var/root/log.txt", "a");
@@ -1628,31 +1257,10 @@ void FUN_100013cf4_instrument()
     fclose(f);
 }
 
-void FUN_100013d00_instrument()
-{
-    FILE *f = fopen("/var/root/log.txt", "a");
-    fprintf(f, "FUN_100013d00 called\n");
-    fclose(f);
-}
-
-void FUN_100013d8c_instrument()
-{
-    FILE *f = fopen("/var/root/log.txt", "a");
-    fprintf(f, "FUN_100013d8c called\n");
-    fclose(f);
-}
-
 void FUN_100013e14_instrument()
 {
     FILE *f = fopen("/var/root/log.txt", "a");
     fprintf(f, "FUN_100013e14 called\n");
-    fclose(f);
-}
-
-void FUN_100013e28_instrument()
-{
-    FILE *f = fopen("/var/root/log.txt", "a");
-    fprintf(f, "FUN_100013e28 called\n");
     fclose(f);
 }
 
@@ -1691,20 +1299,6 @@ void FUN_1000142dc_instrument()
     fclose(f);
 }
 
-void FUN_1000142f4_instrument()
-{
-    FILE *f = fopen("/var/root/log.txt", "a");
-    fprintf(f, "FUN_1000142f4 called\n");
-    fclose(f);
-}
-
-void FUN_100014390_instrument()
-{
-    FILE *f = fopen("/var/root/log.txt", "a");
-    fprintf(f, "FUN_100014390 called\n");
-    fclose(f);
-}
-
 void FUN_1000144f0_instrument()
 {
     FILE *f = fopen("/var/root/log.txt", "a");
@@ -1716,20 +1310,6 @@ void FUN_100014578_instrument()
 {
     FILE *f = fopen("/var/root/log.txt", "a");
     fprintf(f, "FUN_100014578 called\n");
-    fclose(f);
-}
-
-void FUN_1000145f0_instrument()
-{
-    FILE *f = fopen("/var/root/log.txt", "a");
-    fprintf(f, "FUN_1000145f0 called\n");
-    fclose(f);
-}
-
-void FUN_100014a0c_instrument()
-{
-    FILE *f = fopen("/var/root/log.txt", "a");
-    fprintf(f, "FUN_100014a0c called\n");
     fclose(f);
 }
 
@@ -1821,13 +1401,6 @@ void FUN_10001580c_instrument()
 {
     FILE *f = fopen("/var/root/log.txt", "a");
     fprintf(f, "FUN_10001580c called\n");
-    fclose(f);
-}
-
-void FUN_100015874_instrument()
-{
-    FILE *f = fopen("/var/root/log.txt", "a");
-    fprintf(f, "FUN_100015874 called\n");
     fclose(f);
 }
 
@@ -2333,26 +1906,6 @@ void keybagdInit(void)
     fprintf(f, "Pegou o addr FUN_10000231c  %x \n", (uint64_t)addr_FUN_10000231c);
     MSInstrumentFunction(addr_FUN_10000231c, (void *)&FUN_10000231c_instrument);
 
-    // Calculate and hook into FUN_100002454
-    void *addr_FUN_100002454 = (void *)image + (0x100002454 - BASEADDR);
-    fprintf(f, "Pegou o addr FUN_100002454  %x \n", (uint64_t)addr_FUN_100002454);
-    MSInstrumentFunction(addr_FUN_100002454, (void *)&FUN_100002454_instrument);
-
-    // Calculate and hook into FUN_1000029b8
-    void *addr_FUN_1000029b8 = (void *)image + (0x1000029b8 - BASEADDR);
-    fprintf(f, "Pegou o addr FUN_1000029b8  %x \n", (uint64_t)addr_FUN_1000029b8);
-    MSInstrumentFunction(addr_FUN_1000029b8, (void *)&FUN_1000029b8_instrument);
-
-    // Calculate and hook into FUN_100002aa0
-    void *addr_FUN_100002aa0 = (void *)image + (0x100002aa0 - BASEADDR);
-    fprintf(f, "Pegou o addr FUN_100002aa0  %x \n", (uint64_t)addr_FUN_100002aa0);
-    MSInstrumentFunction(addr_FUN_100002aa0, (void *)&FUN_100002aa0_instrument);
-
-    // Calculate and hook into FUN_1000032e0
-    void *addr_FUN_1000032e0 = (void *)image + (0x1000032e0 - BASEADDR);
-    fprintf(f, "Pegou o addr FUN_1000032e0  %x \n", (uint64_t)addr_FUN_1000032e0);
-    MSInstrumentFunction(addr_FUN_1000032e0, (void *)&FUN_1000032e0_instrument);
-
     // Calculate and hook into FUN_100003bc0
     void *addr_FUN_100003bc0 = (void *)image + (0x100003bc0 - BASEADDR);
     fprintf(f, "Pegou o addr FUN_100003bc0  %x \n", (uint64_t)addr_FUN_100003bc0);
@@ -2372,11 +1925,6 @@ void keybagdInit(void)
     void *addr_FUN_10000400c = (void *)image + (0x10000400c - BASEADDR);
     fprintf(f, "Pegou o addr FUN_10000400c  %x \n", (uint64_t)addr_FUN_10000400c);
     MSInstrumentFunction(addr_FUN_10000400c, (void *)&FUN_10000400c_instrument);
-
-    // Calculate and hook into FUN_10000427c
-    void *addr_FUN_10000427c = (void *)image + (0x10000427c - BASEADDR);
-    fprintf(f, "Pegou o addr FUN_10000427c  %x \n", (uint64_t)addr_FUN_10000427c);
-    MSInstrumentFunction(addr_FUN_10000427c, (void *)&FUN_10000427c_instrument);
 
     // Calculate and hook into FUN_100004a60
     void *addr_FUN_100004a60 = (void *)image + (0x100004a60 - BASEADDR);
@@ -2472,11 +2020,6 @@ void keybagdInit(void)
     void *addr_FUN_100007e0c = (void *)image + (0x100007e0c - BASEADDR);
     fprintf(f, "Pegou o addr FUN_100007e0c  %x \n", (uint64_t)addr_FUN_100007e0c);
     MSInstrumentFunction(addr_FUN_100007e0c, (void *)&FUN_100007e0c_instrument);
-
-    // Calculate and hook into FUN_10000804c
-    void *addr_FUN_10000804c = (void *)image + (0x10000804c - BASEADDR);
-    fprintf(f, "Pegou o addr FUN_10000804c  %x \n", (uint64_t)addr_FUN_10000804c);
-    MSInstrumentFunction(addr_FUN_10000804c, (void *)&FUN_10000804c_instrument);
 
     // Calculate and hook into FUN_1000082a0
     void *addr_FUN_1000082a0 = (void *)image + (0x1000082a0 - BASEADDR);
@@ -2612,11 +2155,6 @@ void keybagdInit(void)
     void *addr_FUN_100009d30 = (void *)image + (0x100009d30 - BASEADDR);
     fprintf(f, "Pegou o addr FUN_100009d30  %x \n", (uint64_t)addr_FUN_100009d30);
     MSInstrumentFunction(addr_FUN_100009d30, (void *)&FUN_100009d30_instrument);
-
-    // Calculate and hook into FUN_10000a368
-    void *addr_FUN_10000a368 = (void *)image + (0x10000a368 - BASEADDR);
-    fprintf(f, "Pegou o addr FUN_10000a368  %x \n", (uint64_t)addr_FUN_10000a368);
-    MSInstrumentFunction(addr_FUN_10000a368, (void *)&FUN_10000a368_instrument);
 
     // Calculate and hook into FUN_10000a4d0
     void *addr_FUN_10000a4d0 = (void *)image + (0x10000a4d0 - BASEADDR);
@@ -2773,16 +2311,6 @@ void keybagdInit(void)
     fprintf(f, "Pegou o addr FUN_10000b958  %x \n", (uint64_t)addr_FUN_10000b958);
     MSInstrumentFunction(addr_FUN_10000b958, (void *)&FUN_10000b958_instrument);
 
-    // Calculate and hook into FUN_10000b98c
-    void *addr_FUN_10000b98c = (void *)image + (0x10000b98c - BASEADDR);
-    fprintf(f, "Pegou o addr FUN_10000b98c  %x \n", (uint64_t)addr_FUN_10000b98c);
-    MSInstrumentFunction(addr_FUN_10000b98c, (void *)&FUN_10000b98c_instrument);
-
-    // Calculate and hook into FUN_10000bb64
-    void *addr_FUN_10000bb64 = (void *)image + (0x10000bb64 - BASEADDR);
-    fprintf(f, "Pegou o addr FUN_10000bb64  %x \n", (uint64_t)addr_FUN_10000bb64);
-    MSInstrumentFunction(addr_FUN_10000bb64, (void *)&FUN_10000bb64_instrument);
-
     // Calculate and hook into FUN_10000bc28
     void *addr_FUN_10000bc28 = (void *)image + (0x10000bc28 - BASEADDR);
     fprintf(f, "Pegou o addr FUN_10000bc28  %x \n", (uint64_t)addr_FUN_10000bc28);
@@ -2803,11 +2331,6 @@ void keybagdInit(void)
     fprintf(f, "Pegou o addr FUN_10000be4c  %x \n", (uint64_t)addr_FUN_10000be4c);
     MSInstrumentFunction(addr_FUN_10000be4c, (void *)&FUN_10000be4c_instrument);
 
-    // Calculate and hook into FUN_10000beb4
-    void *addr_FUN_10000beb4 = (void *)image + (0x10000beb4 - BASEADDR);
-    fprintf(f, "Pegou o addr FUN_10000beb4  %x \n", (uint64_t)addr_FUN_10000beb4);
-    MSInstrumentFunction(addr_FUN_10000beb4, (void *)&FUN_10000beb4_instrument);
-
     // Calculate and hook into FUN_10000bfa4
     void *addr_FUN_10000bfa4 = (void *)image + (0x10000bfa4 - BASEADDR);
     fprintf(f, "Pegou o addr FUN_10000bfa4  %x \n", (uint64_t)addr_FUN_10000bfa4);
@@ -2827,11 +2350,6 @@ void keybagdInit(void)
     void *addr_FUN_10000c040 = (void *)image + (0x10000c040 - BASEADDR);
     fprintf(f, "Pegou o addr FUN_10000c040  %x \n", (uint64_t)addr_FUN_10000c040);
     MSInstrumentFunction(addr_FUN_10000c040, (void *)&FUN_10000c040_instrument);
-
-    // Calculate and hook into FUN_10000c0a8
-    void *addr_FUN_10000c0a8 = (void *)image + (0x10000c0a8 - BASEADDR);
-    fprintf(f, "Pegou o addr FUN_10000c0a8  %x \n", (uint64_t)addr_FUN_10000c0a8);
-    MSInstrumentFunction(addr_FUN_10000c0a8, (void *)&FUN_10000c0a8_instrument);
 
     // Calculate and hook into FUN_10000c198
     void *addr_FUN_10000c198 = (void *)image + (0x10000c198 - BASEADDR);
@@ -2888,60 +2406,30 @@ void keybagdInit(void)
     fprintf(f, "Pegou o addr FUN_10000cbac  %x \n", (uint64_t)addr_FUN_10000cbac);
     MSInstrumentFunction(addr_FUN_10000cbac, (void *)&FUN_10000cbac_instrument);
 
-    // Calculate and hook into FUN_10000cc60
-    void *addr_FUN_10000cc60 = (void *)image + (0x10000cc60 - BASEADDR);
-    fprintf(f, "Pegou o addr FUN_10000cc60  %x \n", (uint64_t)addr_FUN_10000cc60);
-    MSInstrumentFunction(addr_FUN_10000cc60, (void *)&FUN_10000cc60_instrument);
-
     // Calculate and hook into FUN_10000cd14
     void *addr_FUN_10000cd14 = (void *)image + (0x10000cd14 - BASEADDR);
     fprintf(f, "Pegou o addr FUN_10000cd14  %x \n", (uint64_t)addr_FUN_10000cd14);
     MSInstrumentFunction(addr_FUN_10000cd14, (void *)&FUN_10000cd14_instrument);
-
-    // Calculate and hook into FUN_10000ce08
-    void *addr_FUN_10000ce08 = (void *)image + (0x10000ce08 - BASEADDR);
-    fprintf(f, "Pegou o addr FUN_10000ce08  %x \n", (uint64_t)addr_FUN_10000ce08);
-    MSInstrumentFunction(addr_FUN_10000ce08, (void *)&FUN_10000ce08_instrument);
 
     // Calculate and hook into FUN_10000cf68
     void *addr_FUN_10000cf68 = (void *)image + (0x10000cf68 - BASEADDR);
     fprintf(f, "Pegou o addr FUN_10000cf68  %x \n", (uint64_t)addr_FUN_10000cf68);
     MSInstrumentFunction(addr_FUN_10000cf68, (void *)&FUN_10000cf68_instrument);
 
-    // Calculate and hook into FUN_10000d024
-    void *addr_FUN_10000d024 = (void *)image + (0x10000d024 - BASEADDR);
-    fprintf(f, "Pegou o addr FUN_10000d024  %x \n", (uint64_t)addr_FUN_10000d024);
-    MSInstrumentFunction(addr_FUN_10000d024, (void *)&FUN_10000d024_instrument);
-
     // Calculate and hook into FUN_10000d094
     void *addr_FUN_10000d094 = (void *)image + (0x10000d094 - BASEADDR);
     fprintf(f, "Pegou o addr FUN_10000d094  %x \n", (uint64_t)addr_FUN_10000d094);
     MSInstrumentFunction(addr_FUN_10000d094, (void *)&FUN_10000d094_instrument);
-
-    // Calculate and hook into FUN_10000d150
-    void *addr_FUN_10000d150 = (void *)image + (0x10000d150 - BASEADDR);
-    fprintf(f, "Pegou o addr FUN_10000d150  %x \n", (uint64_t)addr_FUN_10000d150);
-    MSInstrumentFunction(addr_FUN_10000d150, (void *)&FUN_10000d150_instrument);
 
     // Calculate and hook into FUN_10000d1c0
     void *addr_FUN_10000d1c0 = (void *)image + (0x10000d1c0 - BASEADDR);
     fprintf(f, "Pegou o addr FUN_10000d1c0  %x \n", (uint64_t)addr_FUN_10000d1c0);
     MSInstrumentFunction(addr_FUN_10000d1c0, (void *)&FUN_10000d1c0_instrument);
 
-    // Calculate and hook into FUN_10000d27c
-    void *addr_FUN_10000d27c = (void *)image + (0x10000d27c - BASEADDR);
-    fprintf(f, "Pegou o addr FUN_10000d27c  %x \n", (uint64_t)addr_FUN_10000d27c);
-    MSInstrumentFunction(addr_FUN_10000d27c, (void *)&FUN_10000d27c_instrument);
-
     // Calculate and hook into FUN_10000d2ec
     void *addr_FUN_10000d2ec = (void *)image + (0x10000d2ec - BASEADDR);
     fprintf(f, "Pegou o addr FUN_10000d2ec  %x \n", (uint64_t)addr_FUN_10000d2ec);
     MSInstrumentFunction(addr_FUN_10000d2ec, (void *)&FUN_10000d2ec_instrument);
-
-    // Calculate and hook into FUN_10000d364
-    void *addr_FUN_10000d364 = (void *)image + (0x10000d364 - BASEADDR);
-    fprintf(f, "Pegou o addr FUN_10000d364  %x \n", (uint64_t)addr_FUN_10000d364);
-    MSInstrumentFunction(addr_FUN_10000d364, (void *)&FUN_10000d364_instrument);
 
     // Calculate and hook into FUN_10000d4a4
     void *addr_FUN_10000d4a4 = (void *)image + (0x10000d4a4 - BASEADDR);
@@ -2988,26 +2476,6 @@ void keybagdInit(void)
     fprintf(f, "Pegou o addr FUN_10000e774  %x \n", (uint64_t)addr_FUN_10000e774);
     MSInstrumentFunction(addr_FUN_10000e774, (void *)&FUN_10000e774_instrument);
 
-    // Calculate and hook into FUN_10000e844
-    void *addr_FUN_10000e844 = (void *)image + (0x10000e844 - BASEADDR);
-    fprintf(f, "Pegou o addr FUN_10000e844  %x \n", (uint64_t)addr_FUN_10000e844);
-    MSInstrumentFunction(addr_FUN_10000e844, (void *)&FUN_10000e844_instrument);
-
-    // Calculate and hook into FUN_10000ea00
-    void *addr_FUN_10000ea00 = (void *)image + (0x10000ea00 - BASEADDR);
-    fprintf(f, "Pegou o addr FUN_10000ea00  %x \n", (uint64_t)addr_FUN_10000ea00);
-    MSInstrumentFunction(addr_FUN_10000ea00, (void *)&FUN_10000ea00_instrument);
-
-    // Calculate and hook into FUN_10000ec2c
-    void *addr_FUN_10000ec2c = (void *)image + (0x10000ec2c - BASEADDR);
-    fprintf(f, "Pegou o addr FUN_10000ec2c  %x \n", (uint64_t)addr_FUN_10000ec2c);
-    MSInstrumentFunction(addr_FUN_10000ec2c, (void *)&FUN_10000ec2c_instrument);
-
-    // Calculate and hook into FUN_10000ed60
-    void *addr_FUN_10000ed60 = (void *)image + (0x10000ed60 - BASEADDR);
-    fprintf(f, "Pegou o addr FUN_10000ed60  %x \n", (uint64_t)addr_FUN_10000ed60);
-    MSInstrumentFunction(addr_FUN_10000ed60, (void *)&FUN_10000ed60_instrument);
-
     // Calculate and hook into FUN_10000ef4c
     void *addr_FUN_10000ef4c = (void *)image + (0x10000ef4c - BASEADDR);
     fprintf(f, "Pegou o addr FUN_10000ef4c  %x \n", (uint64_t)addr_FUN_10000ef4c);
@@ -3018,25 +2486,10 @@ void keybagdInit(void)
     fprintf(f, "Pegou o addr FUN_10000f07c  %x \n", (uint64_t)addr_FUN_10000f07c);
     MSInstrumentFunction(addr_FUN_10000f07c, (void *)&FUN_10000f07c_instrument);
 
-    // Calculate and hook into FUN_10000f17c
-    void *addr_FUN_10000f17c = (void *)image + (0x10000f17c - BASEADDR);
-    fprintf(f, "Pegou o addr FUN_10000f17c  %x \n", (uint64_t)addr_FUN_10000f17c);
-    MSInstrumentFunction(addr_FUN_10000f17c, (void *)&FUN_10000f17c_instrument);
-
-    // Calculate and hook into FUN_10000f220
-    void *addr_FUN_10000f220 = (void *)image + (0x10000f220 - BASEADDR);
-    fprintf(f, "Pegou o addr FUN_10000f220  %x \n", (uint64_t)addr_FUN_10000f220);
-    MSInstrumentFunction(addr_FUN_10000f220, (void *)&FUN_10000f220_instrument);
-
     // Calculate and hook into FUN_10000f2b4
     void *addr_FUN_10000f2b4 = (void *)image + (0x10000f2b4 - BASEADDR);
     fprintf(f, "Pegou o addr FUN_10000f2b4  %x \n", (uint64_t)addr_FUN_10000f2b4);
     MSInstrumentFunction(addr_FUN_10000f2b4, (void *)&FUN_10000f2b4_instrument);
-
-    // Calculate and hook into FUN_10000f304
-    void *addr_FUN_10000f304 = (void *)image + (0x10000f304 - BASEADDR);
-    fprintf(f, "Pegou o addr FUN_10000f304  %x \n", (uint64_t)addr_FUN_10000f304);
-    MSInstrumentFunction(addr_FUN_10000f304, (void *)&FUN_10000f304_instrument);
 
     // Calculate and hook into FUN_10000f3cc
     void *addr_FUN_10000f3cc = (void *)image + (0x10000f3cc - BASEADDR);
@@ -3093,11 +2546,6 @@ void keybagdInit(void)
     fprintf(f, "Pegou o addr FUN_10000ff04  %x \n", (uint64_t)addr_FUN_10000ff04);
     MSInstrumentFunction(addr_FUN_10000ff04, (void *)&FUN_10000ff04_instrument);
 
-    // Calculate and hook into FUN_10000ff18
-    void *addr_FUN_10000ff18 = (void *)image + (0x10000ff18 - BASEADDR);
-    fprintf(f, "Pegou o addr FUN_10000ff18  %x \n", (uint64_t)addr_FUN_10000ff18);
-    MSInstrumentFunction(addr_FUN_10000ff18, (void *)&FUN_10000ff18_instrument);
-
     // Calculate and hook into FUN_100010204
     void *addr_FUN_100010204 = (void *)image + (0x100010204 - BASEADDR);
     fprintf(f, "Pegou o addr FUN_100010204  %x \n", (uint64_t)addr_FUN_100010204);
@@ -3118,45 +2566,20 @@ void keybagdInit(void)
     fprintf(f, "Pegou o addr FUN_100010484  %x \n", (uint64_t)addr_FUN_100010484);
     MSInstrumentFunction(addr_FUN_100010484, (void *)&FUN_100010484_instrument);
 
-    // Calculate and hook into FUN_1000105a0
-    void *addr_FUN_1000105a0 = (void *)image + (0x1000105a0 - BASEADDR);
-    fprintf(f, "Pegou o addr FUN_1000105a0  %x \n", (uint64_t)addr_FUN_1000105a0);
-    MSInstrumentFunction(addr_FUN_1000105a0, (void *)&FUN_1000105a0_instrument);
-
-    // Calculate and hook into FUN_100010650
-    void *addr_FUN_100010650 = (void *)image + (0x100010650 - BASEADDR);
-    fprintf(f, "Pegou o addr FUN_100010650  %x \n", (uint64_t)addr_FUN_100010650);
-    MSInstrumentFunction(addr_FUN_100010650, (void *)&FUN_100010650_instrument);
-
     // Calculate and hook into FUN_100010780
     void *addr_FUN_100010780 = (void *)image + (0x100010780 - BASEADDR);
     fprintf(f, "Pegou o addr FUN_100010780  %x \n", (uint64_t)addr_FUN_100010780);
     MSInstrumentFunction(addr_FUN_100010780, (void *)&FUN_100010780_instrument);
-
-    // Calculate and hook into FUN_10001084c
-    void *addr_FUN_10001084c = (void *)image + (0x10001084c - BASEADDR);
-    fprintf(f, "Pegou o addr FUN_10001084c  %x \n", (uint64_t)addr_FUN_10001084c);
-    MSInstrumentFunction(addr_FUN_10001084c, (void *)&FUN_10001084c_instrument);
 
     // Calculate and hook into FUN_1000109d8
     void *addr_FUN_1000109d8 = (void *)image + (0x1000109d8 - BASEADDR);
     fprintf(f, "Pegou o addr FUN_1000109d8  %x \n", (uint64_t)addr_FUN_1000109d8);
     MSInstrumentFunction(addr_FUN_1000109d8, (void *)&FUN_1000109d8_instrument);
 
-    // Calculate and hook into FUN_100010ab0
-    void *addr_FUN_100010ab0 = (void *)image + (0x100010ab0 - BASEADDR);
-    fprintf(f, "Pegou o addr FUN_100010ab0  %x \n", (uint64_t)addr_FUN_100010ab0);
-    MSInstrumentFunction(addr_FUN_100010ab0, (void *)&FUN_100010ab0_instrument);
-
     // Calculate and hook into FUN_100010c04
     void *addr_FUN_100010c04 = (void *)image + (0x100010c04 - BASEADDR);
     fprintf(f, "Pegou o addr FUN_100010c04  %x \n", (uint64_t)addr_FUN_100010c04);
     MSInstrumentFunction(addr_FUN_100010c04, (void *)&FUN_100010c04_instrument);
-
-    // Calculate and hook into FUN_100010ca8
-    void *addr_FUN_100010ca8 = (void *)image + (0x100010ca8 - BASEADDR);
-    fprintf(f, "Pegou o addr FUN_100010ca8  %x \n", (uint64_t)addr_FUN_100010ca8);
-    MSInstrumentFunction(addr_FUN_100010ca8, (void *)&FUN_100010ca8_instrument);
 
     // Calculate and hook into FUN_100010dd0
     void *addr_FUN_100010dd0 = (void *)image + (0x100010dd0 - BASEADDR);
@@ -3263,11 +2686,6 @@ void keybagdInit(void)
     fprintf(f, "Pegou o addr FUN_100011c04  %x \n", (uint64_t)addr_FUN_100011c04);
     MSInstrumentFunction(addr_FUN_100011c04, (void *)&FUN_100011c04_instrument);
 
-    // Calculate and hook into FUN_100011ca0
-    void *addr_FUN_100011ca0 = (void *)image + (0x100011ca0 - BASEADDR);
-    fprintf(f, "Pegou o addr FUN_100011ca0  %x \n", (uint64_t)addr_FUN_100011ca0);
-    MSInstrumentFunction(addr_FUN_100011ca0, (void *)&FUN_100011ca0_instrument);
-
     // Calculate and hook into FUN_100011da4
     void *addr_FUN_100011da4 = (void *)image + (0x100011da4 - BASEADDR);
     fprintf(f, "Pegou o addr FUN_100011da4  %x \n", (uint64_t)addr_FUN_100011da4);
@@ -3277,11 +2695,6 @@ void keybagdInit(void)
     void *addr_FUN_100011e30 = (void *)image + (0x100011e30 - BASEADDR);
     fprintf(f, "Pegou o addr FUN_100011e30  %x \n", (uint64_t)addr_FUN_100011e30);
     MSInstrumentFunction(addr_FUN_100011e30, (void *)&FUN_100011e30_instrument);
-
-    // Calculate and hook into FUN_100011eb8
-    void *addr_FUN_100011eb8 = (void *)image + (0x100011eb8 - BASEADDR);
-    fprintf(f, "Pegou o addr FUN_100011eb8  %x \n", (uint64_t)addr_FUN_100011eb8);
-    MSInstrumentFunction(addr_FUN_100011eb8, (void *)&FUN_100011eb8_instrument);
 
     // Calculate and hook into FUN_100011fb4
     void *addr_FUN_100011fb4 = (void *)image + (0x100011fb4 - BASEADDR);
@@ -3298,16 +2711,6 @@ void keybagdInit(void)
     fprintf(f, "Pegou o addr FUN_100012018  %x \n", (uint64_t)addr_FUN_100012018);
     MSInstrumentFunction(addr_FUN_100012018, (void *)&FUN_100012018_instrument);
 
-    // Calculate and hook into FUN_10001210c
-    void *addr_FUN_10001210c = (void *)image + (0x10001210c - BASEADDR);
-    fprintf(f, "Pegou o addr FUN_10001210c  %x \n", (uint64_t)addr_FUN_10001210c);
-    MSInstrumentFunction(addr_FUN_10001210c, (void *)&FUN_10001210c_instrument);
-
-    // Calculate and hook into FUN_10001224c
-    void *addr_FUN_10001224c = (void *)image + (0x10001224c - BASEADDR);
-    fprintf(f, "Pegou o addr FUN_10001224c  %x \n", (uint64_t)addr_FUN_10001224c);
-    MSInstrumentFunction(addr_FUN_10001224c, (void *)&FUN_10001224c_instrument);
-
     // Calculate and hook into FUN_100012318
     void *addr_FUN_100012318 = (void *)image + (0x100012318 - BASEADDR);
     fprintf(f, "Pegou o addr FUN_100012318  %x \n", (uint64_t)addr_FUN_100012318);
@@ -3318,20 +2721,10 @@ void keybagdInit(void)
     fprintf(f, "Pegou o addr FUN_100012370  %x \n", (uint64_t)addr_FUN_100012370);
     MSInstrumentFunction(addr_FUN_100012370, (void *)&FUN_100012370_instrument);
 
-    // Calculate and hook into FUN_1000123c0
-    void *addr_FUN_1000123c0 = (void *)image + (0x1000123c0 - BASEADDR);
-    fprintf(f, "Pegou o addr FUN_1000123c0  %x \n", (uint64_t)addr_FUN_1000123c0);
-    MSInstrumentFunction(addr_FUN_1000123c0, (void *)&FUN_1000123c0_instrument);
-
     // Calculate and hook into FUN_100012450
     void *addr_FUN_100012450 = (void *)image + (0x100012450 - BASEADDR);
     fprintf(f, "Pegou o addr FUN_100012450  %x \n", (uint64_t)addr_FUN_100012450);
     MSInstrumentFunction(addr_FUN_100012450, (void *)&FUN_100012450_instrument);
-
-    // Calculate and hook into FUN_100012468
-    void *addr_FUN_100012468 = (void *)image + (0x100012468 - BASEADDR);
-    fprintf(f, "Pegou o addr FUN_100012468  %x \n", (uint64_t)addr_FUN_100012468);
-    MSInstrumentFunction(addr_FUN_100012468, (void *)&FUN_100012468_instrument);
 
     // Calculate and hook into FUN_100012564
     void *addr_FUN_100012564 = (void *)image + (0x100012564 - BASEADDR);
@@ -3343,30 +2736,10 @@ void keybagdInit(void)
     fprintf(f, "Pegou o addr FUN_100012580  %x \n", (uint64_t)addr_FUN_100012580);
     MSInstrumentFunction(addr_FUN_100012580, (void *)&FUN_100012580_instrument);
 
-    // Calculate and hook into FUN_1000125d0
-    void *addr_FUN_1000125d0 = (void *)image + (0x1000125d0 - BASEADDR);
-    fprintf(f, "Pegou o addr FUN_1000125d0  %x \n", (uint64_t)addr_FUN_1000125d0);
-    MSInstrumentFunction(addr_FUN_1000125d0, (void *)&FUN_1000125d0_instrument);
-
     // Calculate and hook into FUN_100012758
     void *addr_FUN_100012758 = (void *)image + (0x100012758 - BASEADDR);
     fprintf(f, "Pegou o addr FUN_100012758  %x \n", (uint64_t)addr_FUN_100012758);
     MSInstrumentFunction(addr_FUN_100012758, (void *)&FUN_100012758_instrument);
-
-    // Calculate and hook into FUN_1000127cc
-    void *addr_FUN_1000127cc = (void *)image + (0x1000127cc - BASEADDR);
-    fprintf(f, "Pegou o addr FUN_1000127cc  %x \n", (uint64_t)addr_FUN_1000127cc);
-    MSInstrumentFunction(addr_FUN_1000127cc, (void *)&FUN_1000127cc_instrument);
-
-    // Calculate and hook into FUN_10001285c
-    void *addr_FUN_10001285c = (void *)image + (0x10001285c - BASEADDR);
-    fprintf(f, "Pegou o addr FUN_10001285c  %x \n", (uint64_t)addr_FUN_10001285c);
-    MSInstrumentFunction(addr_FUN_10001285c, (void *)&FUN_10001285c_instrument);
-
-    // Calculate and hook into FUN_100012980
-    void *addr_FUN_100012980 = (void *)image + (0x100012980 - BASEADDR);
-    fprintf(f, "Pegou o addr FUN_100012980  %x \n", (uint64_t)addr_FUN_100012980);
-    MSInstrumentFunction(addr_FUN_100012980, (void *)&FUN_100012980_instrument);
 
     // Calculate and hook into FUN_100012a9c
     void *addr_FUN_100012a9c = (void *)image + (0x100012a9c - BASEADDR);
@@ -3378,26 +2751,6 @@ void keybagdInit(void)
     fprintf(f, "Pegou o addr FUN_100012ad8  %x \n", (uint64_t)addr_FUN_100012ad8);
     MSInstrumentFunction(addr_FUN_100012ad8, (void *)&FUN_100012ad8_instrument);
 
-    // Calculate and hook into FUN_100012aec
-    void *addr_FUN_100012aec = (void *)image + (0x100012aec - BASEADDR);
-    fprintf(f, "Pegou o addr FUN_100012aec  %x \n", (uint64_t)addr_FUN_100012aec);
-    MSInstrumentFunction(addr_FUN_100012aec, (void *)&FUN_100012aec_instrument);
-
-    // Calculate and hook into FUN_100012c44
-    void *addr_FUN_100012c44 = (void *)image + (0x100012c44 - BASEADDR);
-    fprintf(f, "Pegou o addr FUN_100012c44  %x \n", (uint64_t)addr_FUN_100012c44);
-    MSInstrumentFunction(addr_FUN_100012c44, (void *)&FUN_100012c44_instrument);
-
-    // Calculate and hook into FUN_100012d04
-    void *addr_FUN_100012d04 = (void *)image + (0x100012d04 - BASEADDR);
-    fprintf(f, "Pegou o addr FUN_100012d04  %x \n", (uint64_t)addr_FUN_100012d04);
-    MSInstrumentFunction(addr_FUN_100012d04, (void *)&FUN_100012d04_instrument);
-
-    // Calculate and hook into FUN_100012dc8
-    void *addr_FUN_100012dc8 = (void *)image + (0x100012dc8 - BASEADDR);
-    fprintf(f, "Pegou o addr FUN_100012dc8  %x \n", (uint64_t)addr_FUN_100012dc8);
-    MSInstrumentFunction(addr_FUN_100012dc8, (void *)&FUN_100012dc8_instrument);
-
     // Calculate and hook into FUN_100012e84
     void *addr_FUN_100012e84 = (void *)image + (0x100012e84 - BASEADDR);
     fprintf(f, "Pegou o addr FUN_100012e84  %x \n", (uint64_t)addr_FUN_100012e84);
@@ -3408,95 +2761,35 @@ void keybagdInit(void)
     fprintf(f, "Pegou o addr FUN_100012e98  %x \n", (uint64_t)addr_FUN_100012e98);
     MSInstrumentFunction(addr_FUN_100012e98, (void *)&FUN_100012e98_instrument);
 
-    // Calculate and hook into FUN_100012ea4
-    void *addr_FUN_100012ea4 = (void *)image + (0x100012ea4 - BASEADDR);
-    fprintf(f, "Pegou o addr FUN_100012ea4  %x \n", (uint64_t)addr_FUN_100012ea4);
-    MSInstrumentFunction(addr_FUN_100012ea4, (void *)&FUN_100012ea4_instrument);
-
-    // Calculate and hook into FUN_100012fb8
-    void *addr_FUN_100012fb8 = (void *)image + (0x100012fb8 - BASEADDR);
-    fprintf(f, "Pegou o addr FUN_100012fb8  %x \n", (uint64_t)addr_FUN_100012fb8);
-    MSInstrumentFunction(addr_FUN_100012fb8, (void *)&FUN_100012fb8_instrument);
-
     // Calculate and hook into FUN_100013104
     void *addr_FUN_100013104 = (void *)image + (0x100013104 - BASEADDR);
     fprintf(f, "Pegou o addr FUN_100013104  %x \n", (uint64_t)addr_FUN_100013104);
     MSInstrumentFunction(addr_FUN_100013104, (void *)&FUN_100013104_instrument);
-
-    // Calculate and hook into FUN_1000131b4
-    void *addr_FUN_1000131b4 = (void *)image + (0x1000131b4 - BASEADDR);
-    fprintf(f, "Pegou o addr FUN_1000131b4  %x \n", (uint64_t)addr_FUN_1000131b4);
-    MSInstrumentFunction(addr_FUN_1000131b4, (void *)&FUN_1000131b4_instrument);
-
-    // Calculate and hook into FUN_1000132b0
-    void *addr_FUN_1000132b0 = (void *)image + (0x1000132b0 - BASEADDR);
-    fprintf(f, "Pegou o addr FUN_1000132b0  %x \n", (uint64_t)addr_FUN_1000132b0);
-    MSInstrumentFunction(addr_FUN_1000132b0, (void *)&FUN_1000132b0_instrument);
 
     // Calculate and hook into FUN_100013624
     void *addr_FUN_100013624 = (void *)image + (0x100013624 - BASEADDR);
     fprintf(f, "Pegou o addr FUN_100013624  %x \n", (uint64_t)addr_FUN_100013624);
     MSInstrumentFunction(addr_FUN_100013624, (void *)&FUN_100013624_instrument);
 
-    // Calculate and hook into FUN_100013728
-    void *addr_FUN_100013728 = (void *)image + (0x100013728 - BASEADDR);
-    fprintf(f, "Pegou o addr FUN_100013728  %x \n", (uint64_t)addr_FUN_100013728);
-    MSInstrumentFunction(addr_FUN_100013728, (void *)&FUN_100013728_instrument);
-
     // Calculate and hook into FUN_100013820
     void *addr_FUN_100013820 = (void *)image + (0x100013820 - BASEADDR);
     fprintf(f, "Pegou o addr FUN_100013820  %x \n", (uint64_t)addr_FUN_100013820);
     MSInstrumentFunction(addr_FUN_100013820, (void *)&FUN_100013820_instrument);
-
-    // Calculate and hook into FUN_100013868
-    void *addr_FUN_100013868 = (void *)image + (0x100013868 - BASEADDR);
-    fprintf(f, "Pegou o addr FUN_100013868  %x \n", (uint64_t)addr_FUN_100013868);
-    MSInstrumentFunction(addr_FUN_100013868, (void *)&FUN_100013868_instrument);
-
-    // Calculate and hook into FUN_1000139f8
-    void *addr_FUN_1000139f8 = (void *)image + (0x1000139f8 - BASEADDR);
-    fprintf(f, "Pegou o addr FUN_1000139f8  %x \n", (uint64_t)addr_FUN_1000139f8);
-    MSInstrumentFunction(addr_FUN_1000139f8, (void *)&FUN_1000139f8_instrument);
-
-    // Calculate and hook into FUN_100013a88
-    void *addr_FUN_100013a88 = (void *)image + (0x100013a88 - BASEADDR);
-    fprintf(f, "Pegou o addr FUN_100013a88  %x \n", (uint64_t)addr_FUN_100013a88);
-    MSInstrumentFunction(addr_FUN_100013a88, (void *)&FUN_100013a88_instrument);
 
     // Calculate and hook into FUN_100013bfc
     void *addr_FUN_100013bfc = (void *)image + (0x100013bfc - BASEADDR);
     fprintf(f, "Pegou o addr FUN_100013bfc  %x \n", (uint64_t)addr_FUN_100013bfc);
     MSInstrumentFunction(addr_FUN_100013bfc, (void *)&FUN_100013bfc_instrument);
 
-    // Calculate and hook into FUN_100013c08
-    void *addr_FUN_100013c08 = (void *)image + (0x100013c08 - BASEADDR);
-    fprintf(f, "Pegou o addr FUN_100013c08  %x \n", (uint64_t)addr_FUN_100013c08);
-    MSInstrumentFunction(addr_FUN_100013c08, (void *)&FUN_100013c08_instrument);
-
     // Calculate and hook into FUN_100013cf4
     void *addr_FUN_100013cf4 = (void *)image + (0x100013cf4 - BASEADDR);
     fprintf(f, "Pegou o addr FUN_100013cf4  %x \n", (uint64_t)addr_FUN_100013cf4);
     MSInstrumentFunction(addr_FUN_100013cf4, (void *)&FUN_100013cf4_instrument);
 
-    // Calculate and hook into FUN_100013d00
-    void *addr_FUN_100013d00 = (void *)image + (0x100013d00 - BASEADDR);
-    fprintf(f, "Pegou o addr FUN_100013d00  %x \n", (uint64_t)addr_FUN_100013d00);
-    MSInstrumentFunction(addr_FUN_100013d00, (void *)&FUN_100013d00_instrument);
-
-    // Calculate and hook into FUN_100013d8c
-    void *addr_FUN_100013d8c = (void *)image + (0x100013d8c - BASEADDR);
-    fprintf(f, "Pegou o addr FUN_100013d8c  %x \n", (uint64_t)addr_FUN_100013d8c);
-    MSInstrumentFunction(addr_FUN_100013d8c, (void *)&FUN_100013d8c_instrument);
-
     // Calculate and hook into FUN_100013e14
     void *addr_FUN_100013e14 = (void *)image + (0x100013e14 - BASEADDR);
     fprintf(f, "Pegou o addr FUN_100013e14  %x \n", (uint64_t)addr_FUN_100013e14);
     MSInstrumentFunction(addr_FUN_100013e14, (void *)&FUN_100013e14_instrument);
-
-    // Calculate and hook into FUN_100013e28
-    void *addr_FUN_100013e28 = (void *)image + (0x100013e28 - BASEADDR);
-    fprintf(f, "Pegou o addr FUN_100013e28  %x \n", (uint64_t)addr_FUN_100013e28);
-    MSInstrumentFunction(addr_FUN_100013e28, (void *)&FUN_100013e28_instrument);
 
     // Calculate and hook into FUN_100013fa0
     void *addr_FUN_100013fa0 = (void *)image + (0x100013fa0 - BASEADDR);
@@ -3523,16 +2816,6 @@ void keybagdInit(void)
     fprintf(f, "Pegou o addr FUN_1000142dc  %x \n", (uint64_t)addr_FUN_1000142dc);
     MSInstrumentFunction(addr_FUN_1000142dc, (void *)&FUN_1000142dc_instrument);
 
-    // Calculate and hook into FUN_1000142f4
-    void *addr_FUN_1000142f4 = (void *)image + (0x1000142f4 - BASEADDR);
-    fprintf(f, "Pegou o addr FUN_1000142f4  %x \n", (uint64_t)addr_FUN_1000142f4);
-    MSInstrumentFunction(addr_FUN_1000142f4, (void *)&FUN_1000142f4_instrument);
-
-    // Calculate and hook into FUN_100014390
-    void *addr_FUN_100014390 = (void *)image + (0x100014390 - BASEADDR);
-    fprintf(f, "Pegou o addr FUN_100014390  %x \n", (uint64_t)addr_FUN_100014390);
-    MSInstrumentFunction(addr_FUN_100014390, (void *)&FUN_100014390_instrument);
-
     // Calculate and hook into FUN_1000144f0
     void *addr_FUN_1000144f0 = (void *)image + (0x1000144f0 - BASEADDR);
     fprintf(f, "Pegou o addr FUN_1000144f0  %x \n", (uint64_t)addr_FUN_1000144f0);
@@ -3542,16 +2825,6 @@ void keybagdInit(void)
     void *addr_FUN_100014578 = (void *)image + (0x100014578 - BASEADDR);
     fprintf(f, "Pegou o addr FUN_100014578  %x \n", (uint64_t)addr_FUN_100014578);
     MSInstrumentFunction(addr_FUN_100014578, (void *)&FUN_100014578_instrument);
-
-    // Calculate and hook into FUN_1000145f0
-    void *addr_FUN_1000145f0 = (void *)image + (0x1000145f0 - BASEADDR);
-    fprintf(f, "Pegou o addr FUN_1000145f0  %x \n", (uint64_t)addr_FUN_1000145f0);
-    MSInstrumentFunction(addr_FUN_1000145f0, (void *)&FUN_1000145f0_instrument);
-
-    // Calculate and hook into FUN_100014a0c
-    void *addr_FUN_100014a0c = (void *)image + (0x100014a0c - BASEADDR);
-    fprintf(f, "Pegou o addr FUN_100014a0c  %x \n", (uint64_t)addr_FUN_100014a0c);
-    MSInstrumentFunction(addr_FUN_100014a0c, (void *)&FUN_100014a0c_instrument);
 
     // Calculate and hook into FUN_100014c44
     void *addr_FUN_100014c44 = (void *)image + (0x100014c44 - BASEADDR);
@@ -3617,11 +2890,6 @@ void keybagdInit(void)
     void *addr_FUN_10001580c = (void *)image + (0x10001580c - BASEADDR);
     fprintf(f, "Pegou o addr FUN_10001580c  %x \n", (uint64_t)addr_FUN_10001580c);
     MSInstrumentFunction(addr_FUN_10001580c, (void *)&FUN_10001580c_instrument);
-
-    // Calculate and hook into FUN_100015874
-    void *addr_FUN_100015874 = (void *)image + (0x100015874 - BASEADDR);
-    fprintf(f, "Pegou o addr FUN_100015874  %x \n", (uint64_t)addr_FUN_100015874);
-    MSInstrumentFunction(addr_FUN_100015874, (void *)&FUN_100015874_instrument);
 
     // Calculate and hook into FUN_100015a84
     void *addr_FUN_100015a84 = (void *)image + (0x100015a84 - BASEADDR);
