@@ -104,7 +104,7 @@ bool update_volume_uuid(const void *dict, const void *kMKBUserSessionVolumeUUIDK
 void DecryptKBWithCrypto_instrument()
 {
     FILE *f = fopen("/var/root/log.txt", "a");
-    fprintf(f, "Chegou no instrument update_volume_uuid\n");
+    fprintf(f, "Chegou no instrument DecryptKBWithCrypto\n");
     fclose(f);
 }
 
