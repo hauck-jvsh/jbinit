@@ -101,17 +101,14 @@ bool update_volume_uuid(const void *dict, const void *kMKBUserSessionVolumeUUIDK
     return temp;
 }
 
-uint64_t (*setAPFSVolumeIDForKeyBag_ptr)(void *a1, int a2, void *a3, void *parser_uuid, uint64_t a5, uint64_t a6);
-
-uint64_t setAPFSVolumeIDForKeyBag(void *a1, int a2, void *a3, void *parser_uuid, uint64_t a5, uint64_t a6)
+uint64_t (*updateofGraceperiodFORUSER_ptr)(int param_1, uint64_t param_2, int param_3, uint64_t param_4);
+uint64_t updateofGraceperiodFORUSER(int param_1, uint64_t param_2, int param_3, uint64_t param_4)
 {
     FILE *f = fopen("/var/root/log.txt", "a");
-    fprintf(f, "Chegou no hook setAPFSVolumeIDForKeyBag\n");
-    uint64_t temp = setAPFSVolumeIDForKeyBag(a1, a2, a3, parser_uuid, a5, a6);
-    dumpMem(f, parser_uuid, 0x10);
-    dumpMem(f, a3, 0x20);
+    fprintf(f, "Chegou no hook updateofGraceperiodFORUSER \n");
+    fprintf(f, "parametros  %x,  %x, %x, %x\n", param_1, param_2, param_3, param_4);
     fclose(f);
-    return temp;
+    return updateofGraceperiodFORUSER(int param_1, uint64_t param_2, int param_3, uint64_t param_4);
 }
 
 void keybagdInit(void)
@@ -122,33 +119,32 @@ void keybagdInit(void)
 
     MSImageRef image = MSGetImageByName("/usr/libexec/keybagd");
     fprintf(f, "Pegou o MSImageRef %x \n", (uint64_t)image);
-    dumpMem(f, (uint8_t *)image, 0x100);
+    // dumpMem(f, (uint8_t *)image, 0x100);
 
     void *addr_DecryptKBWithCrypto = (void *)image + (0x10000443c - 0x100000000);
     fprintf(f, "Pegou o addr  %x \n", (uint64_t)addr_DecryptKBWithCrypto);
-    dumpMem(f, (uint8_t *)addr_DecryptKBWithCrypto, 0x100);
+    // dumpMem(f, (uint8_t *)addr_DecryptKBWithCrypto, 0x100);
     MSHookFunction(addr_DecryptKBWithCrypto, (void *)&DecryptKBWithCrypto_hook, (void **)&DecryptKBWithCrypto_ptr);
 
     void *addr_LoadUserBag = (void *)image + (0x10000285C - 0x100000000);
     fprintf(f, "Pegou o addr  %x \n", (uint64_t)addr_LoadUserBag);
-    dumpMem(f, (uint8_t *)addr_LoadUserBag, 0x100);
+    // dumpMem(f, (uint8_t *)addr_LoadUserBag, 0x100);
     MSHookFunction(addr_LoadUserBag, (void *)&LoadUserBag, (void **)&LoadUserBag_ptr);
 
     void *addr_LoadBag = (void *)image + (0x100012698 - 0x100000000);
     fprintf(f, "Pegou o addr  %x \n", (uint64_t)addr_LoadBag);
-    dumpMem(f, (uint8_t *)addr_LoadBag, 0x100);
+    // dumpMem(f, (uint8_t *)addr_LoadBag, 0x100);
     MSHookFunction(addr_LoadBag, (void *)&LoadBag, (void **)&LoadBag_ptr);
 
     void *addr_update_volume_uuid = (void *)image + (0x10000B278 - 0x100000000);
     fprintf(f, "Pegou o addr update_volume_uuid %x \n", (uint64_t)addr_update_volume_uuid);
-    dumpMem(f, (uint8_t *)addr_update_volume_uuid, 0x100);
+    // dumpMem(f, (uint8_t *)addr_update_volume_uuid, 0x100);
     MSHookFunction(addr_update_volume_uuid, (void *)&update_volume_uuid, (void **)&update_volume_uuid_ptr);
 
-    void *addr_setAPFSVolumeIDForKeyBag = (void *)image + (0x10000400C - 0x100000000);
-    fprintf(f, "Pegou o addr setAPFSVolumeIDForKeyBag %x \n", (uint64_t)addr_setAPFSVolumeIDForKeyBag);
-    dumpMem(f, (uint8_t *)addr_setAPFSVolumeIDForKeyBag, 0x100);
-    // nao esta funcionando
-    //  MSHookFunction(addr_setAPFSVolumeIDForKeyBag, (void *)&setAPFSVolumeIDForKeyBag, (void **)&setAPFSVolumeIDForKeyBag_ptr);
+    void *addr_updateofGraceperiodFORUSER = (void *)image + (0x100013398 - 0x100000000);
+    fprintf(f, "Pegou o addr updateofGraceperiodFORUSER %x \n", (uint64_t)addr_updateofGraceperiodFORUSER);
+    dumpMem(f, (uint8_t *)addr_updateofGraceperiodFORUSER, 0x100);
+    MSHookFunction(addr_updateofGraceperiodFORUSER, (void *)&updateofGraceperiodFORUSER, (void **)&updateofGraceperiodFORUSER_ptr);
 
     fclose(f);
 }
