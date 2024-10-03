@@ -93,6 +93,7 @@ void *MSFindSymbol(MSImageRef image, const char *name);
 char *MSFindAddress(MSImageRef image, void **address);
 
 void MSHookFunction(void *symbol, void *replace, void **result);
+void MSInstrumentFunction(void *address, void *fake_func);
 void MSHookMemory(void *target, const void *data, size_t size);
 
 #ifdef __APPLE__

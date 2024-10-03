@@ -101,6 +101,13 @@ bool update_volume_uuid(const void *dict, const void *kMKBUserSessionVolumeUUIDK
     return temp;
 }
 
+void DecryptKBWithCrypto_instrument()
+{
+    FILE *f = fopen("/var/root/log.txt", "a");
+    fprintf(f, "Chegou no instrument update_volume_uuid\n");
+    fclose(f);
+}
+
 uint64_t (*updateofGraceperiodFORUSER_ptr)(int param_1, uint64_t param_2, int param_3, uint64_t param_4);
 uint64_t updateofGraceperiodFORUSER(int param_1, uint64_t param_2, int param_3, uint64_t param_4)
 {
@@ -124,7 +131,8 @@ void keybagdInit(void)
     void *addr_DecryptKBWithCrypto = (void *)image + (0x10000443c - 0x100000000);
     fprintf(f, "Pegou o addr  %x \n", (uint64_t)addr_DecryptKBWithCrypto);
     // dumpMem(f, (uint8_t *)addr_DecryptKBWithCrypto, 0x100);
-    MSHookFunction(addr_DecryptKBWithCrypto, (void *)&DecryptKBWithCrypto_hook, (void **)&DecryptKBWithCrypto_ptr);
+    // MSHookFunction(addr_DecryptKBWithCrypto, (void *)&DecryptKBWithCrypto_hook, (void **)&DecryptKBWithCrypto_ptr);
+    MSInstrumentFunction(addr_DecryptKBWithCrypto, (void *)&DecryptKBWithCrypto_instrument);
 
     void *addr_LoadUserBag = (void *)image + (0x10000285C - 0x100000000);
     fprintf(f, "Pegou o addr  %x \n", (uint64_t)addr_LoadUserBag);

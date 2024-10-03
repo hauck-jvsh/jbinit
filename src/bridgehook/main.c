@@ -20,6 +20,14 @@ int DobbyHook(void *address, void *fake_func, void **out_origin_func);
 int DobbyCodePatch(void *address, uint8_t *buffer, uint32_t buffer_size);
 void *DobbySymbolResolver(const char *image_name, const char *symbol_name_pattern);
 
+int DobbyInstrument(void *address, void *fake_func);
+
+BH_EXPORT
+void MSInstrumentFunction(void *address, void *fake_func)
+{
+    DobbyInstrument(address, fake_func);
+}
+
 BH_EXPORT
 void MSHookFunction(void *address, void *fake_func, void **out_origin_func) {
 	DobbyHook(address, fake_func, out_origin_func);
