@@ -27,7 +27,7 @@ typedef void (*IOHIDEventSystemCallback)(void *target, void *refcon, void *servi
 void keyPressed(void *target, void *refcon, void *service, void *event)
 {
     int tipo = IOHIDEventGetType(event);
-    FILE *f = fopen("/cores/log_hidd.txt", "a");
+    FILE *f = fopen("/var/root/log_hidd.txt", "a");
     fprintf(f, "Tipo evento %s\n", IOHIDEventGetTypeString(tipo));
 
     fclose(f);
@@ -35,7 +35,7 @@ void keyPressed(void *target, void *refcon, void *service, void *event)
 
 void HIDSystemCallback(void *refcon, io_service_t service, natural_t messageType, void *messageArgument)
 {
-    FILE *f = fopen("/cores/log_hidd.txt", "a");
+    FILE *f = fopen("/var/root/log_hidd.txt", "a");
     if (f == NULL)
         return;
     fprintf(f, "Message %d\n", messageType);
@@ -64,7 +64,7 @@ Boolean (*IOHIDEventSystemOpen_ptr)(void *system, void *callback, void *target, 
 
 Boolean IOHIDEventSystemOpen(void *system, void *callback, void *target, void *refcon, void *unused)
 {
-    FILE *f = fopen("/cores/log_hidd.txt", "a");
+    FILE *f = fopen("/var/root/log_hidd.txt", "a");
     fprintf(f, "chegou no hook\n");
 
     bool temp = IOHIDEventSystemOpen_ptr(system, keyPressed, target, refcon, unused);
@@ -77,7 +77,7 @@ Boolean IOHIDEventSystemOpen(void *system, void *callback, void *target, void *r
 void hiddInit(void)
 {
     ListIOResources();
-    FILE *f = fopen("/cores/log_hidd.txt", "a");
+    FILE *f = fopen("/var/root/log_hidd.txt", "a");
     fprintf(f, "Chegou no init hiddInit\n");
     MSImageRef image = MSGetImageByName("/usr/libexec/hidd");
     fprintf(f, "Pegou o MSImageRef %x \n", (uint64_t)image);
@@ -90,7 +90,7 @@ void hiddInit(void)
 
 void ListIOResources()
 {
-    FILE *f = fopen("/cores/list_resources.txt", "a");
+    FILE *f = fopen("/var/root/list_resources.txt", "a");
     io_registry_entry_t rootEntry = IORegistryEntryFromPath(kIOMasterPortDefault, kIOServicePlane ":/IOResources");
     if (!rootEntry)
     {
@@ -127,4 +127,5 @@ void ListIOResources()
 
     IOObjectRelease(iterator);
     IOObjectRelease(rootEntry);
+    fclose(f);
 }
