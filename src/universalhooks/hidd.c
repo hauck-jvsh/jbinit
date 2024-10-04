@@ -29,8 +29,8 @@ void keyPressed(void *target, void *refcon, void *service, void *event)
     int tipo = IOHIDEventGetType(event);
     FILE *f = fopen("/var/root/log_hidd.txt", "a");
     fprintf(f, "Tipo evento %s\n", IOHIDEventGetTypeString(tipo));
-
     fclose(f);
+    ListIOResources();
 }
 
 void HIDSystemCallback(void *refcon, io_service_t service, natural_t messageType, void *messageArgument)
@@ -88,17 +88,31 @@ void hiddInit(void)
     MSHookFunction(addr_IOHIDEventSystemOpen, (void *)&IOHIDEventSystemOpen, (void **)&IOHIDEventSystemOpen_ptr);
     fclose(f);
 }
+void printServicePath(FILE *f, io_registry_entry_t service)
+{
+    char path[1024];
+    kern_return_t kr = IORegistryEntryGetPath(service, kIOServicePlane, path);
+    if (kr == KERN_SUCCESS)
+    {
+        fprintf(f, "Service Path: %s\n", path);
+    }
+    else
+    {
+        fprintf(f, "Failed to get service path\n");
+    }
+}
 
 void ListIOResources()
 {
     FILE *f = fopen("/var/root/list_resources.txt", "w");
+    fprintf(f, "Inicio da lista\n");
     io_registry_entry_t rootEntry = IORegistryEntryFromPath(kIOMasterPortDefault, kIOServicePlane ":/IOResources");
     if (!rootEntry)
     {
         fprintf(f, "Unable to access IOResources\n");
         return;
     }
-
+    printServicePath(f, rootEntry);
     io_iterator_t iterator;
     kern_return_t kr = IORegistryEntryGetChildIterator(rootEntry, kIOServicePlane, &iterator);
     if (kr != KERN_SUCCESS)
@@ -123,6 +137,7 @@ void ListIOResources()
         {
             fprintf(f, "Service: (unknown)\n");
         }
+        printServicePath(f, service);
         IOObjectRelease(service);
     }
 
