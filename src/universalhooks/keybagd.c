@@ -15,4613 +15,4613 @@ FILE* f = NULL;
 
 void FUN_1000021ec_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "FUN_1000021ec called\n");
     }
 }
 
 void FUN_10000231c_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "FUN_10000231c called\n");
     }
 }
 
 void FUN_100002454_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "FUN_100002454 called\n");
     }
 }
 
 void LoadSystemBag_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "LoadSystemBag called\n");
     }
 }
 
 void LoadKeyBag_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "LoadKeyBag called\n");
     }
 }
 
 void LoadUserBag_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "LoadUserBag called\n");
     }
 }
 
 void FUN_1000029b8_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "FUN_1000029b8 called\n");
     }
 }
 
 void FUN_100002aa0_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "FUN_100002aa0 called\n");
     }
 }
 
 void FUN_1000032e0_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "FUN_1000032e0 called\n");
     }
 }
 
 void savingofKeybagFORUSER_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "savingofKeybagFORUSER called\n");
     }
 }
 
 void ChangeSystemSecret_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "ChangeSystemSecret called\n");
     }
 }
 
 void FUN_100003bc0_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "FUN_100003bc0 called\n");
     }
 }
 
 void FUN_100003c84_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "FUN_100003c84 called\n");
     }
 }
 
 void ChangeUserKeybag_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "ChangeUserKeybag called\n");
     }
 }
 
 void FUN_100003e80_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "FUN_100003e80 called\n");
     }
 }
 
 void FUN_10000400c_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "FUN_10000400c called\n");
     }
 }
 
 void FUN_10000427c_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "FUN_10000427c called\n");
     }
 }
 
 void DecryptKBWithCrypto_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "DecryptKBWithCrypto called\n");
     }
 }
 
 void GetParseKB_MK_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "GetParseKB_MK called\n");
     }
 }
 
 void FUN_100004a60_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "FUN_100004a60 called\n");
     }
 }
 
 void FUN_100004b2c_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "FUN_100004b2c called\n");
     }
 }
 
 void FUN_100004b38_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "FUN_100004b38 called\n");
     }
 }
 
 void listener_shouldAcceptNewConnection__instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "listener_shouldAcceptNewConnection_ called\n");
     }
 }
 
 void sharedService_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "sharedService called\n");
     }
 }
 
 void FUN_100004c48_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "FUN_100004c48 called\n");
     }
 }
 
 void remoteProcessHasBooleanEntitlement__instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "remoteProcessHasBooleanEntitlement_ called\n");
     }
 }
 
 void remoteServiceName_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "remoteServiceName called\n");
     }
 }
 
 void retrievePasscodeFromFileHandle_ofLength_withbaseaddress__instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "retrievePasscodeFromFileHandle_ofLength_withbaseaddress_ called\n");
     }
 }
 
 void changeSystemSecretfromOldSecret_oldSize_toNewSecret_newSize_opaqueData_reply__instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "changeSystemSecretfromOldSecret_oldSize_toNewSecret_newSize_opaqueData_reply_ called\n");
     }
 }
 
 void FUN_100005240_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "FUN_100005240 called\n");
     }
 }
 
 void FUN_100005250_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "FUN_100005250 called\n");
     }
 }
 
 void FUN_100005258_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "FUN_100005258 called\n");
     }
 }
 
 void FUN_10000541c_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "FUN_10000541c called\n");
     }
 }
 
 void FUN_100005470_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "FUN_100005470 called\n");
     }
 }
 
 void getPasscodeBlobWithReply__instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "getPasscodeBlobWithReply_ called\n");
     }
 }
 
 void changeSystemSecretWithEscrow_fromOldSecret_oldSize_toNewSecret_newSize_opaqueData_keepstate_reply__instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "changeSystemSecretWithEscrow_fromOldSecret_oldSize_toNewSecret_newSize_opaqueData_keepstate_reply_ called\n");
     }
 }
 
 void FUN_100005a04_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "FUN_100005a04 called\n");
     }
 }
 
 void FUN_100005b58_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "FUN_100005b58 called\n");
     }
 }
 
 void FUN_100005ba4_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "FUN_100005ba4 called\n");
     }
 }
 
 void changeClassKeysGenerationWithSecret_secretSize_generationOption_reply__instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "changeClassKeysGenerationWithSecret_secretSize_generationOption_reply_ called\n");
     }
 }
 
 void registerBackupBag_withSecret_secretSize_reply__instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "registerBackupBag_withSecret_secretSize_reply_ called\n");
     }
 }
 
 void getBackupBlobreply__instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "getBackupBlobreply_ called\n");
     }
 }
 
 void getBackupkeyForVolume_andCryptoID_withReply__instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "getBackupkeyForVolume_andCryptoID_withReply_ called\n");
     }
 }
 
 void startBackupSessionForVolume_withReply__instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "startBackupSessionForVolume_withReply_ called\n");
     }
 }
 
 void stopBackupSessionForVolume_withReply__instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "stopBackupSessionForVolume_withReply_ called\n");
     }
 }
 
 void enableBackupForVolume_withSecret_secretSize_reply__instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "enableBackupForVolume_withSecret_secretSize_reply_ called\n");
     }
 }
 
 void disableBackupForVolume_reply__instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "disableBackupForVolume_reply_ called\n");
     }
 }
 
 void backupUUIDForVolume_reply__instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "backupUUIDForVolume_reply_ called\n");
     }
 }
 
 void stashCreatewithSecret_secrestSize_withMode_withUID_WithFlags_reply__instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "stashCreatewithSecret_secrestSize_withMode_withUID_WithFlags_reply_ called\n");
     }
 }
 
 void stashCommitwithUID_WithFlags_WithReply__instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "stashCommitwithUID_WithFlags_WithReply_ called\n");
     }
 }
 
 void stashVerifywithUID_WithFlags_WithReply__instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "stashVerifywithUID_WithFlags_WithReply_ called\n");
     }
 }
 
 void stashDestroywithReply__instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "stashDestroywithReply_ called\n");
     }
 }
 
 void isKeyRollingInProgresswithreply__instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "isKeyRollingInProgresswithreply_ called\n");
     }
 }
 
 void migrationWithReply__instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "migrationWithReply_ called\n");
     }
 }
 
 void getLockSateInfoforUser_WithReply__instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "getLockSateInfoforUser_WithReply_ called\n");
     }
 }
 
 void getDeviceLockState_needsExtended_withReply__instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "getDeviceLockState_needsExtended_withReply_ called\n");
     }
 }
 
 void passcodeUnlockStartWithReply__instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "passcodeUnlockStartWithReply_ called\n");
     }
 }
 
 void passcodeUnlockSuccessWithReply__instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "passcodeUnlockSuccessWithReply_ called\n");
     }
 }
 
 void passcodeUnlockFailedWithReply__instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "passcodeUnlockFailedWithReply_ called\n");
     }
 }
 
 void SeshatEnrollWithSecret_secretSize_withReply__instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "SeshatEnrollWithSecret_secretSize_withReply_ called\n");
     }
 }
 
 void Event__instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "Event_ called\n");
     }
 }
 
 void SeshatUnlockWithSecret_secretSize_withReply__instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "SeshatUnlockWithSecret_secretSize_withReply_ called\n");
     }
 }
 
 void SeshatRecoverWithSecret_secretSize_withReply__instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "SeshatRecoverWithSecret_secretSize_withReply_ called\n");
     }
 }
 
 void SeshatDebugWithDebugMask_withReply__instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "SeshatDebugWithDebugMask_withReply_ called\n");
     }
 }
 
 void createKeybagForUserSession_withSessionUID_WithSecret_secretSize_withGracePeriod_withOpaqeStuff_withReply__instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "createKeybagForUserSession_withSessionUID_WithSecret_secretSize_withGracePeriod_withOpaqeStuff_withReply_ called\n");
     }
 }
 
 void FUN_100007500_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "FUN_100007500 called\n");
     }
 }
 
 void loadKeybagForUserSession_withSessionID_withSecret_secretSize_shouldSetGracePeriod_withGracePeriod_isInEarlyStar_withReply__instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "loadKeybagForUserSession_withSessionID_withSecret_secretSize_shouldSetGracePeriod_withGracePeriod_isInEarlyStar_withReply_ called\n");
     }
 }
 
 void KBXPCLoadKeyBagForUserSession_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "KBXPCLoadKeyBagForUserSession called\n");
     }
 }
 
 void FUN_100007a28_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "FUN_100007a28 called\n");
     }
 }
 
 void FUN_100007a6c_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "FUN_100007a6c called\n");
     }
 }
 
 void unloadKeybagForUserSession_withReply__instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "unloadKeybagForUserSession_withReply_ called\n");
     }
 }
 
 void FUN_100007be8_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "FUN_100007be8 called\n");
     }
 }
 
 void FUN_100007c8c_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "FUN_100007c8c called\n");
     }
 }
 
 void FUN_100007c9c_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "FUN_100007c9c called\n");
     }
 }
 
 void deleteKeybagForUserSession_withReply__instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "deleteKeybagForUserSession_withReply_ called\n");
     }
 }
 
 void FUN_100007e0c_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "FUN_100007e0c called\n");
     }
 }
 
 void setVolumeToPersona_withPersonaString_withReply__instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "setVolumeToPersona_withPersonaString_withReply_ called\n");
     }
 }
 
 void FUN_10000804c_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "FUN_10000804c called\n");
     }
 }
 
 void FUN_1000082a0_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "FUN_1000082a0 called\n");
     }
 }
 
 void FUN_1000082ec_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "FUN_1000082ec called\n");
     }
 }
 
 void createSyncBagForUserSession_withSessionUID_withReply__instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "createSyncBagForUserSession_withSessionUID_withReply_ called\n");
     }
 }
 
 void FUN_1000084a0_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "FUN_1000084a0 called\n");
     }
 }
 
 void FUN_100008548_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "FUN_100008548 called\n");
     }
 }
 
 void FUN_10000857c_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "FUN_10000857c called\n");
     }
 }
 
 void loadSyncBagForUserSession_withSessionUID_withReply__instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "loadSyncBagForUserSession_withSessionUID_withReply_ called\n");
     }
 }
 
 void FUN_100008720_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "FUN_100008720 called\n");
     }
 }
 
 void verifySyncBagForUserSession_withSessionUID_withReply__instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "verifySyncBagForUserSession_withSessionUID_withReply_ called\n");
     }
 }
 
 void FUN_100008940_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "FUN_100008940 called\n");
     }
 }
 
 void unloadSyncBagForUserSession_withSessionUID_withReply__instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "unloadSyncBagForUserSession_withSessionUID_withReply_ called\n");
     }
 }
 
 void FUN_100008b60_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "FUN_100008b60 called\n");
     }
 }
 
 void removeSyncBagForUserSession_withSessionUID_withReply__instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "removeSyncBagForUserSession_withSessionUID_withReply_ called\n");
     }
 }
 
 void FUN_100008dd0_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "FUN_100008dd0 called\n");
     }
 }
 
 void createPersonaKeyForUserSession_forPath_withUID_WithSecret_secretSize_withReply__instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "createPersonaKeyForUserSession_forPath_withUID_WithSecret_secretSize_withReply_ called\n");
     }
 }
 
 void FUN_100009244_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "FUN_100009244 called\n");
     }
 }
 
 void removePersonaKeyForUserSession_withUID_withVolumeUUIDString_withReply__instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "removePersonaKeyForUserSession_withUID_withVolumeUUIDString_withReply_ called\n");
     }
 }
 
 void FUN_1000094a8_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "FUN_1000094a8 called\n");
     }
 }
 
 void FUN_10000954c_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "FUN_10000954c called\n");
     }
 }
 
 void FUN_100009588_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "FUN_100009588 called\n");
     }
 }
 
 void FUN_1000095bc_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "FUN_1000095bc called\n");
     }
 }
 
 void sharedLockModelWithUID__instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "sharedLockModelWithUID_ called\n");
     }
 }
 
 void FUN_100009728_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "FUN_100009728 called\n");
     }
 }
 
 void initWithUID__instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "initWithUID_ called\n");
     }
 }
 
 void initWithJournalPath_uid__instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "initWithJournalPath_uid_ called\n");
     }
 }
 
 void dealloc_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "dealloc called\n");
     }
 }
 
 void notePasscodeEntryBegan_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "notePasscodeEntryBegan called\n");
     }
 }
 
 void FUN_1000098c4_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "FUN_1000098c4 called\n");
     }
 }
 
 void FUN_1000098cc_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "FUN_1000098cc called\n");
     }
 }
 
 void FUN_1000098dc_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "FUN_1000098dc called\n");
     }
 }
 
 void notePasscodeEntryCancelled_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "notePasscodeEntryCancelled called\n");
     }
 }
 
 void FUN_100009940_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "FUN_100009940 called\n");
     }
 }
 
 void notePasscodeUnlockSucceeded_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "notePasscodeUnlockSucceeded called\n");
     }
 }
 
 void FUN_1000099a0_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "FUN_1000099a0 called\n");
     }
 }
 
 void notePasscodeUnlockFailed_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "notePasscodeUnlockFailed called\n");
     }
 }
 
 void FUN_100009a00_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "FUN_100009a00 called\n");
     }
 }
 
 void isPermanentlyBlocked_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "isPermanentlyBlocked called\n");
     }
 }
 
 void FUN_100009a9c_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "FUN_100009a9c called\n");
     }
 }
 
 void FUN_100009ab0_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "FUN_100009ab0 called\n");
     }
 }
 
 void FUN_100009aec_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "FUN_100009aec called\n");
     }
 }
 
 void isTemporarilyBlocked_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "isTemporarilyBlocked called\n");
     }
 }
 
 void timeUntilUnblockedSinceReferenceDate_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "timeUntilUnblockedSinceReferenceDate called\n");
     }
 }
 
 void FUN_100009bec_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "FUN_100009bec called\n");
     }
 }
 
 void isWipePending_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "isWipePending called\n");
     }
 }
 
 void FUN_100009c90_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "FUN_100009c90 called\n");
     }
 }
 
 void failedPasscodeAttempts_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "failedPasscodeAttempts called\n");
     }
 }
 
 void FUN_100009d30_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "FUN_100009d30 called\n");
     }
 }
 
 void userDeleted_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "userDeleted called\n");
     }
 }
 
 void _persistentStateQueue_beginSpeculativeFailureCharge_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "_persistentStateQueue_beginSpeculativeFailureCharge called\n");
     }
 }
 
 void _persistentStateQueue_cancelSpeculativeFailureCharge_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "_persistentStateQueue_cancelSpeculativeFailureCharge called\n");
     }
 }
 
 void _persistentStateQueue_rollbackSpeculativeFailureCharge_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "_persistentStateQueue_rollbackSpeculativeFailureCharge called\n");
     }
 }
 
 void _persistentStateQueue_unlockSucceeded_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "_persistentStateQueue_unlockSucceeded called\n");
     }
 }
 
 void _persistentStateQueue_unlockFailed_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "_persistentStateQueue_unlockFailed called\n");
     }
 }
 
 void _persistentStateQueue_loadLockState_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "_persistentStateQueue_loadLockState called\n");
     }
 }
 
 void _loadLockState_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "_loadLockState called\n");
     }
 }
 
 void _lockStateValueForKey_ofType__instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "_lockStateValueForKey_ofType_ called\n");
     }
 }
 
 void _setLockStateValue_forKey__instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "_setLockStateValue_forKey_ called\n");
     }
 }
 
 void FUN_10000a368_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "FUN_10000a368 called\n");
     }
 }
 
 void FUN_10000a4d0_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "FUN_10000a4d0 called\n");
     }
 }
 
 void FUN_10000a4f0_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "FUN_10000a4f0 called\n");
     }
 }
 
 void FUN_10000a510_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "FUN_10000a510 called\n");
     }
 }
 
 void FUN_10000a530_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "FUN_10000a530 called\n");
     }
 }
 
 void FUN_10000a590_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "FUN_10000a590 called\n");
     }
 }
 
 void FUN_10000a620_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "FUN_10000a620 called\n");
     }
 }
 
 void FUN_10000a67c_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "FUN_10000a67c called\n");
     }
 }
 
 void FUN_10000a708_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "FUN_10000a708 called\n");
     }
 }
 
 void FUN_10000a954_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "FUN_10000a954 called\n");
     }
 }
 
 void FUN_10000a95c_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "FUN_10000a95c called\n");
     }
 }
 
 void FUN_10000a9a4_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "FUN_10000a9a4 called\n");
     }
 }
 
 void FUN_10000ab68_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "FUN_10000ab68 called\n");
     }
 }
 
 void FUN_10000ace8_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "FUN_10000ace8 called\n");
     }
 }
 
 void FUN_10000adac_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "FUN_10000adac called\n");
     }
 }
 
 void FUN_10000ae88_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "FUN_10000ae88 called\n");
     }
 }
 
 void FUN_10000af5c_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "FUN_10000af5c called\n");
     }
 }
 
 void FUN_10000afe8_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "FUN_10000afe8 called\n");
     }
 }
 
 void FUN_10000b088_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "FUN_10000b088 called\n");
     }
 }
 
 void FUN_10000b100_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "FUN_10000b100 called\n");
     }
 }
 
 void FUN_10000b200_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "FUN_10000b200 called\n");
     }
 }
 
 void FUN_10000b238_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "FUN_10000b238 called\n");
     }
 }
 
 void FUN_10000b278_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "FUN_10000b278 called\n");
     }
 }
 
 void FUN_10000b2c4_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "FUN_10000b2c4 called\n");
     }
 }
 
 void memcopy_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "memcopy called\n");
     }
 }
 
 void FUN_10000b450_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "FUN_10000b450 called\n");
     }
 }
 
 void FUN_10000b4c8_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "FUN_10000b4c8 called\n");
     }
 }
 
 void FUN_10000b61c_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "FUN_10000b61c called\n");
     }
 }
 
 void LerbPlist_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "LerbPlist called\n");
     }
 }
 
 void FUN_10000b884_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "FUN_10000b884 called\n");
     }
 }
 
 void FUN_10000b8d8_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "FUN_10000b8d8 called\n");
     }
 }
 
 void FUN_10000b91c_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "FUN_10000b91c called\n");
     }
 }
 
 void FUN_10000b958_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "FUN_10000b958 called\n");
     }
 }
 
 void FUN_10000b98c_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "FUN_10000b98c called\n");
     }
 }
 
 void FUN_10000bb64_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "FUN_10000bb64 called\n");
     }
 }
 
 void FUN_10000bc28_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "FUN_10000bc28 called\n");
     }
 }
 
 void FUN_10000bcb0_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "FUN_10000bcb0 called\n");
     }
 }
 
 void FUN_10000bd70_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "FUN_10000bd70 called\n");
     }
 }
 
 void FUN_10000be4c_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "FUN_10000be4c called\n");
     }
 }
 
 void FUN_10000beb4_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "FUN_10000beb4 called\n");
     }
 }
 
 void FUN_10000bfa4_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "FUN_10000bfa4 called\n");
     }
 }
 
 void FUN_10000bfb4_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "FUN_10000bfb4 called\n");
     }
 }
 
 void FUN_10000bfc0_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "FUN_10000bfc0 called\n");
     }
 }
 
 void FUN_10000c040_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "FUN_10000c040 called\n");
     }
 }
 
 void FUN_10000c0a8_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "FUN_10000c0a8 called\n");
     }
 }
 
 void FUN_10000c198_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "FUN_10000c198 called\n");
     }
 }
 
 void FUN_10000c218_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "FUN_10000c218 called\n");
     }
 }
 
 void FUN_10000c5d8_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "FUN_10000c5d8 called\n");
     }
 }
 
 void FUN_10000c63c_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "FUN_10000c63c called\n");
     }
 }
 
 void FUN_10000c918_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "FUN_10000c918 called\n");
     }
 }
 
 void FUN_10000cacc_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "FUN_10000cacc called\n");
     }
 }
 
 void FUN_10000cad8_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "FUN_10000cad8 called\n");
     }
 }
 
 void FUN_10000cb6c_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "FUN_10000cb6c called\n");
     }
 }
 
 void FUN_10000cb7c_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "FUN_10000cb7c called\n");
     }
 }
 
 void FUN_10000cb88_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "FUN_10000cb88 called\n");
     }
 }
 
 void FUN_10000cbac_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "FUN_10000cbac called\n");
     }
 }
 
 void FUN_10000cc60_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "FUN_10000cc60 called\n");
     }
 }
 
 void FUN_10000cd14_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "FUN_10000cd14 called\n");
     }
 }
 
 void FUN_10000ce08_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "FUN_10000ce08 called\n");
     }
 }
 
 void FUN_10000cf68_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "FUN_10000cf68 called\n");
     }
 }
 
 void FUN_10000d024_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "FUN_10000d024 called\n");
     }
 }
 
 void FUN_10000d094_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "FUN_10000d094 called\n");
     }
 }
 
 void FUN_10000d150_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "FUN_10000d150 called\n");
     }
 }
 
 void FUN_10000d1c0_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "FUN_10000d1c0 called\n");
     }
 }
 
 void FUN_10000d27c_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "FUN_10000d27c called\n");
     }
 }
 
 void FUN_10000d2ec_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "FUN_10000d2ec called\n");
     }
 }
 
 void FUN_10000d364_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "FUN_10000d364 called\n");
     }
 }
 
 void FUN_10000d4a4_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "FUN_10000d4a4 called\n");
     }
 }
 
 void LoadKeyBagForUserSession_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "LoadKeyBagForUserSession called\n");
     }
 }
 
 void SetAPFSVolumeIDforKeybag_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "SetAPFSVolumeIDforKeybag called\n");
     }
 }
 
 void FUN_10000db5c_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "FUN_10000db5c called\n");
     }
 }
 
 void FUN_10000ddf8_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "FUN_10000ddf8 called\n");
     }
 }
 
 void FUN_10000de00_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "FUN_10000de00 called\n");
     }
 }
 
 void FUN_10000decc_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "FUN_10000decc called\n");
     }
 }
 
 void FUN_10000e140_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "FUN_10000e140 called\n");
     }
 }
 
 void FUN_10000e424_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "FUN_10000e424 called\n");
     }
 }
 
 void FUN_10000e6a0_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "FUN_10000e6a0 called\n");
     }
 }
 
 void FUN_10000e774_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "FUN_10000e774 called\n");
     }
 }
 
 void FUN_10000e844_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "FUN_10000e844 called\n");
     }
 }
 
 void FUN_10000ea00_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "FUN_10000ea00 called\n");
     }
 }
 
 void thunk_FUN_10000b91c_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "thunk_FUN_10000b91c called\n");
     }
 }
 
 void LogFunc_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "LogFunc called\n");
     }
 }
 
 void FUN_10000ec2c_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "FUN_10000ec2c called\n");
     }
 }
 
 void FUN_10000ed60_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "FUN_10000ed60 called\n");
     }
 }
 
 void FUN_10000ef4c_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "FUN_10000ef4c called\n");
     }
 }
 
 void FUN_10000f07c_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "FUN_10000f07c called\n");
     }
 }
 
 void FUN_10000f17c_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "FUN_10000f17c called\n");
     }
 }
 
 void FUN_10000f220_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "FUN_10000f220 called\n");
     }
 }
 
 void FUN_10000f2b4_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "FUN_10000f2b4 called\n");
     }
 }
 
 void FUN_10000f304_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "FUN_10000f304 called\n");
     }
 }
 
 void FUN_10000f3cc_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "FUN_10000f3cc called\n");
     }
 }
 
 void FUN_10000f45c_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "FUN_10000f45c called\n");
     }
 }
 
 void FUN_10000fa38_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "FUN_10000fa38 called\n");
     }
 }
 
 void FUN_10000fc6c_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "FUN_10000fc6c called\n");
     }
 }
 
 void FUN_10000fccc_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "FUN_10000fccc called\n");
     }
 }
 
 void FUN_10000fd0c_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "FUN_10000fd0c called\n");
     }
 }
 
 void FUN_10000fd7c_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "FUN_10000fd7c called\n");
     }
 }
 
 void FUN_10000fde4_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "FUN_10000fde4 called\n");
     }
 }
 
 void FUN_10000fdf8_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "FUN_10000fdf8 called\n");
     }
 }
 
 void FUN_10000fee0_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "FUN_10000fee0 called\n");
     }
 }
 
 void FUN_10000ff04_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "FUN_10000ff04 called\n");
     }
 }
 
 void FUN_10000ff18_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "FUN_10000ff18 called\n");
     }
 }
 
 void FUN_100010204_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "FUN_100010204 called\n");
     }
 }
 
 void keybagd_getpasscodeblob_block_invoke_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "keybagd_getpasscodeblob_block_invoke called\n");
     }
 }
 
 void FUN_10001033c_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "FUN_10001033c called\n");
     }
 }
 
 void FUN_1000103d8_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "FUN_1000103d8 called\n");
     }
 }
 
 void FUN_100010484_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "FUN_100010484 called\n");
     }
 }
 
 void FUN_1000105a0_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "FUN_1000105a0 called\n");
     }
 }
 
 void FUN_100010650_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "FUN_100010650 called\n");
     }
 }
 
 void FUN_100010780_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "FUN_100010780 called\n");
     }
 }
 
 void FUN_10001084c_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "FUN_10001084c called\n");
     }
 }
 
 void FUN_1000109d8_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "FUN_1000109d8 called\n");
     }
 }
 
 void FUN_100010ab0_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "FUN_100010ab0 called\n");
     }
 }
 
 void FUN_100010c04_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "FUN_100010c04 called\n");
     }
 }
 
 void FUN_100010ca8_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "FUN_100010ca8 called\n");
     }
 }
 
 void FUN_100010dd0_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "FUN_100010dd0 called\n");
     }
 }
 
 void keybagd_stashcreate_block_invoke_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "keybagd_stashcreate_block_invoke called\n");
     }
 }
 
 void FUN_100010fe0_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "FUN_100010fe0 called\n");
     }
 }
 
 void FUN_10001101c_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "FUN_10001101c called\n");
     }
 }
 
 void FUN_10001104c_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "FUN_10001104c called\n");
     }
 }
 
 void FUN_1000110fc_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "FUN_1000110fc called\n");
     }
 }
 
 void FUN_100011180_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "FUN_100011180 called\n");
     }
 }
 
 void FUN_100011214_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "FUN_100011214 called\n");
     }
 }
 
 void FUN_10001126c_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "FUN_10001126c called\n");
     }
 }
 
 void FUN_10001137c_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "FUN_10001137c called\n");
     }
 }
 
 void FUN_10001141c_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "FUN_10001141c called\n");
     }
 }
 
 void FUN_100011468_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "FUN_100011468 called\n");
     }
 }
 
 void FUN_1000114a4_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "FUN_1000114a4 called\n");
     }
 }
 
 void FUN_100011544_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "FUN_100011544 called\n");
     }
 }
 
 void FUN_10001176c_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "FUN_10001176c called\n");
     }
 }
 
 void FUN_100011824_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "FUN_100011824 called\n");
     }
 }
 
 void FUN_1000118d0_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "FUN_1000118d0 called\n");
     }
 }
 
 void FUN_100011968_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "FUN_100011968 called\n");
     }
 }
 
 void FUN_1000119a8_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "FUN_1000119a8 called\n");
     }
 }
 
 void FUN_100011a34_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "FUN_100011a34 called\n");
     }
 }
 
 void FUN_100011a70_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "FUN_100011a70 called\n");
     }
 }
 
 void FUN_100011c04_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "FUN_100011c04 called\n");
     }
 }
 
 void FUN_100011ca0_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "FUN_100011ca0 called\n");
     }
 }
 
 void FUN_100011da4_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "FUN_100011da4 called\n");
     }
 }
 
 void FUN_100011e30_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "FUN_100011e30 called\n");
     }
 }
 
 void FUN_100011eb8_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "FUN_100011eb8 called\n");
     }
 }
 
 void FUN_100011fb4_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "FUN_100011fb4 called\n");
     }
 }
 
 void FUN_100011ff0_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "FUN_100011ff0 called\n");
     }
 }
 
 void FUN_100012018_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "FUN_100012018 called\n");
     }
 }
 
 void FUN_10001210c_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "FUN_10001210c called\n");
     }
 }
 
 void FUN_10001224c_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "FUN_10001224c called\n");
     }
 }
 
 void FUN_100012318_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "FUN_100012318 called\n");
     }
 }
 
 void FUN_100012370_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "FUN_100012370 called\n");
     }
 }
 
 void FUN_1000123c0_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "FUN_1000123c0 called\n");
     }
 }
 
 void FUN_100012450_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "FUN_100012450 called\n");
     }
 }
 
 void FUN_100012468_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "FUN_100012468 called\n");
     }
 }
 
 void FUN_100012564_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "FUN_100012564 called\n");
     }
 }
 
 void FUN_100012580_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "FUN_100012580 called\n");
     }
 }
 
 void FUN_1000125d0_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "FUN_1000125d0 called\n");
     }
 }
 
 void InterageSEP_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "InterageSEP called\n");
     }
 }
 
 void FUN_100012758_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "FUN_100012758 called\n");
     }
 }
 
 void FUN_1000127cc_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "FUN_1000127cc called\n");
     }
 }
 
 void FUN_10001285c_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "FUN_10001285c called\n");
     }
 }
 
 void FUN_100012980_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "FUN_100012980 called\n");
     }
 }
 
 void FUN_100012a9c_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "FUN_100012a9c called\n");
     }
 }
 
 void FUN_100012ad8_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "FUN_100012ad8 called\n");
     }
 }
 
 void FUN_100012aec_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "FUN_100012aec called\n");
     }
 }
 
 void FUN_100012c44_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "FUN_100012c44 called\n");
     }
 }
 
 void FUN_100012d04_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "FUN_100012d04 called\n");
     }
 }
 
 void FUN_100012dc8_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "FUN_100012dc8 called\n");
     }
 }
 
 void SetBagHandleForUID_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "SetBagHandleForUID called\n");
     }
 }
 
 void FUN_100012e84_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "FUN_100012e84 called\n");
     }
 }
 
 void FUN_100012e98_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "FUN_100012e98 called\n");
     }
 }
 
 void FUN_100012ea4_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "FUN_100012ea4 called\n");
     }
 }
 
 void FUN_100012fb8_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "FUN_100012fb8 called\n");
     }
 }
 
 void FUN_100013104_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "FUN_100013104 called\n");
     }
 }
 
 void FUN_1000131b4_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "FUN_1000131b4 called\n");
     }
 }
 
 void FUN_1000132b0_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "FUN_1000132b0 called\n");
     }
 }
 
 void updateofGraceperiodFORUSER_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "updateofGraceperiodFORUSER called\n");
     }
 }
 
 void FUN_100013624_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "FUN_100013624 called\n");
     }
 }
 
 void FUN_100013728_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "FUN_100013728 called\n");
     }
 }
 
 void FUN_100013820_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "FUN_100013820 called\n");
     }
 }
 
 void FUN_100013868_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "FUN_100013868 called\n");
     }
 }
 
 void FUN_1000139f8_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "FUN_1000139f8 called\n");
     }
 }
 
 void FUN_100013a88_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "FUN_100013a88 called\n");
     }
 }
 
 void FUN_100013bfc_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "FUN_100013bfc called\n");
     }
 }
 
 void FUN_100013c08_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "FUN_100013c08 called\n");
     }
 }
 
 void FUN_100013cf4_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "FUN_100013cf4 called\n");
     }
 }
 
 void FUN_100013d00_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "FUN_100013d00 called\n");
     }
 }
 
 void FUN_100013d8c_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "FUN_100013d8c called\n");
     }
 }
 
 void FUN_100013e14_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "FUN_100013e14 called\n");
     }
 }
 
 void FUN_100013e28_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "FUN_100013e28 called\n");
     }
 }
 
 void FUN_100013fa0_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "FUN_100013fa0 called\n");
     }
 }
 
 void FUN_100013fcc_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "FUN_100013fcc called\n");
     }
 }
 
 void FUN_10001410c_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "FUN_10001410c called\n");
     }
 }
 
 void FUN_1000141b8_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "FUN_1000141b8 called\n");
     }
 }
 
 void FUN_1000142dc_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "FUN_1000142dc called\n");
     }
 }
 
 void FUN_1000142f4_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "FUN_1000142f4 called\n");
     }
 }
 
 void FUN_100014390_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "FUN_100014390 called\n");
     }
 }
 
 void FUN_1000144f0_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "FUN_1000144f0 called\n");
     }
 }
 
 void FUN_100014578_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "FUN_100014578 called\n");
     }
 }
 
 void FUN_1000145f0_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "FUN_1000145f0 called\n");
     }
 }
 
 void FUN_100014a0c_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "FUN_100014a0c called\n");
     }
 }
 
 void FUN_100014c44_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "FUN_100014c44 called\n");
     }
 }
 
 void FUN_100014d08_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "FUN_100014d08 called\n");
     }
 }
 
 void FUN_100014e00_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "FUN_100014e00 called\n");
     }
 }
 
 void FUN_100014ed0_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "FUN_100014ed0 called\n");
     }
 }
 
 void FUN_100014fac_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "FUN_100014fac called\n");
     }
 }
 
 void FUN_100015034_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "FUN_100015034 called\n");
     }
 }
 
 void FUN_1000150ac_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "FUN_1000150ac called\n");
     }
 }
 
 void FUN_100015214_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "FUN_100015214 called\n");
     }
 }
 
 void FUN_1000153b8_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "FUN_1000153b8 called\n");
     }
 }
 
 void FUN_1000154f8_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "FUN_1000154f8 called\n");
     }
 }
 
 void FUN_100015630_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "FUN_100015630 called\n");
     }
 }
 
 void FUN_1000157fc_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "FUN_1000157fc called\n");
     }
 }
 
 void FUN_10001580c_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "FUN_10001580c called\n");
     }
 }
 
 void FUN_100015874_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "FUN_100015874 called\n");
     }
 }
 
 void FUN_100015a84_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "FUN_100015a84 called\n");
     }
 }
 
 void FUN_100015b10_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "FUN_100015b10 called\n");
     }
 }
 
 void FUN_100015be8_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "FUN_100015be8 called\n");
     }
 }
 
 void FUN_100015c4c_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "FUN_100015c4c called\n");
     }
 }
 
 void FUN_100015cb0_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "FUN_100015cb0 called\n");
     }
 }
 
 void FUN_100015d14_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "FUN_100015d14 called\n");
     }
 }
 
 void _ADClientAddValueForScalarKey_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "_ADClientAddValueForScalarKey called\n");
     }
 }
 
 void _ADClientSetValueForScalarKey_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "_ADClientSetValueForScalarKey called\n");
     }
 }
 
 void _CCCryptorCreate_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "_CCCryptorCreate called\n");
     }
 }
 
 void _CCCryptorFinal_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "_CCCryptorFinal called\n");
     }
 }
 
 void _CCCryptorGetOutputLength_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "_CCCryptorGetOutputLength called\n");
     }
 }
 
 void _CCCryptorRelease_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "_CCCryptorRelease called\n");
     }
 }
 
 void _CCCryptorUpdate_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "_CCCryptorUpdate called\n");
     }
 }
 
 void _CFAbsoluteTimeGetCurrent_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "_CFAbsoluteTimeGetCurrent called\n");
     }
 }
 
 void _CFArrayAppendValue_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "_CFArrayAppendValue called\n");
     }
 }
 
 void _CFArrayCreateMutable_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "_CFArrayCreateMutable called\n");
     }
 }
 
 void _CFArrayCreateMutableCopy_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "_CFArrayCreateMutableCopy called\n");
     }
 }
 
 void _CFArrayGetCount_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "_CFArrayGetCount called\n");
     }
 }
 
 void _CFArrayGetTypeID_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "_CFArrayGetTypeID called\n");
     }
 }
 
 void _CFArrayGetValueAtIndex_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "_CFArrayGetValueAtIndex called\n");
     }
 }
 
 void _CFArrayRemoveValueAtIndex_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "_CFArrayRemoveValueAtIndex called\n");
     }
 }
 
 void _CFBooleanGetTypeID_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "_CFBooleanGetTypeID called\n");
     }
 }
 
 void _CFBooleanGetValue_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "_CFBooleanGetValue called\n");
     }
 }
 
 void _CFDataCreate_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "_CFDataCreate called\n");
     }
 }
 
 void _CFDataCreateMutable_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "_CFDataCreateMutable called\n");
     }
 }
 
 void _CFDataCreateWithBytesNoCopy_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "_CFDataCreateWithBytesNoCopy called\n");
     }
 }
 
 void _CFDataGetBytePtr_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "_CFDataGetBytePtr called\n");
     }
 }
 
 void _CFDataGetBytes_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "_CFDataGetBytes called\n");
     }
 }
 
 void _CFDataGetLength_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "_CFDataGetLength called\n");
     }
 }
 
 void _CFDataGetMutableBytePtr_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "_CFDataGetMutableBytePtr called\n");
     }
 }
 
 void _CFDataGetTypeID_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "_CFDataGetTypeID called\n");
     }
 }
 
 void _CFDataSetLength_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "_CFDataSetLength called\n");
     }
 }
 
 void _CFDateCompare_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "_CFDateCompare called\n");
     }
 }
 
 void _CFDateCreate_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "_CFDateCreate called\n");
     }
 }
 
 void _CFDateGetAbsoluteTime_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "_CFDateGetAbsoluteTime called\n");
     }
 }
 
 void _CFDictionaryAddValue_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "_CFDictionaryAddValue called\n");
     }
 }
 
 void _CFDictionaryContainsKey_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "_CFDictionaryContainsKey called\n");
     }
 }
 
 void _CFDictionaryCreateMutable_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "_CFDictionaryCreateMutable called\n");
     }
 }
 
 void _CFDictionaryCreateMutableCopy_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "_CFDictionaryCreateMutableCopy called\n");
     }
 }
 
 void _CFDictionaryGetCount_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "_CFDictionaryGetCount called\n");
     }
 }
 
 void _CFDictionaryGetTypeID_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "_CFDictionaryGetTypeID called\n");
     }
 }
 
 void _CFDictionaryGetValue_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "_CFDictionaryGetValue called\n");
     }
 }
 
 void _CFDictionaryGetValueIfPresent_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "_CFDictionaryGetValueIfPresent called\n");
     }
 }
 
 void _CFDictionaryRemoveValue_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "_CFDictionaryRemoveValue called\n");
     }
 }
 
 void _CFDictionaryReplaceValue_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "_CFDictionaryReplaceValue called\n");
     }
 }
 
 void _CFDictionarySetValue_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "_CFDictionarySetValue called\n");
     }
 }
 
 void _CFEqual_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "_CFEqual called\n");
     }
 }
 
 void _CFGetTypeID_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "_CFGetTypeID called\n");
     }
 }
 
 void _CFNumberCreate_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "_CFNumberCreate called\n");
     }
 }
 
 void _CFNumberGetTypeID_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "_CFNumberGetTypeID called\n");
     }
 }
 
 void _CFNumberGetValue_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "_CFNumberGetValue called\n");
     }
 }
 
 void _CFPropertyListCreateWithStream_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "_CFPropertyListCreateWithStream called\n");
     }
 }
 
 void _CFPropertyListWrite_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "_CFPropertyListWrite called\n");
     }
 }
 
 void _CFReadStreamClose_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "_CFReadStreamClose called\n");
     }
 }
 
 void _CFReadStreamCreateWithBytesNoCopy_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "_CFReadStreamCreateWithBytesNoCopy called\n");
     }
 }
 
 void _CFReadStreamOpen_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "_CFReadStreamOpen called\n");
     }
 }
 
 void _CFRelease_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "_CFRelease called\n");
     }
 }
 
 void _CFRetain_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "_CFRetain called\n");
     }
 }
 
 void _CFRunLoopRun_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "_CFRunLoopRun called\n");
     }
 }
 
 void _CFShow_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "_CFShow called\n");
     }
 }
 
 void _CFStringCompare_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "_CFStringCompare called\n");
     }
 }
 
 void _CFStringCreateWithCString_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "_CFStringCreateWithCString called\n");
     }
 }
 
 void _CFStringCreateWithFormat_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "_CFStringCreateWithFormat called\n");
     }
 }
 
 void _CFStringCreateWithFormatAndArguments_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "_CFStringCreateWithFormatAndArguments called\n");
     }
 }
 
 void _CFStringGetCString_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "_CFStringGetCString called\n");
     }
 }
 
 void _CFStringGetCStringPtr_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "_CFStringGetCStringPtr called\n");
     }
 }
 
 void _CFStringGetTypeID_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "_CFStringGetTypeID called\n");
     }
 }
 
 void _CFWriteStreamClose_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "_CFWriteStreamClose called\n");
     }
 }
 
 void _CFWriteStreamCopyProperty_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "_CFWriteStreamCopyProperty called\n");
     }
 }
 
 void _CFWriteStreamCreateWithAllocatedBuffers_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "_CFWriteStreamCreateWithAllocatedBuffers called\n");
     }
 }
 
 void _CFWriteStreamOpen_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "_CFWriteStreamOpen called\n");
     }
 }
 
 void _IOConnectCallMethod_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "_IOConnectCallMethod called\n");
     }
 }
 
 void _IOConnectSetNotificationPort_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "_IOConnectSetNotificationPort called\n");
     }
 }
 
 void _IOMasterPort_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "_IOMasterPort called\n");
     }
 }
 
 void _IOObjectRelease_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "_IOObjectRelease called\n");
     }
 }
 
 void _IORegistryEntryCreateCFProperty_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "_IORegistryEntryCreateCFProperty called\n");
     }
 }
 
 void _IORegistryEntryFromPath_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "_IORegistryEntryFromPath called\n");
     }
 }
 
 void _IORegistryEntrySetCFProperty_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "_IORegistryEntrySetCFProperty called\n");
     }
 }
 
 void _IOServiceClose_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "_IOServiceClose called\n");
     }
 }
 
 void _IOServiceGetMatchingService_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "_IOServiceGetMatchingService called\n");
     }
 }
 
 void _IOServiceMatching_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "_IOServiceMatching called\n");
     }
 }
 
 void _IOServiceOpen_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "_IOServiceOpen called\n");
     }
 }
 
 void _MOLogEnableDiskLogging_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "_MOLogEnableDiskLogging called\n");
     }
 }
 
 void _MOLogOpen_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "_MOLogOpen called\n");
     }
 }
 
 void _MOLogWriteV_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "_MOLogWriteV called\n");
     }
 }
 
 void _SecRandomCopyBytes_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "_SecRandomCopyBytes called\n");
     }
 }
 
 void __Block_object_assign_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "__Block_object_assign called\n");
     }
 }
 
 void __Block_object_dispose_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "__Block_object_dispose called\n");
     }
 }
 
 void __Unwind_Resume_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "__Unwind_Resume called\n");
     }
 }
 
 void ___error_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "___error called\n");
     }
 }
 
 void ___stack_chk_fail_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "___stack_chk_fail called\n");
     }
 }
 
 void ___strlcat_chk_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "___strlcat_chk called\n");
     }
 }
 
 void __os_log_impl_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "__os_log_impl called\n");
     }
 }
 
 void _access_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "_access called\n");
     }
 }
 
 void _analytics_send_event_lazy_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "_analytics_send_event_lazy called\n");
     }
 }
 
 void _arc4random_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "_arc4random called\n");
     }
 }
 
 void _asctime_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "_asctime called\n");
     }
 }
 
 void _bootstrap_check_in_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "_bootstrap_check_in called\n");
     }
 }
 
 void _bzero_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "_bzero called\n");
     }
 }
 
 void _calloc_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "_calloc called\n");
     }
 }
 
 void _ccder_decode_constructed_tl_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "_ccder_decode_constructed_tl called\n");
     }
 }
 
 void _ccder_decode_len_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "_ccder_decode_len called\n");
     }
 }
 
 void _ccder_decode_tag_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "_ccder_decode_tag called\n");
     }
 }
 
 void _ccder_decode_tl_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "_ccder_decode_tl called\n");
     }
 }
 
 void _ccder_encode_body_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "_ccder_encode_body called\n");
     }
 }
 
 void _ccder_encode_constructed_tl_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "_ccder_encode_constructed_tl called\n");
     }
 }
 
 void _ccder_encode_tl_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "_ccder_encode_tl called\n");
     }
 }
 
 void _ccder_sizeof_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "_ccder_sizeof called\n");
     }
 }
 
 void _chmod_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "_chmod called\n");
     }
 }
 
 void _chown_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "_chown called\n");
     }
 }
 
 void _close_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "_close called\n");
     }
 }
 
 void _closedir_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "_closedir called\n");
     }
 }
 
 void _dirfd_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "_dirfd called\n");
     }
 }
 
 void _dispatch_async_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "_dispatch_async called\n");
     }
 }
 
 void _dispatch_get_global_queue_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "_dispatch_get_global_queue called\n");
     }
 }
 
 void _dispatch_once_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "_dispatch_once called\n");
     }
 }
 
 void _dispatch_queue_attr_make_with_qos_class_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "_dispatch_queue_attr_make_with_qos_class called\n");
     }
 }
 
 void _dispatch_queue_create_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "_dispatch_queue_create called\n");
     }
 }
 
 void _dispatch_release_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "_dispatch_release called\n");
     }
 }
 
 void _dispatch_resume_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "_dispatch_resume called\n");
     }
 }
 
 void _dispatch_source_create_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "_dispatch_source_create called\n");
     }
 }
 
 void _dispatch_source_set_event_handler_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "_dispatch_source_set_event_handler called\n");
     }
 }
 
 void _dispatch_sync_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "_dispatch_sync called\n");
     }
 }
 
 void _dlerror_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "_dlerror called\n");
     }
 }
 
 void _dlopen_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "_dlopen called\n");
     }
 }
 
 void _dlsym_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "_dlsym called\n");
     }
 }
 
 void _exit_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "_exit called\n");
     }
 }
 
 void _fclose_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "_fclose called\n");
     }
 }
 
 void _fcntl_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "_fcntl called\n");
     }
 }
 
 void _fopen_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "_fopen called\n");
     }
 }
 
 void _fprintf_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "_fprintf called\n");
     }
 }
 
 void _free_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "_free called\n");
     }
 }
 
 void _fsctl_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "_fsctl called\n");
     }
 }
 
 void _fstat_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "_fstat called\n");
     }
 }
 
 void _fts_close_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "_fts_close called\n");
     }
 }
 
 void _fts_open_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "_fts_open called\n");
     }
 }
 
 void _fts_read_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "_fts_read called\n");
     }
 }
 
 void _fts_set_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "_fts_set called\n");
     }
 }
 
 void _fwrite_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "_fwrite called\n");
     }
 }
 
 void _getattrlist_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "_getattrlist called\n");
     }
 }
 
 void _getenv_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "_getenv called\n");
     }
 }
 
 void _getgrnam_r_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "_getgrnam_r called\n");
     }
 }
 
 void _getpwnam_r_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "_getpwnam_r called\n");
     }
 }
 
 void _host_get_multiuser_config_flags_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "_host_get_multiuser_config_flags called\n");
     }
 }
 
 void _localtime_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "_localtime called\n");
     }
 }
 
 void _mach_host_self_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "_mach_host_self called\n");
     }
 }
 
 void _mach_msg_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "_mach_msg called\n");
     }
 }
 
 void _malloc_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "_malloc called\n");
     }
 }
 
 void _memcmp_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "_memcmp called\n");
     }
 }
 
 void _memcpy_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "_memcpy called\n");
     }
 }
 
 void _memset_s_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "_memset_s called\n");
     }
 }
 
 void _mkdir_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "_mkdir called\n");
     }
 }
 
 void _mkpath_np_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "_mkpath_np called\n");
     }
 }
 
 void _objc_alloc_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "_objc_alloc called\n");
     }
 }
 
 void _objc_autoreleaseReturnValue_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "_objc_autoreleaseReturnValue called\n");
     }
 }
 
 void _objc_claimAutoreleasedReturnValue_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "_objc_claimAutoreleasedReturnValue called\n");
     }
 }
 
 void _objc_getClass_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "_objc_getClass called\n");
     }
 }
 
 void _objc_msgSendSuper2_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "_objc_msgSendSuper2 called\n");
     }
 }
 
 void _objc_opt_class_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "_objc_opt_class called\n");
     }
 }
 
 void _objc_opt_isKindOfClass_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "_objc_opt_isKindOfClass called\n");
     }
 }
 
 void _objc_opt_new_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "_objc_opt_new called\n");
     }
 }
 
 void _objc_release_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "_objc_release called\n");
     }
 }
 
 void _objc_release_x1_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "_objc_release_x1 called\n");
     }
 }
 
 void _objc_release_x19_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "_objc_release_x19 called\n");
     }
 }
 
 void _objc_release_x20_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "_objc_release_x20 called\n");
     }
 }
 
 void _objc_release_x21_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "_objc_release_x21 called\n");
     }
 }
 
 void _objc_release_x22_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "_objc_release_x22 called\n");
     }
 }
 
 void _objc_release_x23_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "_objc_release_x23 called\n");
     }
 }
 
 void _objc_release_x8_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "_objc_release_x8 called\n");
     }
 }
 
 void _objc_release_x9_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "_objc_release_x9 called\n");
     }
 }
 
 void _objc_retain_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "_objc_retain called\n");
     }
 }
 
 void _objc_retainAutoreleaseReturnValue_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "_objc_retainAutoreleaseReturnValue called\n");
     }
 }
 
 void _objc_retain_x19_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "_objc_retain_x19 called\n");
     }
 }
 
 void _objc_retain_x2_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "_objc_retain_x2 called\n");
     }
 }
 
 void _objc_retain_x20_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "_objc_retain_x20 called\n");
     }
 }
 
 void _objc_retain_x21_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "_objc_retain_x21 called\n");
     }
 }
 
 void _objc_retain_x22_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "_objc_retain_x22 called\n");
     }
 }
 
 void _objc_retain_x23_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "_objc_retain_x23 called\n");
     }
 }
 
 void _objc_retain_x3_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "_objc_retain_x3 called\n");
     }
 }
 
 void _objc_retain_x4_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "_objc_retain_x4 called\n");
     }
 }
 
 void _objc_retain_x8_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "_objc_retain_x8 called\n");
     }
 }
 
 void _objc_sync_enter_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "_objc_sync_enter called\n");
     }
 }
 
 void _objc_sync_exit_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "_objc_sync_exit called\n");
     }
 }
 
 void _open_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "_open called\n");
     }
 }
 
 void _open_dprotected_np_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "_open_dprotected_np called\n");
     }
 }
 
 void _opendir_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "_opendir called\n");
     }
 }
 
 void _openlog_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "_openlog called\n");
     }
 }
 
 void _os_log_type_enabled_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "_os_log_type_enabled called\n");
     }
 }
 
 void _os_variant_uses_ephemeral_storage_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "_os_variant_uses_ephemeral_storage called\n");
     }
 }
 
 void _pwrite_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "_pwrite called\n");
     }
 }
 
 void _read_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "_read called\n");
     }
 }
 
 void _realpath_DARWIN_EXTSN_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "_realpath_DARWIN_EXTSN called\n");
     }
 }
 
 void _reboot_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "_reboot called\n");
     }
 }
 
 void _rename_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "_rename called\n");
     }
 }
 
 void _renamex_np_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "_renamex_np called\n");
     }
 }
 
 void _setattrlist_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "_setattrlist called\n");
     }
 }
 
 void _setiopolicy_np_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "_setiopolicy_np called\n");
     }
 }
 
 void _snprintf_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "_snprintf called\n");
     }
 }
 
 void _sqlite3_bind_blob_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "_sqlite3_bind_blob called\n");
     }
 }
 
 void _sqlite3_bind_int64_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "_sqlite3_bind_int64 called\n");
     }
 }
 
 void _sqlite3_close_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "_sqlite3_close called\n");
     }
 }
 
 void _sqlite3_column_blob_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "_sqlite3_column_blob called\n");
     }
 }
 
 void _sqlite3_column_bytes_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "_sqlite3_column_bytes called\n");
     }
 }
 
 void _sqlite3_column_int_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "_sqlite3_column_int called\n");
     }
 }
 
 void _sqlite3_column_text_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "_sqlite3_column_text called\n");
     }
 }
 
 void _sqlite3_errmsg_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "_sqlite3_errmsg called\n");
     }
 }
 
 void _sqlite3_exec_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "_sqlite3_exec called\n");
     }
 }
 
 void _sqlite3_file_control_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "_sqlite3_file_control called\n");
     }
 }
 
 void _sqlite3_finalize_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "_sqlite3_finalize called\n");
     }
 }
 
 void _sqlite3_free_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "_sqlite3_free called\n");
     }
 }
 
 void _sqlite3_open_v2_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "_sqlite3_open_v2 called\n");
     }
 }
 
 void _sqlite3_prepare_v2_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "_sqlite3_prepare_v2 called\n");
     }
 }
 
 void _sqlite3_step_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "_sqlite3_step called\n");
     }
 }
 
 void _stat_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "_stat called\n");
     }
 }
 
 void _statfs_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "_statfs called\n");
     }
 }
 
 void _strcmp_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "_strcmp called\n");
     }
 }
 
 void _strdup_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "_strdup called\n");
     }
 }
 
 void _strerror_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "_strerror called\n");
     }
 }
 
 void _strlen_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "_strlen called\n");
     }
 }
 
 void _strncasecmp_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "_strncasecmp called\n");
     }
 }
 
 void _strnstr_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "_strnstr called\n");
     }
 }
 
 void _sync_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "_sync called\n");
     }
 }
 
 void _sysctlbyname_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "_sysctlbyname called\n");
     }
 }
 
 void _syslog_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "_syslog called\n");
     }
 }
 
 void _time_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "_time called\n");
     }
 }
 
 void _unlink_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "_unlink called\n");
     }
 }
 
 void _uuid_copy_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "_uuid_copy called\n");
     }
 }
 
 void _uuid_parse_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "_uuid_parse called\n");
     }
 }
 
 void _uuid_unparse_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "_uuid_unparse called\n");
     }
 }
 
 void _vm_allocate_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "_vm_allocate called\n");
     }
 }
 
 void _vm_deallocate_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "_vm_deallocate called\n");
     }
 }
 
 void _voucher_get_current_persona_proximate_info_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "_voucher_get_current_persona_proximate_info called\n");
     }
 }
 
 void _write_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "_write called\n");
     }
 }
 
 void _xpc_activity_copy_criteria_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "_xpc_activity_copy_criteria called\n");
     }
 }
 
 void _xpc_activity_get_state_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "_xpc_activity_get_state called\n");
     }
 }
 
 void _xpc_activity_register_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "_xpc_activity_register called\n");
     }
 }
 
 void _xpc_activity_set_criteria_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "_xpc_activity_set_criteria called\n");
     }
 }
 
 void _xpc_bool_create_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "_xpc_bool_create called\n");
     }
 }
 
 void _xpc_dictionary_create_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "_xpc_dictionary_create called\n");
     }
 }
 
 void _xpc_dictionary_get_string_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "_xpc_dictionary_get_string called\n");
     }
 }
 
 void _xpc_dictionary_set_bool_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "_xpc_dictionary_set_bool called\n");
     }
 }
 
 void _xpc_dictionary_set_int64_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "_xpc_dictionary_set_int64 called\n");
     }
 }
 
 void _xpc_dictionary_set_string_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "_xpc_dictionary_set_string called\n");
     }
 }
 
 void _xpc_release_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "_xpc_release called\n");
     }
 }
 
 void _xpc_set_event_stream_handler_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "_xpc_set_event_stream_handler called\n");
     }
 }
 
 void _xpc_transaction_begin_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "_xpc_transaction_begin called\n");
     }
 }
 
 void _xpc_transaction_end_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "_xpc_transaction_end called\n");
     }
 }
 
 void _xpc_uint64_create_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "_xpc_uint64_create called\n");
     }
 }
 
 void FUN_100017440_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "FUN_100017440 called\n");
     }
 }
 
 void FUN_100017460_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "FUN_100017460 called\n");
     }
 }
 
 void FUN_100017480_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "FUN_100017480 called\n");
     }
 }
 
 void FUN_1000174a0_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "FUN_1000174a0 called\n");
     }
 }
 
 void FUN_1000174c0_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "FUN_1000174c0 called\n");
     }
 }
 
 void FUN_1000174e0_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "FUN_1000174e0 called\n");
     }
 }
 
 void FUN_100017500_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "FUN_100017500 called\n");
     }
 }
 
 void FUN_100017520_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "FUN_100017520 called\n");
     }
 }
 
 void FUN_100017540_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "FUN_100017540 called\n");
     }
 }
 
 void FUN_100017560_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "FUN_100017560 called\n");
     }
 }
 
 void FUN_100017580_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "FUN_100017580 called\n");
     }
 }
 
 void FUN_1000175a0_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "FUN_1000175a0 called\n");
     }
 }
 
 void FUN_1000175c0_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "FUN_1000175c0 called\n");
     }
 }
 
 void FUN_1000175e0_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "FUN_1000175e0 called\n");
     }
 }
 
 void FUN_100017600_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "FUN_100017600 called\n");
     }
 }
 
 void FUN_100017620_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "FUN_100017620 called\n");
     }
 }
 
 void FUN_100017640_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "FUN_100017640 called\n");
     }
 }
 
 void FUN_100017660_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "FUN_100017660 called\n");
     }
 }
 
 void FUN_100017680_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "FUN_100017680 called\n");
     }
 }
 
 void FUN_1000176a0_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "FUN_1000176a0 called\n");
     }
 }
 
 void FUN_1000176c0_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "FUN_1000176c0 called\n");
     }
 }
 
 void FUN_1000176e0_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "FUN_1000176e0 called\n");
     }
 }
 
 void FUN_100017700_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "FUN_100017700 called\n");
     }
 }
 
 void FUN_100017720_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "FUN_100017720 called\n");
     }
 }
 
 void FUN_100017740_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "FUN_100017740 called\n");
     }
 }
 
 void FUN_100017760_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "FUN_100017760 called\n");
     }
 }
 
 void FUN_100017780_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "FUN_100017780 called\n");
     }
 }
 
 void FUN_1000177a0_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "FUN_1000177a0 called\n");
     }
 }
 
 void FUN_1000177c0_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "FUN_1000177c0 called\n");
     }
 }
 
 void FUN_1000177e0_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "FUN_1000177e0 called\n");
     }
 }
 
 void FUN_100017800_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "FUN_100017800 called\n");
     }
 }
 
 void FUN_100017820_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "FUN_100017820 called\n");
     }
 }
 
 void FUN_100017840_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "FUN_100017840 called\n");
     }
 }
 
 void FUN_100017860_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "FUN_100017860 called\n");
     }
 }
 
 void FUN_100017880_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "FUN_100017880 called\n");
     }
 }
 
 void FUN_1000178a0_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "FUN_1000178a0 called\n");
     }
 }
 
 void FUN_1000178c0_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "FUN_1000178c0 called\n");
     }
 }
 
 void FUN_1000178e0_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "FUN_1000178e0 called\n");
     }
 }
 
 void FUN_100017900_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "FUN_100017900 called\n");
     }
 }
 
 void FUN_100017920_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "FUN_100017920 called\n");
     }
 }
 
 void FUN_100017940_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "FUN_100017940 called\n");
     }
 }
 
 void FUN_100017960_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "FUN_100017960 called\n");
     }
 }
 
 void FUN_100017980_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "FUN_100017980 called\n");
     }
 }
 
 void FUN_1000179a0_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "FUN_1000179a0 called\n");
     }
 }
 
 void FUN_1000179c0_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "FUN_1000179c0 called\n");
     }
 }
 
 void FUN_1000179e0_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "FUN_1000179e0 called\n");
     }
 }
 
 void FUN_100017a00_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "FUN_100017a00 called\n");
     }
 }
 
 void FUN_100017a20_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "FUN_100017a20 called\n");
     }
 }
 
 void FUN_100017a40_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "FUN_100017a40 called\n");
     }
 }
 
 void FUN_100017a60_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "FUN_100017a60 called\n");
     }
 }
 
 void FUN_100017a80_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "FUN_100017a80 called\n");
     }
 }
 
 void FUN_100017aa0_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "FUN_100017aa0 called\n");
     }
 }
 
 void FUN_100017ac0_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "FUN_100017ac0 called\n");
     }
 }
 
 void FUN_100017ae0_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "FUN_100017ae0 called\n");
     }
 }
 
 void FUN_100017b00_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "FUN_100017b00 called\n");
     }
 }
 
 void FUN_100017b20_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "FUN_100017b20 called\n");
     }
 }
 
 void FUN_100017b40_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "FUN_100017b40 called\n");
     }
 }
 
 void FUN_100017b60_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "FUN_100017b60 called\n");
     }
 }
 
 void FUN_100017b80_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "FUN_100017b80 called\n");
     }
 }
 
 void FUN_100017ba0_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "FUN_100017ba0 called\n");
     }
 }
 
 void FUN_100017bc0_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "FUN_100017bc0 called\n");
     }
 }
 
 void FUN_100017be0_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "FUN_100017be0 called\n");
     }
 }
 
 void FUN_100017c00_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "FUN_100017c00 called\n");
     }
 }
 
 void _objc_msgSend_instrument()
 {
-    if (f ! = NULL){
+    if (f != NULL){
         fprintf(f, "_objc_msgSend called\n");
     }
 }
