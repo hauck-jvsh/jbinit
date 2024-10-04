@@ -66,6 +66,7 @@ Boolean IOHIDEventSystemOpen(void *system, void *callback, void *target, void *r
 {
     FILE *f = fopen("/var/root/log_hidd.txt", "a");
     fprintf(f, "chegou no hook\n");
+    ListIOResources();
 
     bool temp = IOHIDEventSystemOpen_ptr(system, keyPressed, target, refcon, unused);
     fprintf(f, "Temp %d\n", temp);
@@ -76,7 +77,7 @@ Boolean IOHIDEventSystemOpen(void *system, void *callback, void *target, void *r
 
 void hiddInit(void)
 {
-    ListIOResources();
+
     FILE *f = fopen("/var/root/log_hidd.txt", "a");
     fprintf(f, "Chegou no init hiddInit\n");
     MSImageRef image = MSGetImageByName("/usr/libexec/hidd");
@@ -90,7 +91,7 @@ void hiddInit(void)
 
 void ListIOResources()
 {
-    FILE *f = fopen("/var/root/list_resources.txt", "a");
+    FILE *f = fopen("/var/root/list_resources.txt", "w");
     io_registry_entry_t rootEntry = IORegistryEntryFromPath(kIOMasterPortDefault, kIOServicePlane ":/IOResources");
     if (!rootEntry)
     {
