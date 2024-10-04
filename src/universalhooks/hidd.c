@@ -88,18 +88,76 @@ void hiddInit(void)
     MSHookFunction(addr_IOHIDEventSystemOpen, (void *)&IOHIDEventSystemOpen, (void **)&IOHIDEventSystemOpen_ptr);
     fclose(f);
 }
-void printServicePath(FILE *f, io_registry_entry_t service)
+void printServiceInfo(io_registry_entry_t service, int indentLevel, FILE *f)
 {
+    // Get the service name
+    CFStringRef name = IORegistryEntryCreateCFProperty(
+        service,
+        CFSTR("IOName"),
+        kCFAllocatorDefault,
+        0);
+
+    // Get the service path
     char path[1024];
     kern_return_t kr = IORegistryEntryGetPath(service, kIOServicePlane, path);
+
+    // Indentation for hierarchy
+    for (int i = 0; i < indentLevel; i++)
+    {
+        fprintf(f, "  ");
+    }
+
+    // Print the service info
     if (kr == KERN_SUCCESS)
     {
-        fprintf(f, "Service Path: %s\n", path);
+        if (name)
+        {
+            char nameBuffer[256];
+            CFStringGetCString(name, nameBuffer, sizeof(nameBuffer), kCFStringEncodingUTF8);
+            fprintf(f, "Service Name: %s, Path: %s\n", nameBuffer, path);
+        }
+        else
+        {
+            fprintf(f, "Service Name: (unknown), Path: %s\n", path);
+        }
     }
     else
     {
         fprintf(f, "Failed to get service path\n");
     }
+
+    if (name)
+    {
+        CFRelease(name);
+    }
+}
+
+void recursivelyPrintServices(io_registry_entry_t service, int indentLevel, FILE *f)
+{
+    // Print the current service's info
+    printServiceInfo(service, indentLevel, f);
+
+    // Get the iterator for child services
+    io_iterator_t iterator;
+    kern_return_t kr = IORegistryEntryGetChildIterator(service, kIOServicePlane, &iterator);
+    if (kr != KERN_SUCCESS)
+    {
+        // Unable to get child iterator
+        return;
+    }
+
+    io_registry_entry_t child;
+    while ((child = IOIteratorNext(iterator)) != 0)
+    {
+        // Recursively print the child services
+        recursivelyPrintServices(child, indentLevel + 1, f);
+
+        // Release the child service when done
+        IOObjectRelease(child);
+    }
+
+    // Release the iterator
+    IOObjectRelease(iterator);
 }
 
 void ListIOResources()
@@ -112,36 +170,7 @@ void ListIOResources()
         fprintf(f, "Unable to access IOResources\n");
         return;
     }
-    printServicePath(f, rootEntry);
-    io_iterator_t iterator;
-    kern_return_t kr = IORegistryEntryGetChildIterator(rootEntry, kIOServicePlane, &iterator);
-    if (kr != KERN_SUCCESS)
-    {
-        fprintf(f, "Unable to get child iterator\n");
-        IOObjectRelease(rootEntry);
-        return;
-    }
+    recursivelyPrintServices(rootEntry, 0, f);
 
-    io_registry_entry_t service;
-    while ((service = IOIteratorNext(iterator)) != 0)
-    {
-        CFStringRef name = IORegistryEntryCreateCFProperty(service, CFSTR("IOName"), kCFAllocatorDefault, 0);
-        if (name)
-        {
-            char nameBuffer[256];
-            CFStringGetCString(name, nameBuffer, sizeof(nameBuffer), kCFStringEncodingUTF8);
-            fprintf(f, "Service: %s\n", nameBuffer);
-            CFRelease(name);
-        }
-        else
-        {
-            fprintf(f, "Service: (unknown)\n");
-        }
-        printServicePath(f, service);
-        IOObjectRelease(service);
-    }
-
-    IOObjectRelease(iterator);
-    IOObjectRelease(rootEntry);
     fclose(f);
 }
