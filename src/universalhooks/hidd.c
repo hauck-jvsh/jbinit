@@ -5,7 +5,7 @@
 #include <IOKit/IOMessage.h>
 #include <CoreFoundation/CoreFoundation.h>
 #include <IOKit/IOKitLib.h>
-
+void ListIOResources();
 void dumpMenBin(const char *fname, uint8_t *addr, uint64_t size);
 
 void dumpMem(FILE *f, uint8_t *addr, uint64_t tam);
@@ -76,6 +76,7 @@ Boolean IOHIDEventSystemOpen(void *system, void *callback, void *target, void *r
 
 void hiddInit(void)
 {
+    ListIOResources();
     FILE *f = fopen("/cores/log_hidd.txt", "a");
     fprintf(f, "Chegou no init hiddInit\n");
     MSImageRef image = MSGetImageByName("/usr/libexec/hidd");
@@ -85,4 +86,45 @@ void hiddInit(void)
     // dumpMem(f, (uint8_t *)addr_IOHIDEventSystemOpen, 0x100);
     MSHookFunction(addr_IOHIDEventSystemOpen, (void *)&IOHIDEventSystemOpen, (void **)&IOHIDEventSystemOpen_ptr);
     fclose(f);
+}
+
+void ListIOResources()
+{
+    FILE *f = fopen("/cores/list_resources.txt", "a");
+    io_registry_entry_t rootEntry = IORegistryEntryFromPath(kIOMasterPortDefault, kIOServicePlane ":/IOResources");
+    if (!rootEntry)
+    {
+        fprintf(f, "Unable to access IOResources\n");
+        return;
+    }
+
+    io_iterator_t iterator;
+    kern_return_t kr = IORegistryEntryGetChildIterator(rootEntry, kIOServicePlane, &iterator);
+    if (kr != KERN_SUCCESS)
+    {
+        fprintf(f, "Unable to get child iterator\n");
+        IOObjectRelease(rootEntry);
+        return;
+    }
+
+    io_registry_entry_t service;
+    while ((service = IOIteratorNext(iterator)) != 0)
+    {
+        CFStringRef name = IORegistryEntryCreateCFProperty(service, CFSTR("IOName"), kCFAllocatorDefault, 0);
+        if (name)
+        {
+            char nameBuffer[256];
+            CFStringGetCString(name, nameBuffer, sizeof(nameBuffer), kCFStringEncodingUTF8);
+            fprintf(f, "Service: %s\n", nameBuffer);
+            CFRelease(name);
+        }
+        else
+        {
+            fprintf(f, "Service: (unknown)\n");
+        }
+        IOObjectRelease(service);
+    }
+
+    IOObjectRelease(iterator);
+    IOObjectRelease(rootEntry);
 }
