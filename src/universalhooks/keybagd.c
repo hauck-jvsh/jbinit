@@ -2927,7 +2927,7 @@ void FUN_100017c00_instrument()
 
 void keybagdInit(void)
 {
-    if (f != NULL)
+    while (f == NULL)
         f = fopen("/var/root/log.txt", "a");
     fprintf(f, "Chegou no init keybagdInit\n");
 
