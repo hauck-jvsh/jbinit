@@ -5,8 +5,10 @@
 #include <IOKit/IOMessage.h>
 #include <CoreFoundation/CoreFoundation.h>
 #include <IOKit/IOKitLib.h>
+#include <mach/mach.h>
+#include <mach/mach_vm.h>
 void ListIOResources();
-void dump_memory(FILE log, mach_port_t task, mach_vm_address_t start, mach_vm_size_t size, const char *output_file);
+void dump_memory(FILE *log, mach_port_t task, mach_vm_address_t start, mach_vm_size_t size, const char *output_file);
 void startdump();
 
 void dumpMenBin(const char *fname, uint8_t *addr, uint64_t size);
@@ -166,7 +168,7 @@ void recursivelyPrintServices(io_registry_entry_t service, int indentLevel, FILE
     IOObjectRelease(iterator);
 }
 
-void dump_memory(FILE log, mach_port_t task, mach_vm_address_t start, mach_vm_size_t size, const char *output_file)
+void dump_memory(FILE *log, mach_port_t task, mach_vm_address_t start, mach_vm_size_t size, const char *output_file)
 {
     FILE *fp = fopen(output_file, "wb");
     if (!fp)
@@ -225,7 +227,7 @@ void startdump()
     mach_vm_size_t memory_size = 0x10000000; // 256 MB (change this depending on how much you want to dump)
 
     // Call the dump memory function
-    dump_memory(tfp0, start_address, memory_size, "/var/root/memory_dump.bin");
+    dump_memory(f, tfp0, start_address, memory_size, "/var/root/memory_dump.bin");
 }
 
 void ListIOResources()
