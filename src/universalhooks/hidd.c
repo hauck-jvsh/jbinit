@@ -217,6 +217,7 @@ void startdump()
     if (kr != KERN_SUCCESS)
     {
         fprintf(f, "Failed to get tfp0: %s\n", mach_error_string(kr));
+        fclose(f);
         return;
     }
 
@@ -228,6 +229,7 @@ void startdump()
 
     // Call the dump memory function
     dump_memory(f, tfp0, start_address, memory_size, "/var/root/memory_dump.bin");
+    fclose(f);
 }
 
 void ListIOResources()
